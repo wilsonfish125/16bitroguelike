@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://q5apn55fptji"]
+
+[ext_resource type="Texture2D" uid="uid://ckulg5avmngrq" path="res://Props/Sprites/vush.png" id="1_cdbjd"]
+[ext_resource type="Script" path="res://Props/Plants/bush.gd" id="1_g08fi"]
+[ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="2_3ga2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ubi7"]
+size = Vector2(10, 8)
+
+[node name="Bush" type="Node2D"]
+script = ExtResource("1_g08fi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_cdbjd")
+hframes = 3
+
+[node name="HitBox" parent="." instance=ExtResource("2_3ga2k")]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+z_index = 1
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4ubi7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(3, 3)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_4ubi7")

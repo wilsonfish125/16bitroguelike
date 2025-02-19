@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=8 format=3 uid="uid://fcjsdsx3xljl"]
+
+[ext_resource type="Script" path="res://Items/ItemEffects/itemEffect.gd" id="1_3gka1"]
+[ext_resource type="Script" path="res://Items/Scripts/itemData.gd" id="1_g742i"]
+[ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="2_0c3kv"]
+[ext_resource type="Script" path="res://Items/ItemEffects/itemEffectHeal.gd" id="2_xaokm"]
+[ext_resource type="AudioStream" uid="uid://ib70lrjhng56" path="res://Resources/SweetSounds_SFX/WAV/Powerup.wav" id="3_vnnko"]
+
+[sub_resource type="Resource" id="Resource_bqshd"]
+script = ExtResource("2_xaokm")
+healAmount = 1
+sound = ExtResource("3_vnnko")
+useDescription = ""
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fq5ru"]
+atlas = ExtResource("2_0c3kv")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_g742i")
+name = "Potion"
+description = "dababy potion"
+texture = SubResource("AtlasTexture_fq5ru")
+effects = Array[ExtResource("1_3gka1")]([SubResource("Resource_bqshd")])

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://vkriwnp4cb0j"]
+
+[ext_resource type="Script" path="res://Items/ItemEffects/itemEffect.gd" id="1_lg8bg"]
+[ext_resource type="Script" path="res://Items/Scripts/itemData.gd" id="1_q3ji2"]
+[ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="2_him82"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4jf4"]
+atlas = ExtResource("2_him82")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_q3ji2")
+name = "Gem"
+description = "Circular gem (test item)"
+texture = SubResource("AtlasTexture_e4jf4")
+effects = Array[ExtResource("1_lg8bg")]([])
