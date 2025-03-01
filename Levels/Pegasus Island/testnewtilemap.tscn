@@ -2293,10 +2293,11 @@ position = Vector2(1026, 1594)
 position = Vector2(250, 1282)
 
 [node name="Knight" parent="Enemy Manager" instance=ExtResource("5_fbb2h")]
-position = Vector2(754, 1138)
+position = Vector2(1394, 1258)
 
 [node name="LevelTransition" parent="." instance=ExtResource("7_ubvom")]
 position = Vector2(506, 1082)
 level = "res://Levels/TestLevels/testDungeonLevel.tscn"
+centerPlayer = true
 size = 1
 side = 2

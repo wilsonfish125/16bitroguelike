@@ -5,6 +5,8 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM } #easy way for us to track the side it bel
 
 @export_file( "*.tscn" ) var level #hey you did wildcard characters in IPT! finally something useful
 @export var targetTransitionArea : String = "LevelTransition" #value will be used to point the player to another map scene
+@export var centerPlayer : bool = false
+
 
 @export_category("Collision Area Settings")
 
@@ -60,12 +62,18 @@ func getOffset() -> Vector2:
 	
 	#we need to detect if we are in the left, right, top, or bottom
 	if side == SIDE.LEFT or side == SIDE.RIGHT:
-		offset.y = playerPosition.y - global_position.y
+		if centerPlayer == true:
+			offset.y = 0
+		else:
+			offset.y = playerPosition.y - global_position.y
 		offset.x = 8
 		if side == SIDE.LEFT:
 			offset.x *= -1
 	else: #if not left or right we know its top or bottom
-		offset.x = playerPosition.x - global_position.x
+		if centerPlayer == true:
+				offset.x = 0
+		else:
+			offset.x = playerPosition.x - global_position.x
 		offset.y = 8
 		if side == SIDE.TOP:
 			offset.y *= -1

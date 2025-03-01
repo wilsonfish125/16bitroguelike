@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdgj0sg0djhne"
+path="res://.godot/imported/lever-01.wav-fc799e95f6f2df659c728b956f4bf7c3.sample"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/lever-01.wav"
+dest_files=["res://.godot/imported/lever-01.wav-fc799e95f6f2df659c728b956f4bf7c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
