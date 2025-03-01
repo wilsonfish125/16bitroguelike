@@ -1338,4 +1338,4 @@ libraries = {
 [node name="VisionArea" parent="." instance=ExtResource("17_8jh00")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
-polygon = PackedVector2Array(-16, 0, 16, 0, 64, 64, -64, 64)
+polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)

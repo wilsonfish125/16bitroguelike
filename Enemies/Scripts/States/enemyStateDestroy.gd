@@ -26,13 +26,13 @@ func init()  -> void:
 # What happens when the player enters this state?
 func enter() -> void:
 	enemy.invulnerable = true
+	disableHurtBox() #player cant get damaged after dickhead is killed
 	
 	_direction = enemy.global_position.direction_to( _damagePosition )
 	enemy.set_direction( _direction )
 	enemy.velocity = _direction * -knockbackSpeed * 2 #negative to oppose motion
 	enemy.updateAnimation( animName )
 	enemy.animation_player.animation_finished.connect( _onAnimationFinished )
-	disableHurtBox() #player cant get damaged after dickhead is killed
 	dropItems()
 	pass
 
