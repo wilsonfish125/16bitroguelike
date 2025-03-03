@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://ctirkmy8fyhl2"]
+[gd_scene load_steps=14 format=4 uid="uid://ctirkmy8fyhl2"]
 
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Props/Tilemaps/Testing/mountain.png" id="1_4v52j"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_h4uem"]
 [ext_resource type="PackedScene" uid="uid://b7lfepmi73rnn" path="res://Props/Interactables/Pressure Plate/pressurePlate.tscn" id="3_dkm4e"]
+[ext_resource type="PackedScene" uid="uid://w1hfjynx1eg5" path="res://Props/Interactables/Barred Door/barredDoor.tscn" id="4_oy70c"]
+[ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="5_0ok2n"]
+[ext_resource type="PackedScene" uid="uid://bg3omyj3j65ts" path="res://Props/Interactables/Pushable Statue/pushableStatue.tscn" id="6_t0wiu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlsua"]
 texture = ExtResource("1_4v52j")
@@ -588,6 +591,9 @@ sources/0 = SubResource("TileSetAtlasSource_6kbm7")
 
 [node name="TestDungeonLevel" type="Node2D"]
 
+[node name="PlayerSpawn" parent="." instance=ExtResource("5_0ok2n")]
+position = Vector2(-6, 354)
+
 [node name="LevelTransition" parent="." instance=ExtResource("2_h4uem")]
 z_index = 1
 position = Vector2(10, 642)
@@ -612,4 +618,13 @@ tile_map_data = PackedByteArray("AAAEAAkAAAAFAAAAAAAFAAkAAAAEAAIAAAAFAAgAAAAFAAA
 tile_set = SubResource("TileSet_gor5r")
 
 [node name="PressurePlate" parent="." instance=ExtResource("3_dkm4e")]
-position = Vector2(-318, 442)
+position = Vector2(-190, 210)
+
+[node name="BarredDoor" parent="." instance=ExtResource("4_oy70c")]
+position = Vector2(-102, 130)
+
+[node name="PushableStatue" parent="." instance=ExtResource("6_t0wiu")]
+position = Vector2(370, 474)
+
+[connection signal="activated" from="PressurePlate" to="BarredDoor" method="openDoor"]
+[connection signal="deactivated" from="PressurePlate" to="BarredDoor" method="closeDoor"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dyoad8y2vcdpa"]
+[gd_scene load_steps=44 format=3 uid="uid://dyoad8y2vcdpa"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_e4rxs"]
 [ext_resource type="Texture2D" uid="uid://46afmieuh2rt" path="res://Resources/Old Tilesets/Old Tilesets/playergreen1.png" id="2_v363s"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Player/States/stateStun.gd" id="9_swrls"]
 [ext_resource type="Script" path="res://Player/playerCamera.gd" id="10_ejskq"]
 [ext_resource type="Script" path="res://Player/playerInteractionsHost.gd" id="11_ie2j0"]
+[ext_resource type="Script" path="res://Player/pushArea.gd" id="12_s0uyu"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="12_tpq6g"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="13_egsra"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="14_rt4ae"]
@@ -865,6 +866,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly1fl"]
 size = Vector2(32, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_totfj"]
+size = Vector2(20, 12)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbqvx"]
 radius = 17.2627
 
@@ -1006,6 +1010,18 @@ monitoring = false
 position = Vector2(0, 26.405)
 shape = SubResource("RectangleShape2D_ly1fl")
 debug_color = Color(0.092, 0.46, 0, 1)
+
+[node name="PushArea" type="Area2D" parent="Interactions"]
+z_index = 1
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("12_s0uyu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/PushArea"]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_totfj")
+debug_color = Color(0.884152, 0.00111471, 0.95256, 1)
 
 [node name="HurtBox" parent="Interactions" instance=ExtResource("12_tpq6g")]
 collision_mask = 258
