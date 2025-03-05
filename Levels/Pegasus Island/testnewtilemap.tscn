@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://bplxsf3f3jpae"]
 
-[ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Props/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
-[ext_resource type="Texture2D" uid="uid://gx54iqpb5mid" path="res://Props/Tilemaps/Testing/grasslandrev2.png" id="2_mwd1t"]
+[ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
+[ext_resource type="Texture2D" uid="uid://gx54iqpb5mid" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grasslandrev2.png" id="2_mwd1t"]
 [ext_resource type="Texture2D" uid="uid://d2te2biv6nfc2" path="res://Resources/New Tileset (v2)/NEW Overworld (Classic)(v2).png" id="3_a4ycg"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="3_cghyv"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="4_l3n8p"]
@@ -2261,6 +2261,13 @@ offset_top = 43.0
 offset_right = -524.0
 offset_bottom = 115.0
 text = "LAKE TO GO HERE"
+
+[node name="Label2" type="Label" parent="TempLabels"]
+offset_left = 163.333
+offset_top = 368.667
+offset_right = 334.333
+offset_bottom = 440.667
+text = "TEST DUNGEON ENTRY"
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("3_cghyv")]
 position = Vector2(-30, 914)

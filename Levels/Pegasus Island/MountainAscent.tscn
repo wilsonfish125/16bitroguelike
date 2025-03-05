@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://q8ota5ye5dhn"]
 
-[ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Props/Tilemaps/Testing/mountain.png" id="1_c3nax"]
+[ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="1_c3nax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qc25m"]
 texture = ExtResource("1_c3nax")

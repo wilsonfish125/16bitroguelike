@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4n2thvf224h7"
-path="res://.godot/imported/mountain.png-04aca67757e940fdc3146c65382e6b2e.ctex"
+uid="uid://ckppvhi0fjbjb"
+path="res://.godot/imported/jungle.png-5b5846c9b4d3ebe93c1e5e4784756ec0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Props/Tilemaps/Testing/mountain.png"
-dest_files=["res://.godot/imported/mountain.png-04aca67757e940fdc3146c65382e6b2e.ctex"]
+source_file="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/jungle.png"
+dest_files=["res://.godot/imported/jungle.png-5b5846c9b4d3ebe93c1e5e4784756ec0.ctex"]
 
 [params]
 

@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="12_sicrm"]
 
 [node name="LevelScene" type="Node2D"]
-visible = false
 y_sort_enabled = true
 script = ExtResource("1_hqajm")
 

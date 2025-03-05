@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq7ssngrmbopj"
-path="res://.godot/imported/magicforest.png-5c7b62ed68dcda976f0cff2b35795d64.ctex"
+uid="uid://csf0wqytbk2ru"
+path="res://.godot/imported/shadowforest.png-4791c19c404561003f41d6ce9b4ba3f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Props/Tilemaps/Testing/magicforest.png"
-dest_files=["res://.godot/imported/magicforest.png-5c7b62ed68dcda976f0cff2b35795d64.ctex"]
+source_file="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/shadowforest.png"
+dest_files=["res://.godot/imported/shadowforest.png-4791c19c404561003f41d6ce9b4ba3f0.ctex"]
 
 [params]
 

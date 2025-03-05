@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckppvhi0fjbjb"
-path="res://.godot/imported/jungle.png-5e31fa146bfb3a07e4130534f97e2059.ctex"
+uid="uid://dq7ssngrmbopj"
+path="res://.godot/imported/magicforest.png-1934689bdd9b39f8c74b041f84e22ce5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Props/Tilemaps/Testing/jungle.png"
-dest_files=["res://.godot/imported/jungle.png-5e31fa146bfb3a07e4130534f97e2059.ctex"]
+source_file="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/magicforest.png"
+dest_files=["res://.godot/imported/magicforest.png-1934689bdd9b39f8c74b041f84e22ce5.ctex"]
 
 [params]
 

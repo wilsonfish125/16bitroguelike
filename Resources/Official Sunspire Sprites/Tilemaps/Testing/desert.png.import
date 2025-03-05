@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcea566wxr84e"
-path="res://.godot/imported/desert.png-98d9ad2aa8b833c1d68a8d34071c939e.ctex"
+path="res://.godot/imported/desert.png-cfad913484a8afbb1a2165f9758791ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Props/Tilemaps/Testing/desert.png"
-dest_files=["res://.godot/imported/desert.png-98d9ad2aa8b833c1d68a8d34071c939e.ctex"]
+source_file="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/desert.png"
+dest_files=["res://.godot/imported/desert.png-cfad913484a8afbb1a2165f9758791ab.ctex"]
 
 [params]
 

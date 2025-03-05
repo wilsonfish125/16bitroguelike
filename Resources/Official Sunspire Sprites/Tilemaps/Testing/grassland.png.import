@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b52s75fyjfqa1"
-path="res://.godot/imported/grassland.png-3962d9fac4184210c7e8d6dda8646ac0.ctex"
+path="res://.godot/imported/grassland.png-838a2007d1e00a8a04fe3b3d5380170c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Props/Tilemaps/Testing/grassland.png"
-dest_files=["res://.godot/imported/grassland.png-3962d9fac4184210c7e8d6dda8646ac0.ctex"]
+source_file="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png"
+dest_files=["res://.godot/imported/grassland.png-838a2007d1e00a8a04fe3b3d5380170c.ctex"]
 
 [params]
 
