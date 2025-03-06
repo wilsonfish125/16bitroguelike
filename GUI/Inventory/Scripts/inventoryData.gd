@@ -81,3 +81,12 @@ func itemFromSave( saveObj : Dictionary ) -> SlotData:
 	newSlot.itemData = load( saveObj.item )
 	newSlot.quantity = int( saveObj.quantity )
 	return newSlot
+
+
+func useItem( item : ItemData, count : int = 1 ) -> bool:
+	for s in slots:
+		if s: #if there is a valid item in an inventory slot
+			if s.itemData == item and s.quantity >= count: #is it the right item and amount REMEMBER GREATER OR EQUAL
+				s.quantity -= count
+				return true
+	return false

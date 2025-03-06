@@ -17,8 +17,6 @@ func _ready() -> void:
 	await get_tree().create_timer( 0.2 ).timeout
 	playerSpawned = true #after half a second if we havent had something try to spawn a player we set it to true
 
-
-
 func addPlayerInstance() -> void:
 	player = PLAYER.instantiate() #creates an instance of PLAYER and assigns it to the variable
 	add_child( player ) #gotta add the player somewhere
@@ -35,9 +33,6 @@ func setPlayerHealth( hp : int, maxHP : int ) -> void:
 	player.updateHP(0) #this updates the UI
 	pass
 
-
-
-
 #bugfix methods for ysort issue
 
 func setAsParent( _p : Node2D ) -> void:
@@ -48,4 +43,3 @@ func setAsParent( _p : Node2D ) -> void:
 
 func unparentPlayer( _p : Node2D ) -> void:
 	_p.remove_child( player )
-	
