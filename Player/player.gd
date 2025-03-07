@@ -18,6 +18,8 @@ var maxHP : int = 6
 
 @onready var state_machine: PlayerStateMachine = $StateMachine
 @onready var hit_box: hitBox = $Interactions/HitBox
+@onready var audio : AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
+
 
 signal DirectionChanged( newDirection : Vector2 )
 signal PlayerDamaged( hurtBox : HurtBox )

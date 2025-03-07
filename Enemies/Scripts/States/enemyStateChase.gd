@@ -61,7 +61,10 @@ func physics( _delta : float) -> EnemyState:
 
 func _onPlayerEnter() -> void:
 	_canSeePlayer = true
-	if stateMachine.currentState is EnemyStateStun:
+	if( 
+		stateMachine.currentState is EnemyStateStun
+		or stateMachine.currentState is EnemyStateDestroy
+	):
 		return #prevents weird behavior
 	stateMachine.changeState( self )
 	pass
