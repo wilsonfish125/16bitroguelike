@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dyoad8y2vcdpa"]
+[gd_scene load_steps=47 format=3 uid="uid://dyoad8y2vcdpa"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_e4rxs"]
 [ext_resource type="Texture2D" uid="uid://46afmieuh2rt" path="res://Resources/Old Tilesets/Old Tilesets/playergreen1.png" id="2_v363s"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="13_egsra"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="14_rt4ae"]
 [ext_resource type="Script" path="res://Player/Abilities/abilities.gd" id="16_ktcs0"]
+[ext_resource type="PackedScene" uid="uid://brfx6gsyhxuw4" path="res://GeneralNodes/ItemMagnet/itemMagnet.tscn" id="17_7mgmt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4k85"]
 size = Vector2(12.3333, 16)
@@ -943,6 +944,9 @@ _data = {
 "default": SubResource("Animation_t6lg4")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_q665k"]
+radius = 34.0588
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 collision_mask = 16
@@ -1053,3 +1057,9 @@ libraries = {
 
 [node name="Abilities" type="Node" parent="."]
 script = ExtResource("16_ktcs0")
+
+[node name="ItemMagnet" parent="." instance=ExtResource("17_7mgmt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemMagnet"]
+shape = SubResource("CircleShape2D_q665k")
+debug_color = Color(0, 0.6, 0.7, 0.135)
