@@ -2,6 +2,8 @@
 class_name ItemPickup extends CharacterBody2D
 #manages the pickup-appble item scene, just assign this scene with script one of our item resources
 
+signal pickedUp
+
 @export var itemData : ItemData : set = _setItemData
 
 @onready var area_2d: Area2D = $Area2D
@@ -37,6 +39,7 @@ func itemPickedUp() -> void:
 	area_2d.body_entered.disconnect( _onBodyEntered )
 	audio_stream_player_2d.play()
 	visible = false
+	pickedUp.emit()
 	await audio_stream_player_2d.finished
 	queue_free()
 	pass

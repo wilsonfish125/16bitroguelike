@@ -624,7 +624,7 @@ position = Vector2(-190, 210)
 position = Vector2(-102, 130)
 
 [node name="PushableStatue" parent="." instance=ExtResource("6_t0wiu")]
-position = Vector2(-190, 322)
+position = Vector2(154, 418)
 
 [node name="LevelTransition2" parent="." instance=ExtResource("2_h4uem")]
 position = Vector2(2, 22.5)

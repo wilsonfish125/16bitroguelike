@@ -2263,11 +2263,12 @@ offset_bottom = 115.0
 text = "LAKE TO GO HERE"
 
 [node name="Label2" type="Label" parent="TempLabels"]
-offset_left = 163.333
-offset_top = 368.667
-offset_right = 334.333
-offset_bottom = 440.667
-text = "TEST DUNGEON ENTRY"
+offset_left = 80.6667
+offset_top = 366.0
+offset_right = 253.667
+offset_bottom = 438.0
+theme_override_constants/outline_size = 5
+text = "EVIL DUNGEON ENTRY"
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("3_cghyv")]
 position = Vector2(-30, 914)

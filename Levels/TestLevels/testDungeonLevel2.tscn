@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cgr2s7524inad"]
+[gd_scene load_steps=19 format=4 uid="uid://cgr2s7524inad"]
 
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="1_mvg87"]
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="2_xamrq"]
@@ -8,7 +8,8 @@
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="4_7wueu"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="7_ut4ft"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="8_dtqeh"]
-[ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="9_pkp2o"]
+[ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="9_vwlqs"]
+[ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="10_8kfxe"]
 [ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="10_y8os2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcqm5"]
@@ -654,46 +655,48 @@ centerPlayer = true
 size = 3
 side = 3
 
-[node name="Enemy Manager" type="Node2D" parent="."]
-
-[node name="Slime" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(-622, 498)
-
-[node name="Slime2" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(-478, 610)
-
-[node name="Slime5" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(218, 162)
-
-[node name="Slime6" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(322, 194)
-
-[node name="Slime3" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(-590, 602)
-
-[node name="Slime4" parent="Enemy Manager" instance=ExtResource("3_wbe6i")]
-position = Vector2(-478, 554)
-
-[node name="Knight" parent="Enemy Manager" instance=ExtResource("4_1rsst")]
-position = Vector2(50, 130)
-
-[node name="Knight2" parent="Enemy Manager" instance=ExtResource("4_1rsst")]
-position = Vector2(-214, 354)
-
-[node name="Knight3" parent="Enemy Manager" instance=ExtResource("4_1rsst")]
-position = Vector2(-470, 354)
-
 [node name="Treasurechest" parent="." instance=ExtResource("3_xmanm")]
 position = Vector2(-662, 410)
 itemData = ExtResource("4_7wueu")
 quantity = 3
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("7_ut4ft")]
-position = Vector2(1210, 474)
+position = Vector2(-566, 930)
 
 [node name="LockedDoor" parent="." instance=ExtResource("8_dtqeh")]
 position = Vector2(1202, 402)
 
-[node name="ItemPickup" parent="." instance=ExtResource("9_pkp2o")]
-position = Vector2(1258, 458)
+[node name="EnemyCounter" parent="." instance=ExtResource("9_vwlqs")]
+
+[node name="Slime" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(-622, 498)
+
+[node name="Slime2" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(-478, 610)
+
+[node name="Slime5" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(218, 162)
+
+[node name="Slime6" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(322, 194)
+
+[node name="Slime3" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(-590, 602)
+
+[node name="Slime4" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
+position = Vector2(-478, 554)
+
+[node name="Knight" parent="EnemyCounter" instance=ExtResource("4_1rsst")]
+position = Vector2(1370, 610)
+
+[node name="Knight2" parent="EnemyCounter" instance=ExtResource("4_1rsst")]
+position = Vector2(1002, 602)
+
+[node name="Knight3" parent="EnemyCounter" instance=ExtResource("4_1rsst")]
+position = Vector2(274, 138)
+
+[node name="ItemDropper" parent="." instance=ExtResource("10_8kfxe")]
+position = Vector2(1194, 658)
 itemData = ExtResource("10_y8os2")
+
+[connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]
