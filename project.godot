@@ -17,6 +17,7 @@ config/icon="res://Props/Interactables/Treasure Chest/chest.png"
 
 [autoload]
 
+AudioManager="*res://00Global/globalAudioManager.gd"
 LevelManager="*res://00Global/globalLevelManager.gd"
 PlayerHud="*res://GUI/PlayerHUD/playerHUD.tscn"
 PlayerManager="*res://00Global/globalPlayerManager.gd"

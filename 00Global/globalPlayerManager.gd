@@ -5,7 +5,6 @@ const PLAYER = preload("res://Player/player2.tscn")
 const INVENTORYDATA : InventoryData = preload("res://GUI/Inventory/playerInventory.tres")
 
 signal InteractPressed #any interactable thing can listen in, detection for button in states
-#we dont use this yet
 
 var player : Player
 var playerSpawned : bool = false

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pt8161lmjyx2"
-path="res://.godot/imported/push_stone.wav-c7e29fea481d53a24211a966499c7fc9.sample"
+path="res://.godot/imported/push_stone.wav-573081817042a1079d21465030828ce4.sample"
 
 [deps]
 
-source_file="res://Resources/Michael Games Sprites/push_stone.wav"
-dest_files=["res://.godot/imported/push_stone.wav-c7e29fea481d53a24211a966499c7fc9.sample"]
+source_file="res://Resources/Michael Games Sprites/example_music/push_stone.wav"
+dest_files=["res://.godot/imported/push_stone.wav-573081817042a1079d21465030828ce4.sample"]
 
 [params]
 

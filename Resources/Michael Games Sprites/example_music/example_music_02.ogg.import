@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvawfaolww78g"
+path="res://.godot/imported/example_music_02.ogg-d09b159c8a928305a516bbc25e961706.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/example_music/example_music_02.ogg"
+dest_files=["res://.godot/imported/example_music_02.ogg-d09b159c8a928305a516bbc25e961706.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

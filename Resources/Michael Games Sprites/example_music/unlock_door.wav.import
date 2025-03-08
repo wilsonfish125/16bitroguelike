@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bwm6guilsd83h"
-path="res://.godot/imported/unlock_door.wav-c91d91dc45b3bf2884493e305b24eda8.sample"
+path="res://.godot/imported/unlock_door.wav-16c6fd315405cf767fea53ddbc987e22.sample"
 
 [deps]
 
-source_file="res://Resources/Michael Games Sprites/unlock_door.wav"
-dest_files=["res://.godot/imported/unlock_door.wav-c91d91dc45b3bf2884493e305b24eda8.sample"]
+source_file="res://Resources/Michael Games Sprites/example_music/unlock_door.wav"
+dest_files=["res://.godot/imported/unlock_door.wav-16c6fd315405cf767fea53ddbc987e22.sample"]
 
 [params]
 

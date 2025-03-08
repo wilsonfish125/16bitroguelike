@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdgj0sg0djhne"
-path="res://.godot/imported/lever-01.wav-fc799e95f6f2df659c728b956f4bf7c3.sample"
+path="res://.godot/imported/lever-01.wav-fca54d7f8bc2c09fcf67e7ba45c80076.sample"
 
 [deps]
 
-source_file="res://Resources/Michael Games Sprites/lever-01.wav"
-dest_files=["res://.godot/imported/lever-01.wav-fc799e95f6f2df659c728b956f4bf7c3.sample"]
+source_file="res://Resources/Michael Games Sprites/example_music/lever-01.wav"
+dest_files=["res://.godot/imported/lever-01.wav-fca54d7f8bc2c09fcf67e7ba45c80076.sample"]
 
 [params]
 

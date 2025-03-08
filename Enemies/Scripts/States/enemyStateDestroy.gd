@@ -61,7 +61,7 @@ func _onAnimationFinished( _a : String ) -> void:
 func disableHurtBox() -> void:
 	var hurtBox : HurtBox = enemy.get_node_or_null("HurtBox")
 	if hurtBox != null:
-		hurtBox.monitorable = false
+		hurtBox.set_deferred( "monitorable", false )
 
 #create a function to drop the items
 func dropItems() -> void:

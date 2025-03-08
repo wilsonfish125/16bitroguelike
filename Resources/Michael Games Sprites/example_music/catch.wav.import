@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dystitxqv7kr6"
-path="res://.godot/imported/catch.wav-94dff48a2b525ac8d966bd487031fc82.sample"
+path="res://.godot/imported/catch.wav-2d7f1e619da1782a2502d8b055057198.sample"
 
 [deps]
 
-source_file="res://Resources/Michael Games Sprites/catch.wav"
-dest_files=["res://.godot/imported/catch.wav-94dff48a2b525ac8d966bd487031fc82.sample"]
+source_file="res://Resources/Michael Games Sprites/example_music/catch.wav"
+dest_files=["res://.godot/imported/catch.wav-2d7f1e619da1782a2502d8b055057198.sample"]
 
 [params]
 
