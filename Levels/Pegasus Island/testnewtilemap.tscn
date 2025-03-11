@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=27 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -11,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="5_fbb2h"]
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="6_wcj0u"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="7_ubvom"]
+[ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="12_j7onb"]
+[ext_resource type="PackedScene" uid="uid://dbd0cgx5c0x5s" path="res://NPC/NPCBehaviorWander.tscn" id="13_ifhc3"]
+[ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="13_t8q1j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7fl2"]
 texture = ExtResource("1_0hxoe")
@@ -2313,3 +2316,19 @@ level = "res://Levels/TestLevels/testDungeonLevel.tscn"
 centerPlayer = true
 size = 1
 side = 2
+
+[node name="NPC" parent="." instance=ExtResource("12_j7onb")]
+position = Vector2(111.931, 1026)
+npcResource = ExtResource("13_t8q1j")
+
+[node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("13_ifhc3")]
+wanderRange = 1
+wanderSpeed = 60.0
+
+[node name="NPC2" parent="." instance=ExtResource("12_j7onb")]
+position = Vector2(1050, 1010)
+
+[node name="NpcBehaviorWander" parent="NPC2" instance=ExtResource("13_ifhc3")]
+wanderRange = 3
+wanderSpeed = 90.0
+wanderDuration = 2.0

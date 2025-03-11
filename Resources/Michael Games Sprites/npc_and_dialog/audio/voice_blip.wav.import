@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b0yl8fsxoxwmx"
+path="res://.godot/imported/voice_blip.wav-c097ee4470cc687d69c163943445f9fa.sample"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/npc_and_dialog/audio/voice_blip.wav"
+dest_files=["res://.godot/imported/voice_blip.wav-c097ee4470cc687d69c163943445f9fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

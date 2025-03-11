@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" path="res://Props/Interactables/Pushable Statue/pushableStatue.gd" id="1_qpyql"]
 [ext_resource type="Texture2D" uid="uid://cwvr6oc2hniqy" path="res://Resources/Michael Games Sprites/dungeon_props.png" id="2_1cpjg"]
-[ext_resource type="AudioStream" uid="uid://pt8161lmjyx2" path="res://Resources/Michael Games Sprites/push_stone.wav" id="3_013b6"]
+[ext_resource type="AudioStream" uid="uid://pt8161lmjyx2" path="res://Resources/Michael Games Sprites/example_music/push_stone.wav" id="3_013b6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhnj2"]
 size = Vector2(29.3333, 10)
 
 [node name="PushableStatue" type="RigidBody2D"]
+z_index = 2
 texture_filter = 1
 collision_layer = 16
 collision_mask = 273

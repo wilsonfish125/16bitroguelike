@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://8hkerrqbw760"]
+
+[ext_resource type="Script" path="res://NPC/Scripts/npcResource.gd" id="1_ht27n"]
+[ext_resource type="Texture2D" uid="uid://52l5j1hptjyx" path="res://Resources/Old Tilesets/Old Tilesets/npcGameboy.png" id="2_wgibh"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_g0jql"]
+
+[resource]
+script = ExtResource("1_ht27n")
+npcName = "Big Johnny"
+sprite = ExtResource("2_wgibh")
+portrait = SubResource("ImageTexture_g0jql")
+dialogueAudioPitch = ""

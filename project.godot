@@ -39,6 +39,7 @@ folder_colors={
 "res://GeneralNodes/": "green",
 "res://Items/": "yellow",
 "res://Levels/": "purple",
+"res://NPC/": "pink",
 "res://Player/": "pink",
 "res://Props/": "orange",
 "res://Resources/": "blue"
@@ -79,4 +80,5 @@ ability={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
