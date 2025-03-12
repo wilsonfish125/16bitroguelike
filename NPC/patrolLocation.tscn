@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://la2r0u1m7tbn"]
+
+[ext_resource type="Script" path="res://NPC/Scripts/patrolLocation.gd" id="1_7ok6n"]
+
+[sub_resource type="Gradient" id="Gradient_xu0s3"]
+offsets = PackedFloat32Array(0, 0.581921, 0.819209, 0.988701, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.78, 0.78, 0.78, 0, 0.861189, 0.861189, 0.861189, 1, 0.892655, 0.892655, 0.892655, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ecsuc"]
+gradient = SubResource("Gradient_xu0s3")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="PatrolLocation" type="Node2D"]
+show_behind_parent = true
+texture_filter = 1
+script = ExtResource("1_7ok6n")
+waitTime = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.514)
+texture = SubResource("GradientTexture2D_ecsuc")
+
+[node name="Line2D" type="Line2D" parent="Sprite2D"]
+points = PackedVector2Array(0, 0, 12, 0)
+width = 1.0
+default_color = Color(1, 1, 1, 0.697)
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -19.6667
+offset_top = -13.3333
+offset_right = 20.3333
+offset_bottom = 10.6667
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Sprite2D"]
+offset_left = -21.3333
+offset_top = 7.0
+offset_right = 22.6667
+offset_bottom = 31.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 11
+text = "wait: 1s"
+horizontal_alignment = 1

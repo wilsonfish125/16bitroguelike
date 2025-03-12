@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=30 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="12_j7onb"]
 [ext_resource type="PackedScene" uid="uid://dbd0cgx5c0x5s" path="res://NPC/NPCBehaviorWander.tscn" id="13_ifhc3"]
 [ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="13_t8q1j"]
+[ext_resource type="Resource" uid="uid://dasklqnbrewy5" path="res://NPC/npcSmallJohnny.tres" id="15_t1p6o"]
+[ext_resource type="PackedScene" uid="uid://spdecvl5sh88" path="res://NPC/NPCBehaviorPatrol.tscn" id="16_y6ssu"]
+[ext_resource type="PackedScene" uid="uid://la2r0u1m7tbn" path="res://NPC/patrolLocation.tscn" id="17_n80ir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7fl2"]
 texture = ExtResource("1_0hxoe")
@@ -2322,13 +2325,22 @@ position = Vector2(111.931, 1026)
 npcResource = ExtResource("13_t8q1j")
 
 [node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("13_ifhc3")]
-wanderRange = 1
 wanderSpeed = 60.0
 
 [node name="NPC2" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(1050, 1010)
+npcResource = ExtResource("15_t1p6o")
 
-[node name="NpcBehaviorWander" parent="NPC2" instance=ExtResource("13_ifhc3")]
-wanderRange = 3
-wanderSpeed = 90.0
-wanderDuration = 2.0
+[node name="NpcBehaviorPatrol" parent="NPC2" instance=ExtResource("16_y6ssu")]
+
+[node name="PatrolLocation" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(125.333, -2.66669)
+
+[node name="PatrolLocation2" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(2.66666, -2.66665)
+
+[node name="PatrolLocation3" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(61.3333, -61.3333)

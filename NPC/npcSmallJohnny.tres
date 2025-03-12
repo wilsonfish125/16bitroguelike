@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://dasklqnbrewy5"]
+
+[ext_resource type="Script" path="res://NPC/Scripts/npcResource.gd" id="1_0v4ek"]
+[ext_resource type="Texture2D" uid="uid://52l5j1hptjyx" path="res://Resources/Old Tilesets/Old Tilesets/npcGameboy.png" id="2_wj7ba"]
+
+[resource]
+script = ExtResource("1_0v4ek")
+npcName = "Small Johnny"
+sprite = ExtResource("2_wj7ba")
+dialogueAudioPitch = ""
