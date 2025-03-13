@@ -26,7 +26,7 @@ func _process( _delta: float ) -> void:
 	if Engine.is_editor_hint():
 		return
 	
-	if npc.global_position.distance_to( target.targetPosition ) < 1:
+	if npc.global_position.distance_to( target.targetPosition ) < 10:
 		start()
 
 
@@ -41,10 +41,8 @@ func gatherPatrolLocations( _n : Node = null ) -> void: #only passing through a 
 			for i in patrolLocations.size():
 				var _p = patrolLocations[ i ] as PatrolLocation
 				
-				
 				if not _p.transformChanged.is_connected( gatherPatrolLocations ):
 					_p.transformChanged.connect( gatherPatrolLocations )
-				
 				
 				_p.updateLabel( str(i) )
 				_p.modulate = _getColourByIndex( i )
@@ -63,7 +61,6 @@ func start() -> void:
 		return
 	
 	 #IDLE PHASE
-	npc.global_position = target.targetPosition
 	npc.state = "idle"
 	npc.velocity = Vector2.ZERO
 	npc.updateAnimation()
@@ -84,10 +81,8 @@ func start() -> void:
 	 #WALK PHASE
 	
 	npc.state = "walk"
-	var _dir = global_position.direction_to( target.global_position )
-	npc.direction = _dir
-	npc.velocity = walkSpeed * _dir
 	npc.updateDirection( target.targetPosition )
+	npc.velocity = walkSpeed * npc.direction
 	npc.updateAnimation()
 
 func _getColourByIndex( i : int ) -> Color :
