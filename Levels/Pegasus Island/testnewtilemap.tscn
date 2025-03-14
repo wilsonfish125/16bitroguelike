@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=33 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -14,9 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="12_j7onb"]
 [ext_resource type="PackedScene" uid="uid://dbd0cgx5c0x5s" path="res://NPC/NPCBehaviorWander.tscn" id="13_ifhc3"]
 [ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="13_t8q1j"]
+[ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="15_ekmoi"]
 [ext_resource type="Resource" uid="uid://dasklqnbrewy5" path="res://NPC/npcSmallJohnny.tres" id="15_t1p6o"]
+[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="16_ef4rs"]
 [ext_resource type="PackedScene" uid="uid://spdecvl5sh88" path="res://NPC/NPCBehaviorPatrol.tscn" id="16_y6ssu"]
 [ext_resource type="PackedScene" uid="uid://la2r0u1m7tbn" path="res://NPC/patrolLocation.tscn" id="17_n80ir"]
+[ext_resource type="Resource" uid="uid://c7gwignismips" path="res://NPC/npcArkusYoung.tres" id="17_wvqx4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7fl2"]
 texture = ExtResource("1_0hxoe")
@@ -2326,6 +2329,21 @@ npcResource = ExtResource("13_t8q1j")
 
 [node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("13_ifhc3")]
 wanderSpeed = 60.0
+
+[node name="DialogueInteraction" parent="NPC" instance=ExtResource("15_ekmoi")]
+enabled = true
+
+[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction"]
+script = ExtResource("16_ef4rs")
+text = "Yo Wuddup
+I'm Big Johnny"
+npcInfo = ExtResource("13_t8q1j")
+
+[node name="DialogueText2" type="Node" parent="NPC/DialogueInteraction"]
+script = ExtResource("16_ef4rs")
+text = "[wave]woooah no way[/wave]
+You're THE big johnny?"
+npcInfo = ExtResource("17_wvqx4")
 
 [node name="NPC2" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(1050, 1010)

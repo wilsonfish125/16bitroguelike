@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=2 format=3 uid="uid://c7gwignismips"]
+
+[ext_resource type="Script" path="res://NPC/Scripts/npcResource.gd" id="1_l7h54"]
+
+[resource]
+script = ExtResource("1_l7h54")
+npcName = "Arkus"
+dialogueAudioPitch = ""
