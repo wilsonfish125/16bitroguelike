@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d36l7keq0j2v"]
+[gd_scene load_steps=17 format=3 uid="uid://d36l7keq0j2v"]
 
 [ext_resource type="Script" path="res://GUI/DialogueSystem/Scripts/dialogueSystem.gd" id="1_kw4ey"]
 [ext_resource type="Texture2D" uid="uid://dma5h7fdlohxx" path="res://GUI/DialogueSystem/text-bubble.png" id="2_173aa"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://hfgmnua5imtm" path="res://GUI/Fonts/m6x11.ttf" id="5_nldyi"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialoguePortrait.gd" id="6_2gesg"]
 [ext_resource type="AudioStream" uid="uid://b0yl8fsxoxwmx" path="res://Resources/Michael Games Sprites/npc_and_dialog/audio/voice_blip.wav" id="6_3axov"]
+[ext_resource type="Theme" uid="uid://i50i312dgi5k" path="res://GUI/DialogueSystem/dialogueChoiceTheme.tres" id="9_vxeod"]
 
 [sub_resource type="Gradient" id="Gradient_vnwbh"]
 offsets = PackedFloat32Array(0, 0.99435)
@@ -79,7 +80,7 @@ _data = {
 
 [node name="DialogueSystem" type="CanvasLayer"]
 process_mode = 3
-layer = 0
+layer = 3
 script = ExtResource("1_kw4ey")
 
 [node name="DialogueUI" type="Control" parent="."]
@@ -181,3 +182,35 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_3b6hk")
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -344.0
+offset_right = 148.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme = ExtResource("9_vxeod")
+alignment = 1
+
+[node name="Button" type="Button" parent="DialogueUI/VBoxContainer"]
+layout_mode = 2
+text = "Choice 1..."
+alignment = 0
+
+[node name="Button2" type="Button" parent="DialogueUI/VBoxContainer"]
+layout_mode = 2
+text = "Choice 1..."
+alignment = 0
+
+[node name="Button3" type="Button" parent="DialogueUI/VBoxContainer"]
+layout_mode = 2
+text = "Choice 1..."
+alignment = 0

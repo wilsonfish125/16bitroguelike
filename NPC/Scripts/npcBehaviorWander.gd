@@ -35,6 +35,8 @@ func start() -> void:
 	npc.velocity = Vector2.ZERO
 	npc.updateAnimation()
 	await get_tree().create_timer( randf() * idleDuration + idleDuration ).timeout 
+	if npc.canDoBehavior == false:
+		return
 	
 	 #WALK PHASE
 	npc.state = "walk"

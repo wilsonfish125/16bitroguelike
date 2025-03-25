@@ -9,6 +9,12 @@ var patrolLocations : Array = [ PatrolLocation ]
 var currentLocationIndex : int = 0
 var target : PatrolLocation
 
+var hasStarted : bool = false
+var lastPhase : String = ""
+var direction : Vector2
+
+@onready var timer: Timer = $Timer
+
 
 func _ready() -> void:
 	gatherPatrolLocations()
@@ -27,7 +33,7 @@ func _process( _delta: float ) -> void:
 		return
 	
 	if npc.global_position.distance_to( target.targetPosition ) < 10:
-		start()
+		idlePhase()
 
 
 func gatherPatrolLocations( _n : Node = null ) -> void: #only passing through a node to satisfy childenteredtree
@@ -60,7 +66,16 @@ func start() -> void:
 	if npc.canDoBehavior == false or patrolLocations.size() < 2:
 		return
 	
-	 #IDLE PHASE
+	if hasStarted == true:
+		if timer.time_left == 0: #we use the timer for the idle phase, if there is still time left we are still in the idle phase dummy
+			walkPhase()
+		return
+	
+	hasStarted = true
+	idlePhase()
+
+func idlePhase() -> void:
+		 #IDLE PHASE USED TO BE IN START
 	npc.state = "idle"
 	npc.velocity = Vector2.ZERO
 	npc.updateAnimation()
@@ -73,17 +88,24 @@ func start() -> void:
 	
 	target = patrolLocations[ currentLocationIndex ]
 	
-	await get_tree().create_timer( waitTime ).timeout
+	if waitTime > 0:
+		timer.start( waitTime )
+		await timer.timeout
 	
 	if npc.canDoBehavior == false:
 		return
 	
-	 #WALK PHASE
-	
+	walkPhase()
+
+func walkPhase() -> void:
+		 #WALK PHASE USED TO BE IN START
 	npc.state = "walk"
+	direction = global_position.direction_to( target.targetPosition )
+	npc.direction = direction
+	npc.velocity = walkSpeed * direction
 	npc.updateDirection( target.targetPosition )
-	npc.velocity = walkSpeed * npc.direction
 	npc.updateAnimation()
+
 
 func _getColourByIndex( i : int ) -> Color :
 	var colourCount : int = COLOURS.size()

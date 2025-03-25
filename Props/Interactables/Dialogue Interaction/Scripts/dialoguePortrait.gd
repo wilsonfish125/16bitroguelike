@@ -23,13 +23,19 @@ func checkMouthOpen( l : String ) -> void:
 		audio.pitch_scale = randf_range( audioPitchBase - 0.04, audioPitchBase + 0.04 )
 		audio.play()
 	elif '.,!?'.contains( l ):
+		audio.pitch_scale = audioPitchBase - 0.1
+		audio.play()
 		mouthOpenFrames = 0
 	
 	if mouthOpenFrames > 0:
 		mouthOpenFrames -= 1
 	
 	if mouthOpenFrames == 0:
-		openMouth = false
+		if openMouth == true:
+			openMouth = false
+			audio.pitch_scale = randf_range( audioPitchBase - 0.08, audioPitchBase + 0.02 )
+			audio.play()
+
 	
 
 func updatePortrait() -> void:

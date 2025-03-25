@@ -24,6 +24,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	#lets decide if we wanna show the puase screen or not
 	if event.is_action_pressed("pause"):
 		if isPaused == false: #hey its kinda like a flip flop (see below functions)
+			if DialogueSystem.isActive:
+				return
 			showPauseMenu()
 		else:
 			hidePauseMenu()
