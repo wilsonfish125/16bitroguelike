@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://d36l7keq0j2v"]
+[gd_scene load_steps=16 format=3 uid="uid://d36l7keq0j2v"]
 
 [ext_resource type="Script" path="res://GUI/DialogueSystem/Scripts/dialogueSystem.gd" id="1_kw4ey"]
 [ext_resource type="Texture2D" uid="uid://dma5h7fdlohxx" path="res://GUI/DialogueSystem/text-bubble.png" id="2_173aa"]
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="3_fiuji"]
 [ext_resource type="FontFile" uid="uid://8c0v8ui2crtu" path="res://GUI/Fonts/Abaddon Bold.ttf" id="4_ubga4"]
+[ext_resource type="Texture2D" uid="uid://crtxgq14u76k" path="res://Resources/Michael Games Sprites/npc_and_dialog/sprites/portraits/npc_portrait_01.png" id="5_4qpk4"]
 [ext_resource type="FontFile" uid="uid://hfgmnua5imtm" path="res://GUI/Fonts/m6x11.ttf" id="5_nldyi"]
+[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialoguePortrait.gd" id="6_2gesg"]
+[ext_resource type="AudioStream" uid="uid://b0yl8fsxoxwmx" path="res://Resources/Michael Games Sprites/npc_and_dialog/audio/voice_blip.wav" id="6_3axov"]
 
 [sub_resource type="Gradient" id="Gradient_vnwbh"]
 offsets = PackedFloat32Array(0, 0.99435)
@@ -25,8 +28,6 @@ texture_margin_left = 16.0
 texture_margin_top = 16.0
 texture_margin_right = 16.0
 texture_margin_bottom = 16.0
-
-[sub_resource type="ImageTexture" id="ImageTexture_niw0o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84eqh"]
 content_margin_left = 5.0
@@ -108,8 +109,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -856.0
-offset_top = -288.0
+offset_left = -960.0
+offset_top = -304.0
 offset_right = -40.0
 offset_bottom = -40.0
 grow_horizontal = 0
@@ -131,9 +132,9 @@ scroll_active = false
 
 [node name="NameLabel" type="Label" parent="DialogueUI"]
 layout_mode = 0
-offset_left = 432.0
+offset_left = 328.0
 offset_top = 376.0
-offset_right = 928.0
+offset_right = 824.0
 offset_bottom = 429.0
 theme_override_colors/font_color = Color(0.901961, 0.870588, 0.811765, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -144,13 +145,20 @@ theme_override_font_sizes/font_size = 40
 text = "NAME"
 
 [node name="PortraitSprite" type="Sprite2D" parent="DialogueUI"]
-position = Vector2(35.045, 421.05)
-scale = Vector2(72, 40)
-texture = SubResource("ImageTexture_niw0o")
+texture_filter = 1
+position = Vector2(168, 472)
+scale = Vector2(3.32, 3.32)
+texture = ExtResource("5_4qpk4")
+hframes = 4
+script = ExtResource("6_2gesg")
 
 [node name="Timer" type="Timer" parent="DialogueUI"]
+one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogueUI"]
+stream = ExtResource("6_3axov")
+max_polyphony = 6
+bus = &"SFX"
 
 [node name="DialogueProgressIndicator" type="PanelContainer" parent="DialogueUI"]
 self_modulate = Color(0.346976, 0.355272, 0.530482, 1)

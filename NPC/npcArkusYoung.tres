@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_l7h54")
 npcName = "Arkus"
-dialogueAudioPitch = ""
+dialogueAudioPitch = 1.1

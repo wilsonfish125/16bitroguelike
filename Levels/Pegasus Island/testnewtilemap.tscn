@@ -2331,12 +2331,11 @@ npcResource = ExtResource("13_t8q1j")
 wanderSpeed = 60.0
 
 [node name="DialogueInteraction" parent="NPC" instance=ExtResource("15_ekmoi")]
-enabled = true
 
 [node name="DialogueText" type="Node" parent="NPC/DialogueInteraction"]
 script = ExtResource("16_ef4rs")
-text = "Yo Wuddup
-I'm Big Johnny"
+text = "Yo Wuddup.
+I'm Big Johnny."
 npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueText2" type="Node" parent="NPC/DialogueInteraction"]
@@ -2357,16 +2356,31 @@ position = Vector2(10.6667, -5.33334)
 
 [node name="PatrolLocation2" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(112, -5.33334)
+position = Vector2(-109.333, -8.00001)
 
 [node name="PatrolLocation3" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
 modulate = Color(0, 1, 0, 1)
-position = Vector2(50.6667, 34.6667)
+position = Vector2(-162.667, 58.6667)
 
 [node name="PatrolLocation4" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
 modulate = Color(0, 1, 1, 1)
-position = Vector2(120, -29.3333)
+position = Vector2(-128, 88)
 
 [node name="PatrolLocation5" parent="NPC2/NpcBehaviorPatrol" instance=ExtResource("17_n80ir")]
 modulate = Color(0, 0, 1, 1)
-position = Vector2(56, -34.6667)
+position = Vector2(-53.3333, 53.3333)
+
+[node name="DialogueInteraction" parent="NPC2" instance=ExtResource("15_ekmoi")]
+
+[node name="DialogueText" type="Node" parent="NPC2/DialogueInteraction"]
+script = ExtResource("16_ef4rs")
+text = "Yo it's me Small Johnny
+My brother [wave]BIG JOHNNY[/wave] is just over west.
+I think he wants you.."
+npcInfo = ExtResource("15_t1p6o")
+
+[node name="DialogueText2" type="Node" parent="NPC2/DialogueInteraction"]
+script = ExtResource("16_ef4rs")
+text = "[shake]Big Johnny wants me?![/shake]
+Alright... I'll check it out"
+npcInfo = ExtResource("17_wvqx4")

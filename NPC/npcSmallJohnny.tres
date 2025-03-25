@@ -7,4 +7,4 @@
 script = ExtResource("1_0v4ek")
 npcName = "Small Johnny"
 sprite = ExtResource("2_wj7ba")
-dialogueAudioPitch = ""
+dialogueAudioPitch = 1.05
