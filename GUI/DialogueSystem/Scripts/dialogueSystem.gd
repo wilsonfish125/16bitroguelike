@@ -95,6 +95,7 @@ func startDialogue() -> void:
 #once set, start text typing timer to sync with portraitsprite
 func setDialogueText( _d : DialogueText ):
 	content.text = _d.text
+	choiceOptions.visible = false
 	name_label.text = _d.npcInfo.npcName
 	portrait_sprite.texture = _d.npcInfo.portrait
 	portrait_sprite.audioPitchBase = _d.npcInfo.dialogueAudioPitch
@@ -116,6 +117,9 @@ func setDialogueChoice( _d : DialogueChoice ):
 		_newChoice.text = _d.dialogueBranches[i].text
 		_newChoice.pressed.connect( _dialogueChoiceSelected.bind( _d.dialogueBranches[i] ) ) #bind allows us to pass another parameter
 		choiceOptions.add_child( _newChoice )
+	
+	if Engine.is_editor_hint():
+		return
 	
 	await get_tree().process_frame
 	choiceOptions.get_child( 0 ).grab_focus()

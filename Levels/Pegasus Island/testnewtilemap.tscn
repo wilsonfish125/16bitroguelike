@@ -2354,22 +2354,28 @@ npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueChoice" type="Node" parent="NPC/DialogueInteraction"]
 script = ExtResource("18_55lqf")
+npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueBranch" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
 script = ExtResource("19_v3gbc")
 text = "Yeah Big Johnny!"
+npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch"]
 script = ExtResource("16_ef4rs")
 text = "Awesome! You're a hero dude!"
+npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueBranch2" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
 script = ExtResource("19_v3gbc")
-text = "Nah man"
+text = "Nah man, too busy."
+npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch2"]
 script = ExtResource("16_ef4rs")
-text = "Duuude what the fuck man..."
+text = "[wave]Duuude what the fuck man...[/wave]
+why woudld you doooo that :("
+npcInfo = ExtResource("13_t8q1j")
 
 [node name="NPC2" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(1050, 1010)
