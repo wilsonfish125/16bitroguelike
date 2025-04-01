@@ -2363,7 +2363,10 @@ npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch"]
 script = ExtResource("16_ef4rs")
-text = "Awesome! You're a hero dude!"
+text = "Awesome! You're a hero dude!
+So you gotta get my thingo from that evil cave...
+
+Surely you got this!"
 npcInfo = ExtResource("13_t8q1j")
 
 [node name="DialogueBranch2" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]

@@ -35,10 +35,13 @@ func saveGame() -> void:
 	GameSaved.emit()
 	pass
 
+func getSaveFile() -> FileAccess:
+	return FileAccess.open( SAVEPATH + "save.sav", FileAccess.READ )
+
 
 func loadGame() -> void:
 	#we want this function to open the file we saved, get the data outta it, and update the current savefile, and update the player
-	var file := FileAccess.open( SAVEPATH + "save.sav", FileAccess.READ )
+	var file := getSaveFile()
 	var json := JSON.new()
 	json.parse( file.get_line() ) #gonna get the first line and populate the new empty json
 	#now lets convert silly json back into a file we can use lel

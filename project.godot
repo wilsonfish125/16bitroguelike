@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Sunspire"
-run/main_scene="res://Levels/Pegasus Island/testnewtilemap.tscn"
+run/main_scene="res://Levels/Menu Levels/TitleScreen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+boot_splash/show_image=false
 config/icon="res://Props/Interactables/Treasure Chest/chest.png"
 
 [autoload]
