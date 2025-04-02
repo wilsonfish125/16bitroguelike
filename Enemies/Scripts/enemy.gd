@@ -77,6 +77,7 @@ func _takeDamage( hurtBox : HurtBox ) -> void: #in the future we can add shit ea
 	if invulnerable == true:
 		return 
 	hp -= hurtBox.damage #Remember the power of passing through classnames to get the whole scripts vars
+	PlayerManager.shakeCamera( 1 )
 	if hp > 0:
 		enemy_damaged.emit( hurtBox ) #states have access to data as we are passing thru hurtbox
 	else:

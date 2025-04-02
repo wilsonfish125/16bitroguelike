@@ -4,6 +4,7 @@ extends Node
 const PLAYER = preload("res://Player/player2.tscn")
 const INVENTORYDATA : InventoryData = preload("res://GUI/Inventory/playerInventory.tres")
 
+signal CameraShook( trauma : float )
 signal InteractPressed #any interactable thing can listen in, detection for button in states
 
 var interactHandled : bool = true
@@ -51,3 +52,6 @@ func playAudio( _audio : AudioStream ) -> void:
 func interact() -> void:
 	interactHandled = false
 	InteractPressed.emit()
+
+func shakeCamera( trauma : float = 1 ) -> void:
+	CameraShook.emit( trauma ) 

@@ -30,6 +30,7 @@ func Enter() -> void:
 	player.updateAnimation("Stun")
 	player.makeInvulnerable( invulnerableDuration ) 
 	player.effect_animation_player.play("damaged")
+	PlayerManager.shakeCamera( hurtBox.damage )
 	pass
 
 # What happens when the player exits this state?
