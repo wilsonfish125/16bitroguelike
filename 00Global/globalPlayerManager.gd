@@ -6,6 +6,7 @@ const INVENTORYDATA : InventoryData = preload("res://GUI/Inventory/playerInvento
 
 signal InteractPressed #any interactable thing can listen in, detection for button in states
 
+var interactHandled : bool = true
 var player : Player
 var playerSpawned : bool = false
 
@@ -47,5 +48,6 @@ func playAudio( _audio : AudioStream ) -> void:
 	player.audio.stream = _audio
 	player.audio.play()
 
-func emitInteractPressed() -> void:
+func interact() -> void:
+	interactHandled = false
 	InteractPressed.emit()

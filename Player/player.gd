@@ -20,6 +20,10 @@ var maxHP : int = 6
 @onready var hit_box: hitBox = $Interactions/HitBox
 @onready var audio : AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
 
+@onready var lift: StateLift = $StateMachine/Lift
+@onready var held_item: Node2D = $Sprite2D/HeldItem
+@onready var carry: StateCarry = $StateMachine/Carry
+
 
 signal DirectionChanged( newDirection : Vector2 )
 signal PlayerDamaged( hurtBox : HurtBox )
@@ -103,4 +107,10 @@ func makeInvulnerable( _duration : float = 1.0 ) -> void:
 	
 	invulnerable = false
 	hit_box.monitoring = true
+	pass
+
+func pickupItem( _t : Throwable ) -> void:
+	state_machine.changeState( lift )
+	# store throwable object so we have a reference
+	carry.throwable = _t
 	pass

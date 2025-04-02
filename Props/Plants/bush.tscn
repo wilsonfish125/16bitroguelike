@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://q5apn55fptji"]
+[gd_scene load_steps=7 format=3 uid="uid://q5apn55fptji"]
 
 [ext_resource type="Texture2D" uid="uid://ckulg5avmngrq" path="res://Props/Sprites/vush.png" id="1_cdbjd"]
 [ext_resource type="Script" path="res://Props/Plants/bush.gd" id="1_g08fi"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="2_3ga2k"]
+[ext_resource type="PackedScene" uid="uid://wecm5kmp7830" path="res://Props/Interactables/Throwable/throwable.tscn" id="4_28fxs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ubi7"]
 size = Vector2(10, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdidi"]
+size = Vector2(45, 36)
 
 [node name="Bush" type="Node2D"]
 script = ExtResource("1_g08fi")
@@ -39,3 +43,9 @@ collision_mask = 0
 z_index = 1
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_4ubi7")
+
+[node name="Throwable" parent="." instance=ExtResource("4_28fxs")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Throwable"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_pdidi")

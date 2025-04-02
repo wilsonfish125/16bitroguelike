@@ -1,7 +1,8 @@
 class_name HurtBox extends Area2D
 
-@export var damage : int = 1 #set to 1 by default we can change this its chill 
+signal didDamage
 
+@export var damage : int = 1 #set to 1 by default we can change this its chill 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,5 +17,6 @@ func _process(_delta: float) -> void:
 
 func areaEntered( a : Area2D ) -> void:
 	if a is hitBox: #This is why classnames and statictype are important! Only way to target in if statement like this
+		didDamage.emit()
 		a.takeDamage( self )
 	pass
