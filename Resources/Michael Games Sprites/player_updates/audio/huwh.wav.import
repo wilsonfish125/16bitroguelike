@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtqllr406k2hl"
+path="res://.godot/imported/huwh.wav-9b4dbc41a2ec74be23c3a491e3164f3c.sample"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/player_updates/audio/huwh.wav"
+dest_files=["res://.godot/imported/huwh.wav-9b4dbc41a2ec74be23c3a491e3164f3c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=36 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://c7gwignismips" path="res://NPC/npcArkusYoung.tres" id="17_wvqx4"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="18_55lqf"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="19_v3gbc"]
+[ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="23_plvyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7fl2"]
 texture = ExtResource("1_0hxoe")
@@ -2420,3 +2421,6 @@ script = ExtResource("16_ef4rs")
 text = "[shake]Big Johnny wants me?![/shake]
 Alright... I'll check it out"
 npcInfo = ExtResource("17_wvqx4")
+
+[node name="Pot" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-302, 1138)

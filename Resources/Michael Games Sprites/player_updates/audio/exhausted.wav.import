@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cifslihjmkdhn"
+path="res://.godot/imported/exhausted.wav-a751e07b807e840ac52fb7108c0d5c2d.sample"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/player_updates/audio/exhausted.wav"
+dest_files=["res://.godot/imported/exhausted.wav-a751e07b807e840ac52fb7108c0d5c2d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
