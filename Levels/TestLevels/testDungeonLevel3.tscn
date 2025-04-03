@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=4 uid="uid://j2guha514j5r"]
+[gd_scene load_steps=14 format=4 uid="uid://j2guha514j5r"]
 
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_1rgcn"]
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="1_f44vr"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_c46xi"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_durrk"]
 [ext_resource type="PackedScene" uid="uid://32xgchm26o8g" path="res://Props/Torches/torchDungeon.tscn" id="5_wrxwo"]
+[ext_resource type="PackedScene" uid="uid://66k76ctxkn4x" path="res://Enemies/Hazards/Energy Orb/energyOrb.tscn" id="6_a0qeb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq8rx"]
 texture = ExtResource("1_f44vr")
@@ -650,10 +651,7 @@ size = 3
 side = 3
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_durrk")]
-position = Vector2(0, 584)
-
-[node name="TorchDungeon" parent="." instance=ExtResource("5_wrxwo")]
-position = Vector2(-8, 232)
+position = Vector2(224, 224)
 
 [node name="TorchDungeon2" parent="." instance=ExtResource("5_wrxwo")]
 position = Vector2(688, -160)
@@ -671,3 +669,6 @@ position = Vector2(672, 424)
 color = Color(0.337215, 0.265723, 0.514635, 1)
 energy = 0.8
 blend_mode = 2
+
+[node name="EnergyOrb" parent="." instance=ExtResource("6_a0qeb")]
+position = Vector2(-152, -72)

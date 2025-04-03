@@ -44,7 +44,8 @@ folder_colors={
 "res://NPC/": "pink",
 "res://Player/": "pink",
 "res://Props/": "orange",
-"res://Resources/": "blue"
+"res://Resources/": "blue",
+"res://Shaders & Materials/": "gray"
 }
 
 [gui]
