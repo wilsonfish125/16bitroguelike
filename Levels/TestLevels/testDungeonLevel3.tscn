@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_c46xi"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_durrk"]
 [ext_resource type="PackedScene" uid="uid://32xgchm26o8g" path="res://Props/Torches/torchDungeon.tscn" id="5_wrxwo"]
-[ext_resource type="PackedScene" uid="uid://66k76ctxkn4x" path="res://Enemies/Hazards/Energy Orb/energyOrb.tscn" id="6_a0qeb"]
+[ext_resource type="PackedScene" uid="uid://csci2lncscmr6" path="res://Enemies/Hazards/Energy Beam/energyBeam.tscn" id="7_1jwgi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq8rx"]
 texture = ExtResource("1_f44vr")
@@ -670,5 +670,6 @@ color = Color(0.337215, 0.265723, 0.514635, 1)
 energy = 0.8
 blend_mode = 2
 
-[node name="EnergyOrb" parent="." instance=ExtResource("6_a0qeb")]
-position = Vector2(-152, -72)
+[node name="EnergyBeam" parent="." instance=ExtResource("7_1jwgi")]
+position = Vector2(-40, 64)
+useTimer = true
