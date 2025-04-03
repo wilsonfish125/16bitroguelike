@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bn8n41jb0y67l"
+path="res://.godot/imported/boss_fireball_hit.wav-6b7ffecb2e2e3ffb2cd99bd37881bec0.sample"
+
+[deps]
+
+source_file="res://Resources/Michael Games Sprites/wizard_boss/boss_fireball_hit.wav"
+dest_files=["res://.godot/imported/boss_fireball_hit.wav-6b7ffecb2e2e3ffb2cd99bd37881bec0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

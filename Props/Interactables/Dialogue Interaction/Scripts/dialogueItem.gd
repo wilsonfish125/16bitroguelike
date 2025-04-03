@@ -5,14 +5,15 @@ class_name DialogueItem extends Node #acts as a base class for all unique dialog
 
 @export var npcInfo : NPCResource
 
-var editorSelection : EditorSelection
+var editorSelection
 var exampleDialogue : DialogueSystemNode
 
 
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
-		editorSelection = EditorInterface.get_selection() #gives us current instance of whatever is selected in editor
+		#editorSelection = EditorInterface.get_selection() #gives us current instance of whatever is selected in editor
+		editorSelection = Engine.get_singleton( "EditorInterface" ).get_selection()
 		editorSelection.selection_changed.connect( _onSelectionChanged )
 		return
 	checkNPCData()

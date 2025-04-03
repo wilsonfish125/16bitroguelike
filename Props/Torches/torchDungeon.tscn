@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://32xgchm26o8g"]
+
+[ext_resource type="Texture2D" uid="uid://ybub8k4gkee8" path="res://Resources/Michael Games Sprites/wizard_boss/torch.png" id="1_venv5"]
+[ext_resource type="Script" path="res://Props/Torches/torchLightFlicker.gd" id="2_42omb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqwoi"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="Animation" id="Animation_50daa"]
+resource_name = "default"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_mkol0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65y8x"]
+_data = {
+"RESET": SubResource("Animation_mkol0"),
+"default": SubResource("Animation_50daa")
+}
+
+[sub_resource type="Gradient" id="Gradient_o0wcv"]
+offsets = PackedFloat32Array(0.0903955, 0.231638, 0.570621, 0.881356, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.902, 0.02, 1, 0.68, 0.283333, 0, 1, 0.42, 0.1092, 0.1092, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jp8oh"]
+gradient = SubResource("Gradient_o0wcv")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="TorchDungeon" type="Node2D"]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -30)
+texture = ExtResource("1_venv5")
+hframes = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -6)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_xqwoi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_65y8x")
+}
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -29.3333)
+texture = SubResource("GradientTexture2D_jp8oh")
+script = ExtResource("2_42omb")

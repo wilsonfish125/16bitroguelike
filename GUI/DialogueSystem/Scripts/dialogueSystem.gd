@@ -122,6 +122,7 @@ func setDialogueChoice( _d : DialogueChoice ):
 		return
 	
 	await get_tree().process_frame
+	await get_tree().process_frame #second await to prevent a bug where dialogue options do not highlight
 	choiceOptions.get_child( 0 ).grab_focus()
 
 
