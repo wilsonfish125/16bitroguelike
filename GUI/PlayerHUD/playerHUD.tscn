@@ -1,22 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbt3kwfycmc6i"]
+[gd_scene load_steps=7 format=3 uid="uid://bbt3kwfycmc6i"]
 
 [ext_resource type="Script" path="res://GUI/PlayerHUD/playerHUD.gd" id="1_21iu4"]
 [ext_resource type="PackedScene" uid="uid://bowf8hb50yx3c" path="res://GUI/PlayerHUD/heartGUI.tscn" id="1_44l4d"]
+[ext_resource type="FontFile" uid="uid://ddnrrsylcf52p" path="res://Resources/Michael Games Sprites/npc_and_dialog/fonts/m5x7.ttf" id="3_e23lp"]
+[ext_resource type="Texture2D" uid="uid://c8ykbniqg7dj3" path="res://Resources/Michael Games Sprites/wizard_boss/boss-hp.png" id="3_el4fc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lje3l"]
+atlas = ExtResource("3_el4fc")
+region = Rect2(9, 40, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnv0i"]
+atlas = ExtResource("3_el4fc")
+region = Rect2(40, 40, 15, 15)
 
 [node name="PlayerHud" type="CanvasLayer"]
 layer = 2
 script = ExtResource("1_21iu4")
 
 [node name="Control" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(3, 3)
 size_flags_horizontal = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture_filter = 1
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
 z_index = 1
@@ -24,11 +37,11 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_right = 200.0
-offset_bottom = 152.0
+offset_left = -588.667
+offset_top = 3.33333
+offset_right = -188.667
+offset_bottom = 155.333
 grow_horizontal = 2
-scale = Vector2(2, 2)
 theme_override_constants/v_separation = 2
 alignment = 1
 
@@ -97,6 +110,73 @@ layout_mode = 2
 [node name="Heart20" parent="Control/HFlowContainer" instance=ExtResource("1_44l4d")]
 visible = false
 layout_mode = 2
+
+[node name="BossUI" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -591.0
+offset_right = -853.0
+offset_bottom = -429.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -20.0
+offset_right = 87.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 50.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_lje3l")
+texture_progress = SubResource("AtlasTexture_bnv0i")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -28.0
+offset_right = 96.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_el4fc")
+region_rect = Rect2(0, 0, 64, 30)
+patch_margin_left = 21
+patch_margin_right = 25
+axis_stretch_horizontal = 1
+
+[node name="Label" type="Label" parent="Control/BossUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -39.0
+offset_right = 27.5
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_e23lp")
+text = "BOSS NAME"
+horizontal_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

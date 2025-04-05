@@ -4,6 +4,12 @@ extends CanvasLayer
 var hearts : Array[ HeartGUI ] = []
 
 
+@onready var boss_ui : Control = $Control/BossUI
+@onready var bossHPBar : TextureProgressBar = $Control/BossUI/TextureProgressBar
+@onready var boss_label : Label = $Control/BossUI/Label
+
+
+
 
 
 func _ready() -> void:
@@ -11,6 +17,9 @@ func _ready() -> void:
 		if child is HeartGUI:
 			hearts.append( child )
 			child.visible = false #turn em all off by default
+	
+	hideBossHealth()
+	
 	pass
 
 func updateHP( _hp: int, _maxHP: int ) -> void:
@@ -33,4 +42,20 @@ func updateMaxHP( _maxHP : int ) -> void:
 			hearts[i].visible = true
 		else:
 			hearts[i].visible = false #goes over every heart and turns them visible or invisible depending on max health
+	pass
+
+
+#Gameover stuff here
+
+
+func showBossHealth( name : String ) -> void:
+	boss_ui.visible = true
+	boss_label.text = name 
+	updateBossHealth( 1, 1 )
+
+func hideBossHealth() -> void:
+	boss_ui.visible = false
+
+func updateBossHealth( hp : int, maxHP : int ) -> void:
+	bossHPBar.value = clampf( float(hp) / float(maxHP) * 100, 0, 100 )
 	pass

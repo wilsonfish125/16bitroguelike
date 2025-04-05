@@ -42,7 +42,7 @@ func _ready() -> void:
 		return
 	
 	hp = maxHP
-	
+	PlayerHud.showBossHealth( "EEEEEvil Wizard" )
 	hit_box.Damaged.connect( damageTaken )
 	
 	for c in $PositionTargets.get_children():
@@ -181,7 +181,8 @@ func damageTaken( _hurtBox : HurtBox ) -> void:
 	hp = clampi( hp - _hurtBox.damage, 0, maxHP )
 	damageCount += 1
 	
-	#Update future boss healthbar
+	#Update boss healthbar
+	PlayerHud.updateBossHealth( hp, maxHP )
 	
 	animation_player_damaged.play( "damaged" )
 	animation_player_damaged.seek( 0 ) #possibility we were already playing anim
@@ -197,6 +198,7 @@ func playAudio( _a : AudioStream ) -> void:
 func defeat() -> void:
 	animation_player.play( "destroy" )
 	enableHitboxes( false ) #disables hitboxes
+	PlayerHud.hideBossHealth()
 	persistent_data_handler.setValue()
 	door_block.enabled = false
 	await animation_player.animation_finished
