@@ -31,13 +31,14 @@ var damageCount : int = 0
 @onready var hand_02_up: Sprite2D = $BossNode/CloakSprite/Hand02Up
 @onready var hand_01_horizontal: Sprite2D = $BossNode/CloakSprite/Hand01Horizontal
 @onready var hand_02_horizontal: Sprite2D = $BossNode/CloakSprite/Hand02Horizontal
-@onready var door_block: TileMapLayer = $"../DoorBlock"
-
+@onready var door_block: TileMapLayer = $"../DoorBlock/Walls"
 
 func _ready() -> void:
 	persistent_data_handler.getValue()
+	
 	if persistent_data_handler.value == true: #True means boss has been defeated
 		door_block.enabled = false
+		print("GET SHIIIT ON")
 		queue_free()
 		return
 	
@@ -51,6 +52,8 @@ func _ready() -> void:
 	
 	for b in $BeamAttacks.get_children():
 		beamAttacks.append( b )
+	
+	print( persistent_data_handler.value )
 	
 	teleport( 0 )
 
@@ -107,6 +110,7 @@ func idle() -> void:
 		energyBeamAttack()
 		animation_player.play( "castSpell" )
 		await animation_player.animation_finished
+	
 	if hp < 1:
 			return
 	
@@ -115,6 +119,7 @@ func idle() -> void:
 	while _t == currentPositionIndex:
 		_t = randi_range( 0, 3 )
 	teleport( _t )
+	pass
 	
 
 func updateAnimations() -> void:
@@ -200,8 +205,8 @@ func defeat() -> void:
 	enableHitboxes( false ) #disables hitboxes
 	PlayerHud.hideBossHealth()
 	persistent_data_handler.setValue()
-	door_block.enabled = false
 	await animation_player.animation_finished
+	door_block.enabled = false
 
 func enableHitboxes( _v : bool = true ) -> void:
 	hit_box.set_deferred( "monitorable", _v )

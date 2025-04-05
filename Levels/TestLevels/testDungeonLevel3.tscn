@@ -1,8 +1,9 @@
-[gd_scene load_steps=45 format=4 uid="uid://j2guha514j5r"]
+[gd_scene load_steps=46 format=4 uid="uid://j2guha514j5r"]
 
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_1rgcn"]
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="1_f44vr"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_c46xi"]
+[ext_resource type="AudioStream" uid="uid://cxtshqsxyjk3v" path="res://Resources/evil wizard song.mp3" id="2_gnhy6"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_durrk"]
 [ext_resource type="PackedScene" uid="uid://32xgchm26o8g" path="res://Props/Torches/torchDungeon.tscn" id="5_wrxwo"]
 [ext_resource type="PackedScene" uid="uid://2e0h8mj62td1" path="res://GeneralNodes/PersistentDataHandler/persistentDataHandler.tscn" id="6_04k36"]
@@ -1320,6 +1321,7 @@ fill_to = Vector2(1, 0.5)
 
 [node name="TestDungeonLevel3" type="Node2D"]
 script = ExtResource("1_1rgcn")
+music = ExtResource("2_gnhy6")
 
 [node name="Main Layer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -1383,7 +1385,6 @@ blend_mode = 2
 z_index = 2
 y_sort_enabled = true
 script = ExtResource("6_o236e")
-maxHP = 2
 
 [node name="PersistentDataHandler" parent="EvilWizardBoss" instance=ExtResource("6_04k36")]
 
