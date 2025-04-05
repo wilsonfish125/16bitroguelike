@@ -6,7 +6,6 @@ class_name Throwable extends Area2D
 @export var throwStartingHeight : float = 49
 
 
-
 var pickedUp : bool = false
 var throwable : Node2D #a reference to the parent node which we are throwing
 var throwDirection : Vector2

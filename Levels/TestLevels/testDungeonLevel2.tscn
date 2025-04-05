@@ -684,7 +684,7 @@ position = Vector2(1202, 402)
 position = Vector2(-622, 498)
 
 [node name="Slime2" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
-position = Vector2(-478, 610)
+position = Vector2(-494, 610)
 
 [node name="Slime5" parent="EnemyCounter" instance=ExtResource("3_wbe6i")]
 position = Vector2(218, 162)
