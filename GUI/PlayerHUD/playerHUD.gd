@@ -49,8 +49,8 @@ func updateMaxHP( _maxHP : int ) -> void:
 
 
 func showBossHealth( name : String ) -> void:
-	boss_ui.visible = true
 	boss_label.text = name 
+	boss_ui.visible = true
 	updateBossHealth( 1, 1 )
 
 func hideBossHealth() -> void:

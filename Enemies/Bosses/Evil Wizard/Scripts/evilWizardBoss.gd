@@ -58,7 +58,7 @@ func _ready() -> void:
 	teleport( 0 )
 
 
-func _process( delta: float ) -> void:
+func _process( _delta: float ) -> void:
 	#Syncs unique hand frames and position
 	#Offsets for positions of horizontal stuff done in OFFSET of parent node rather than transform
 	hand_01_up.position = hand_01.position

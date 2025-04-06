@@ -1320,6 +1320,7 @@ drops = Array[ExtResource("10_1rh7s")]([SubResource("Resource_3jv6o"), SubResour
 script = ExtResource("16_phrp5")
 visionArea = NodePath("../../VisionArea")
 attackArea = NodePath("../../Sprite2D/WeaponSprite2D/AttackHurtBox")
+stateAggroDuration = 5.0
 nextState = NodePath("../Idle")
 
 [node name="DestroyEffect" type="Sprite2D" parent="."]

@@ -1,5 +1,7 @@
 class_name EnemyStateChase extends EnemyState
 
+const PATHFINDER : PackedScene = preload( "res://Enemies/pathFinder.tscn" )
+
 @export var animName : String = "Chase"
 @export var chaseSpeed : float = 100.0
 @export var turnRate : float = 0.25
@@ -9,6 +11,8 @@ class_name EnemyStateChase extends EnemyState
 @export var attackArea : HurtBox
 @export var stateAggroDuration : float = 0.5
 @export var nextState : EnemyState
+
+var pathfinder : PathFinder
 
 var _timer : float = 0.0 #smth simple silly variable name will suffice
 var _direction : Vector2
@@ -23,6 +27,9 @@ func init()  -> void:
 
 # What happens when the player enters this state?
 func enter() -> void:
+	pathfinder = PATHFINDER.instantiate() as PathFinder
+	enemy.add_child( pathfinder )
+	
 	_timer = stateAggroDuration
 	enemy.updateAnimation( animName )
 	if attackArea:
@@ -31,6 +38,7 @@ func enter() -> void:
 
 # What happens when the player exits this state?
 func exit() -> void:
+	pathfinder.queue_free()
 	if attackArea:
 		attackArea.monitoring = false
 	_canSeePlayer = false
@@ -39,9 +47,12 @@ func exit() -> void:
 # Returns a state for ease of processing, either returns null or a state we can use for animation
 # What happens during the _process update in this state?
 func process (_delta : float) -> EnemyState:
-	var newDir : Vector2 = enemy.global_position.direction_to( PlayerManager.player.global_position )
-	_direction = lerp( _direction, newDir, turnRate )
+	if PlayerManager.player.hp <= 0:
+		return nextState
+	
+	_direction = lerp( _direction, pathfinder.moveDirection, turnRate )
 	enemy.velocity = _direction * chaseSpeed
+	
 	if enemy.set_direction( _direction ):
 		enemy.updateAnimation( animName )
 	
