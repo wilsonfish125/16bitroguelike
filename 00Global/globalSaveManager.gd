@@ -17,7 +17,10 @@ var currentSave : Dictionary = {
 	},
 	items = [], #any item we want to save
 	persistence = [], #any persistent var we want to save
-	quests = [], #any quests and quest data we want to save
+	quests = [
+		 # What each item looks like: { title = "not found", isComplete = false, completedSteps = [''] }
+		
+	], #any quests and quest data we want to save
 }
 
 #we need to be able to save the game, load the game, and gather the mess of JSON data we save
@@ -28,6 +31,7 @@ func saveGame() -> void:
 	updatePlayerData()
 	updateScenePath()
 	updateItemData()
+	updateQuestData()
 	
 	var file := FileAccess.open( SAVEPATH + "save.sav", FileAccess.WRITE ) #gonna try and open a file, we gotta give it a path which includes the filename
 	var saveJSON = JSON.stringify( currentSave ) #converts the savedata into a format we can actually store
@@ -55,6 +59,7 @@ func loadGame() -> void:
 	PlayerManager.setPlayerPosition( Vector2( currentSave.player.posX, currentSave.player.posY ) )
 	PlayerManager.setPlayerHealth( currentSave.player.hp, currentSave.player.maxHP )
 	PlayerManager.INVENTORYDATA.parseSaveData( currentSave.items )
+	QuestManager.currentQuests = currentSave.quests #both dictionaries, both in same format!!
 	
 	
 	await LevelManager.LevelLoaded
@@ -82,13 +87,13 @@ func updateScenePath() -> void:
 
 func updateItemData() -> void:
 	currentSave.items = PlayerManager.INVENTORYDATA.getSaveData()
-	pass
 
-#lets make some funcs for persistent data management
+func updateQuestData() -> void:
+	currentSave.quests = QuestManager.currentQuests
+
 func addPersistentValue( value : String ) -> void:
 	if checkPersistentValue( value ) == false: #make sure we dont add any more than one
 		currentSave.persistence.append( value )
-	pass
 
 func checkPersistentValue( value : String ) -> bool: #check is NOT load, load is from disk, check is codey
 	var p = currentSave.persistence as Array

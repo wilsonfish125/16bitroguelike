@@ -20,12 +20,6 @@ func _ready() -> void:
 func _process( _delta: float ) -> void:
 	if Engine.is_editor_hint():
 		return
-	if abs( global_position.distance_to( originalPosition ) ) > wanderRange * 48 :
-		npc.velocity *= -1
-		npc.direction *= -1
-		npc.updateDirection( global_position + npc.direction )
-		npc.updateAnimation()
-
 
 func start() -> void:
 	 #IDLE PHASE
@@ -41,6 +35,13 @@ func start() -> void:
 	 #WALK PHASE
 	npc.state = "walk"
 	var _dir : Vector2 = DIRECTIONS[ randi_range( 0, 3 ) ]
+	if abs( global_position.distance_to( originalPosition ) ) > wanderRange * 48 :
+		#pick a new direction closest to wander area here instead of every frame
+		var dirToArea : Vector2 = global_position.direction_to( originalPosition )
+		var bestDirections : Array[ float ]
+		for d in DIRECTIONS:
+			bestDirections.append( d.dot( dirToArea ) )
+		_dir = DIRECTIONS[ bestDirections.find( bestDirections.max() ) ] #biggest numba in array
 	npc.direction = _dir
 	npc.velocity = wanderSpeed * _dir
 	npc.updateDirection( global_position + _dir )

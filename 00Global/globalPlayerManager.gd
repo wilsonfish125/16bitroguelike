@@ -11,6 +11,8 @@ var interactHandled : bool = true
 var player : Player
 var playerSpawned : bool = false
 
+var xp : int = 0
+
 
 func _ready() -> void:
 	addPlayerInstance()
@@ -35,6 +37,9 @@ func setPlayerHealth( hp : int, maxHP : int ) -> void:
 	pass
 
 #bugfix methods for ysort issue
+
+func rewardXP( _xp : int ) -> void:
+	xp += _xp
 
 func setAsParent( _p : Node2D ) -> void:
 	#gotta remove player from any other nodes it could be a child of first

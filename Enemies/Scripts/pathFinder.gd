@@ -33,8 +33,8 @@ func _ready() -> void:
 			rays.append( c )
 	
 	 # Normalise our Vectors array
-	for v in vectors:
-		v = v.normalized()
+	for i in vectors.size():
+		vectors[ i ] = vectors[ i ].normalized()
 	
 	 # Check initial path
 	setPath()

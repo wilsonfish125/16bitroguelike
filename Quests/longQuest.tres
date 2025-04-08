@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://gsaua6pwv7lr"]
+
+[ext_resource type="Script" path="res://Quests/Scripts/questRewardItem.gd" id="1_hd5gh"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="2_k18pn"]
+[ext_resource type="Script" path="res://Quests/Scripts/questResource.gd" id="2_pscfo"]
+
+[sub_resource type="Resource" id="Resource_g68oi"]
+script = ExtResource("1_hd5gh")
+item = ExtResource("2_k18pn")
+quantity = 3
+
+[resource]
+script = ExtResource("2_pscfo")
+title = "A Long Quest"
+description = "A long quest with many steps"
+steps = Array[String](["1", "2", "3", "4", "5"])
+rewardXP = 50
+rewardItems = Array[ExtResource("1_hd5gh")]([SubResource("Resource_g68oi"), null])

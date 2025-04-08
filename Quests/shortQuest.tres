@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://1lwrtgwdv83i"]
+
+[ext_resource type="Script" path="res://Quests/Scripts/questRewardItem.gd" id="1_s5nn7"]
+[ext_resource type="Script" path="res://Quests/Scripts/questResource.gd" id="2_kgrim"]
+
+[resource]
+script = ExtResource("2_kgrim")
+title = "A Short Quest"
+description = "Gunga Ginga"
+steps = Array[String](["Complete Quest"])
+rewardXP = 10
+rewardItems = Array[ExtResource("1_s5nn7")]([])

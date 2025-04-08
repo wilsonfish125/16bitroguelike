@@ -26,6 +26,7 @@ SceneTransition="*res://GUI/SceneTransition/sceneTransition.tscn"
 SaveManager="*res://00Global/globalSaveManager.gd"
 PauseMenu="*res://GUI/PauseMenu/pauseMenu.tscn"
 DialogueSystem="*res://GUI/DialogueSystem/dialogueSystem.tscn"
+QuestManager="*res://Quests/Scripts/globalQuestManager.gd"
 
 [display]
 
@@ -44,6 +45,7 @@ folder_colors={
 "res://NPC/": "pink",
 "res://Player/": "pink",
 "res://Props/": "orange",
+"res://Quests/": "yellow",
 "res://Resources/": "blue",
 "res://Shaders & Materials/": "gray"
 }

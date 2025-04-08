@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://xwsltq1wtx2k"]
+
+[ext_resource type="Script" path="res://Quests/Scripts/questRewardItem.gd" id="1_dlqje"]
+[ext_resource type="Script" path="res://Quests/Scripts/questResource.gd" id="2_4yfnp"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="2_hkby8"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="3_qbcal"]
+
+[sub_resource type="Resource" id="Resource_ykytm"]
+script = ExtResource("1_dlqje")
+item = ExtResource("2_hkby8")
+quantity = 100
+
+[sub_resource type="Resource" id="Resource_11cg7"]
+script = ExtResource("1_dlqje")
+item = ExtResource("3_qbcal")
+quantity = 3
+
+[resource]
+script = ExtResource("2_4yfnp")
+title = "Slay the Evil Wizard"
+description = "Help Big Johnny by entering evil dungeon to kill the evil wizard."
+steps = Array[String](["Enter the Dungeon", "Kill the Evil Wizard", "Return to Big Johnny"])
+rewardXP = 100
+rewardItems = Array[ExtResource("1_dlqje")]([SubResource("Resource_ykytm"), SubResource("Resource_11cg7")])
