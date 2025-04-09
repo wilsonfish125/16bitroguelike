@@ -125,9 +125,10 @@ func setDialogueChoice( _d : DialogueChoice ):
 	await get_tree().process_frame #second await to prevent a bug where dialogue options do not highlight
 	choiceOptions.get_child( 0 ).grab_focus()
 
-
+# Hide choice options, and show dialogue that branch contains
 func _dialogueChoiceSelected( _d : DialogueBranch ) -> void:
 	choiceOptions.visible = false
+	_d.Selected.emit()
 	showDialogue( _d.dialogueItems )
 	
 

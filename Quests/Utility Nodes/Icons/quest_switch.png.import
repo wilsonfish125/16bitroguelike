@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bypptsyoilyqt"
-path="res://.godot/imported/quest_advance.png-090fbb8b1fa6cb80f882f841262a5f6f.ctex"
+uid="uid://cmli08h020t1f"
+path="res://.godot/imported/quest_switch.png-083c720fafe29614d3f07b5f836fb4e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Michael Games Sprites/quests/quest_advance.png"
-dest_files=["res://.godot/imported/quest_advance.png-090fbb8b1fa6cb80f882f841262a5f6f.ctex"]
+source_file="res://Quests/Utility Nodes/Icons/quest_switch.png"
+dest_files=["res://.godot/imported/quest_switch.png-083c720fafe29614d3f07b5f836fb4e0.ctex"]
 
 [params]
 

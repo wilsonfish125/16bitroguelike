@@ -2,6 +2,7 @@
 @icon( "res://NPC/Icons/answer_bubble.svg" )
 class_name DialogueBranch extends DialogueItem
 
+signal Selected
 
 @export var text : String = "ok.." : set = _setText
 

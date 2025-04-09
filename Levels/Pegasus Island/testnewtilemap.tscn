@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=39 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -22,6 +22,8 @@
 [ext_resource type="Resource" uid="uid://c7gwignismips" path="res://NPC/npcArkusYoung.tres" id="17_wvqx4"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="18_55lqf"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="19_v3gbc"]
+[ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="20_tgj4k"]
+[ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="21_yqfgs"]
 [ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="23_plvyu"]
 [ext_resource type="PackedScene" uid="uid://q5apn55fptji" path="res://Props/Plants/bush.tscn" id="24_aig36"]
 
@@ -2362,6 +2364,14 @@ npcInfo = ExtResource("13_t8q1j")
 script = ExtResource("19_v3gbc")
 text = "Yeah Big Johnny!"
 npcInfo = ExtResource("13_t8q1j")
+
+[node name="QuestAdvanceTrigger" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch" instance=ExtResource("20_tgj4k")]
+signalName = "Selected"
+linkedQuest = ExtResource("21_yqfgs")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Step: 0 - N/A
+Complete: false"
 
 [node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch"]
 script = ExtResource("16_ef4rs")

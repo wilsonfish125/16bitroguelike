@@ -13,16 +13,17 @@ var currentQuests : Array = [
 func _ready() -> void:
 	# Gather all Quests
 	gatherQuestData()
-	
 
 func _unhandled_input( event: InputEvent ) -> void:
 	if event.is_action_pressed( "test" ):
 		#print( findQuest( load( "res://Quests/evilWizardQuest.tres" ) as Quest ) )
 		# The way it works, quests cannot be added and completed at once
-		updateQuest( "short quest", "" )
-		updateQuest( "slay the evil wizard", "" )
-		updateQuest( "long quest", "step 1" )
-		updateQuest( "long quest", "step 2" )
+		#updateQuest( "a short quest" )
+		#updateQuest( "slay the evil wizard" )
+		#updateQuest( "slay the evil wizard", "enter the dungeon" )
+		#updateQuest( "a long quest" )
+		#updateQuest( "a long quest", "1" )
+		#updateQuest( "a long quest", "2" )
 		
 		pass
 
@@ -42,11 +43,11 @@ func updateQuest( _title : String, _completedStep : String = "", _isComplete : b
 		# Means quest was not found, and it must be added to currentQuests
 		var newQuest : Dictionary = {  # Two tabs for Dictionary
 				title = _title, 
-				isComplete = _isComplete, 
-				completedSteps = [] 
+				isComplete = _completedStep, #listed as _completedStep
+				completedSteps = []
 		}
 		if _completedStep != "":
-			newQuest.completedSteps.append( _completedStep )
+			newQuest.completedSteps.append( _completedStep.to_lower() )
 		
 		currentQuests.append( newQuest )
 		QuestUpdated.emit( newQuest )
@@ -58,8 +59,7 @@ func updateQuest( _title : String, _completedStep : String = "", _isComplete : b
 		var q = currentQuests[ questIndex ]
 		if _completedStep != "" and q.completedSteps.has( _completedStep ) == false:
 			# If we have a completed step value, and if that string is not already found in list of completed steps
-			q.completedSteps.append( _completedStep )
-			pass
+			q.completedSteps.append( _completedStep.to_lower() )
 		q.isComplete = _isComplete
 		QuestUpdated.emit( q )
 		
@@ -80,7 +80,7 @@ func dropQuestRewards( _q : Quest ) -> void:
 # Provide a quest resource and return the corresponding Dictionary from currentQuests associated with it
 func findQuest( _quest : Quest ) -> Dictionary:
 	for q in currentQuests:
-		if q.title == _quest.title:
+		if q.title.to_lower() == _quest.title.to_lower():
 			return q
 	return { title = "not found", isComplete = false, completedSteps = [''] }
 
@@ -117,6 +117,6 @@ func sortQuests() -> void:
 	
 
 func sortQuestsAscending( a, b ):
-	if a.title < b.title:
+	if a.title.to_lower() < b.title.to_lower():
 		return true
 	return false

@@ -35,7 +35,6 @@ func _onVisibleChanged() -> void:
 			newQItem.initalize( questData, q ) # Create new questItem with the corresponding resource 
 			# Connect to focus buttons
 			newQItem.focus_entered.connect( updateQuestDetails.bind( newQItem.quest ) )
-	pass
 
 func updateQuestDetails( q : Quest ) -> void:
 	# Clear previous quest details
@@ -53,7 +52,7 @@ func updateQuestDetails( q : Quest ) -> void:
 			stepIsComplete = questSave.completedSteps.has( step.to_lower() ) # Check steps by string name
 		detailsContainer.add_child( newStep )
 		newStep.initialize( step, stepIsComplete ) # Now iterates over all steps
-	
+		#print( step, stepIsComplete )
 
 func clearQuestDetails() -> void:
 	# Set the label text to blank string by iterating over details container

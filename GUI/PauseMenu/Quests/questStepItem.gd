@@ -4,7 +4,6 @@ class_name QuestStepItem extends Control
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 
-
 func initialize( step : String, isComplete : bool ) -> void:
 	label.text = step
 	if isComplete == true:
