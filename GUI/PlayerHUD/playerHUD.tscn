@@ -27,6 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(3, 3)
 size_flags_horizontal = 8
+mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture_filter = 1

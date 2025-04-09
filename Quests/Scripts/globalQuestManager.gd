@@ -18,6 +18,11 @@ func _ready() -> void:
 func _unhandled_input( event: InputEvent ) -> void:
 	if event.is_action_pressed( "test" ):
 		#print( findQuest( load( "res://Quests/evilWizardQuest.tres" ) as Quest ) )
+		# The way it works, quests cannot be added and completed at once
+		updateQuest( "short quest", "" )
+		updateQuest( "slay the evil wizard", "" )
+		updateQuest( "long quest", "step 1" )
+		updateQuest( "long quest", "step 2" )
 		
 		pass
 
@@ -94,5 +99,24 @@ func getQuestIndexByTitle( _title : String ) -> int:
 	# Returns -1 if no quest with matching title was found
 	return -1
 
+# 
 func sortQuests() -> void:
-	pass
+	var activeQuests : Array = [] #Current quests not complete
+	var completedQuests : Array = []
+	for q in currentQuests:
+		if q.isComplete: # Has dictionary data here, no autocomplete remember
+			completedQuests.append( q )
+		else:
+			activeQuests.append( q )
+	
+	activeQuests.sort_custom( sortQuestsAscending )
+	completedQuests.sort_custom( sortQuestsAscending )
+	
+	currentQuests = activeQuests # Overwrites previous data in currentQuests
+	currentQuests.append_array( completedQuests ) # Appends at the end, out of the way
+	
+
+func sortQuestsAscending( a, b ):
+	if a.title < b.title:
+		return true
+	return false

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn8w2msja1h1h"]
+
+[ext_resource type="Script" path="res://GUI/PauseMenu/Quests/questStepItem.gd" id="1_xypgd"]
+[ext_resource type="Texture2D" uid="uid://gvqn8p5fffrn" path="res://Resources/Michael Games Sprites/quests/checkbox.png" id="2_fpfmx"]
+
+[node name="QuestStepItem" type="Control"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 22)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xypgd")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.607843, 0.678431, 0.717647, 1)
+layout_mode = 0
+offset_left = 24.0
+offset_right = 64.0
+offset_bottom = 18.0
+text = "Step"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("2_fpfmx")
+hframes = 2
