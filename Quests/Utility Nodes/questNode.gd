@@ -35,6 +35,12 @@ func updateSummary() -> void:
 func getStep() -> String:
 	# Check that our questStep value is within the range of steps
 	if questStep != 0 and questStep <= getStepCount() :
-		return linkedQuest.steps[ questStep - 1 ] # Because indexed arrays begin at zero
+		return linkedQuest.steps[ questStep - 1 ].to_lower() # Because indexed arrays begin at zero
+	else:
+		return "N/A"
+
+func getPreviousStep() -> String:
+	if questStep <= getStepCount() and questStep > 1:
+		return linkedQuest.steps[ questStep - 2 ] # Previous step, hence -2
 	else:
 		return "N/A"

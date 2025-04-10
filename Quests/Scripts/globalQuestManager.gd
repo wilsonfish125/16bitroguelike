@@ -43,7 +43,7 @@ func updateQuest( _title : String, _completedStep : String = "", _isComplete : b
 		# Means quest was not found, and it must be added to currentQuests
 		var newQuest : Dictionary = {  # Two tabs for Dictionary
 				title = _title, 
-				isComplete = _completedStep, #listed as _completedStep
+				isComplete = _isComplete,
 				completedSteps = []
 		}
 		if _completedStep != "":
@@ -52,7 +52,8 @@ func updateQuest( _title : String, _completedStep : String = "", _isComplete : b
 		currentQuests.append( newQuest )
 		QuestUpdated.emit( newQuest )
 		
-		# Display UI notif
+		# Display UI notif that a quest was ADDED
+		PlayerHud.queueNotification( "Quest Started", _title )
 		
 	else:
 		# Means quest WAS found, update it
@@ -66,16 +67,21 @@ func updateQuest( _title : String, _completedStep : String = "", _isComplete : b
 		# Display UI notif if quest is updated/completed
 		
 		if q.isComplete == true:
+			PlayerHud.queueNotification( "Quest Complete", _title )
 			dropQuestRewards( findQuestByTitle( _title ) )
-		
+		else: # Quest wasn't marked as complete
+			PlayerHud.queueNotification( "Quest Updated", _title + ": " + _completedStep )
 	pass
 
 # Give XP and item rewards to player
 func dropQuestRewards( _q : Quest ) -> void:
+	var _message : String = str( _q.rewardXP ) + "xp"
 	PlayerManager.rewardXP( _q.rewardXP )
 	for i in _q.rewardItems:
 		PlayerManager.INVENTORYDATA.addItem( i.item, i.quantity )
-	pass
+		_message += ", " + i.item.name + " x" + str( i.quantity )
+	
+	PlayerHud.queueNotification( "Quest Rewards Recieved", _message )
 
 # Provide a quest resource and return the corresponding Dictionary from currentQuests associated with it
 func findQuest( _quest : Quest ) -> Dictionary:

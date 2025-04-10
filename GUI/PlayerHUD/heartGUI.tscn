@@ -4,9 +4,11 @@
 [ext_resource type="Script" path="res://GUI/PlayerHUD/heartGUI.gd" id="1_jmi7l"]
 
 [node name="Heart" type="Control"]
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(34, 34)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 34.0
+offset_bottom = 34.0
 script = ExtResource("1_jmi7l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbt3kwfycmc6i"]
+[gd_scene load_steps=16 format=3 uid="uid://bbt3kwfycmc6i"]
 
 [ext_resource type="Script" path="res://GUI/PlayerHUD/playerHUD.gd" id="1_21iu4"]
 [ext_resource type="PackedScene" uid="uid://bowf8hb50yx3c" path="res://GUI/PlayerHUD/heartGUI.tscn" id="1_44l4d"]
 [ext_resource type="FontFile" uid="uid://ddnrrsylcf52p" path="res://Resources/Michael Games Sprites/npc_and_dialog/fonts/m5x7.ttf" id="3_e23lp"]
 [ext_resource type="Texture2D" uid="uid://c8ykbniqg7dj3" path="res://Resources/Michael Games Sprites/wizard_boss/boss-hp.png" id="3_el4fc"]
+[ext_resource type="Script" path="res://GUI/PlayerHUD/notifications.gd" id="5_ldcvr"]
+[ext_resource type="Texture2D" uid="uid://jci552math5p" path="res://Resources/Michael Games Sprites/quests/panel_notification.png" id="5_u4upu"]
+[ext_resource type="FontFile" uid="uid://8c0v8ui2crtu" path="res://GUI/Fonts/Abaddon Bold.ttf" id="6_mqnbt"]
+[ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="7_1q36p"]
+[ext_resource type="AudioStream" uid="uid://cd5rhvtajyx3f" path="res://Resources/Michael Games Sprites/quests/notification.wav" id="8_vjqm6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lje3l"]
 atlas = ExtResource("3_el4fc")
@@ -12,6 +17,120 @@ region = Rect2(9, 40, 14, 15)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bnv0i"]
 atlas = ExtResource("3_el4fc")
 region = Rect2(40, 40, 15, 15)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hc7bp"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("5_u4upu")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="Animation" id="Animation_up323"]
+resource_name = "showNotification"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5, 0), Vector2(5, 5), Vector2(5, 5), Vector2(5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_vjqm6")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_3u8ix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h17e8"]
+_data = {
+"RESET": SubResource("Animation_3u8ix"),
+"showNotification": SubResource("Animation_up323")
+}
 
 [node name="PlayerHud" type="CanvasLayer"]
 layer = 2
@@ -38,10 +157,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -589.0
-offset_top = 3.0
-offset_right = -189.0
-offset_bottom = 155.0
+offset_left = -404.667
+offset_top = 3.33333
+offset_right = -215.667
+offset_bottom = 109.333
 grow_horizontal = 2
 theme_override_constants/v_separation = 2
 alignment = 1
@@ -179,6 +298,47 @@ theme_override_fonts/font = ExtResource("3_e23lp")
 text = "BOSS NAME"
 horizontal_alignment = 1
 
+[node name="Notification" type="Control" parent="Control"]
+process_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("5_ldcvr")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Notification"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 229.0
+offset_bottom = 63.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hc7bp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Notification/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
+modulate = Color(1, 0.858824, 0.552941, 1)
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_mqnbt")
+text = "Notif Type "
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_1q36p")
+text = "Notif Message"
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Notification"]
+libraries = {
+"": SubResource("AnimationLibrary_h17e8")
+}
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_left = 2.0
@@ -186,3 +346,6 @@ offset_top = 2.0
 offset_right = 802.0
 offset_bottom = 116.0
 color = Color(1, 0.882353, 0.741176, 0.643137)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
