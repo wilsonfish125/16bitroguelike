@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cwvr6oc2hniqy" path="res://Resources/Michael Games Sprites/dungeon_props.png" id="2_874qx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ui4ya"]
-size = Vector2(14, 8)
+size = Vector2(8, 8)
 
 [node name="PressurePlate" type="Node2D"]
 z_index = 1

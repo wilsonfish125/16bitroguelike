@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ctirkmy8fyhl2"]
+[gd_scene load_steps=24 format=4 uid="uid://ctirkmy8fyhl2"]
 
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="1_4v52j"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_j4rp1"]
@@ -7,7 +7,461 @@
 [ext_resource type="PackedScene" uid="uid://b7lfepmi73rnn" path="res://Props/Interactables/Pressure Plate/pressurePlate.tscn" id="3_dkm4e"]
 [ext_resource type="PackedScene" uid="uid://w1hfjynx1eg5" path="res://Props/Interactables/Barred Door/barredDoor.tscn" id="4_oy70c"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="5_0ok2n"]
+[ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="5_75rus"]
+[ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="5_u3qib"]
+[ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="6_3ssen"]
 [ext_resource type="PackedScene" uid="uid://bg3omyj3j65ts" path="res://Props/Interactables/Pushable Statue/pushableStatue.tscn" id="6_t0wiu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phi30"]
+texture = ExtResource("1_4v52j")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rv6kg"]
+texture = ExtResource("1_4v52j")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_37hpw"]
+physics_layer_0/collision_layer = 16
+sources/0 = SubResource("TileSetAtlasSource_phi30")
+sources/1 = SubResource("TileSetAtlasSource_rv6kg")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tclm"]
+texture = ExtResource("1_4v52j")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+9:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fvfdd"]
+sources/0 = SubResource("TileSetAtlasSource_5tclm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vobn6"]
 texture = ExtResource("1_4v52j")
@@ -606,6 +1060,43 @@ centerPlayer = true
 size = 14
 side = 3
 
+[node name="QuestActivatedSwitch" parent="LevelTransition" instance=ExtResource("5_75rus")]
+checkType = 1
+removeWhenActivated = true
+freeOnRemoved = true
+linkedQuest = ExtResource("6_3ssen")
+questStep = 1
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if player has completed step: enter the dungeon"
+
+[node name="QuestAdvanceTrigger" parent="LevelTransition/QuestActivatedSwitch" instance=ExtResource("5_u3qib")]
+linkedQuest = ExtResource("6_3ssen")
+questStep = 1
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Step: 1 - enter the dungeon
+Complete: false"
+
+[node name="QuestActivatedSwitch" parent="." instance=ExtResource("5_75rus")]
+removeWhenActivated = true
+freeOnRemoved = true
+reactToGlobalSignal = true
+linkedQuest = ExtResource("6_3ssen")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if player has quest"
+
+[node name="DoorBlock" type="TileMapLayer" parent="QuestActivatedSwitch"]
+z_index = 3
+texture_filter = 1
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAAFAP//AAAGAAEAAAAFAAAAAAAGAAMAAAAFAAEAAAAGAAQAAAAEAP//AAAGAAEAAAAEAAAAAAAGAAMAAAAEAAEAAAAGAAQAAAADAP//AAAGAAIAAAADAAAAAAAGAAMAAAADAAEAAAAGAAQAAAACAP//AAAGAAIAAAACAAAAAAAGAAMAAAACAAEAAAAGAAQAAAABAP//AAAGAAIAAAABAAAAAAAGAAMAAAABAAEAAAAGAAQAAAAAAP//AAAGAAIAAAAAAAAAAAAGAAMAAAAAAAEAAAAGAAQAAAD/////AAAGAAIAAAD//wAAAAAGAAMAAAD//wEAAAAGAAQAAAD+////AAAGAAIAAAD+/wAAAAAGAAMAAAD+/wEAAAAGAAQAAAD9////AAAGAAIAAAD9/wAAAAAGAAMAAAD9/wEAAAAGAAQAAAD8////AAAGAAIAAAD8/wAAAAAGAAMAAAD8/wEAAAAGAAQAAAD7////AAAGAAIAAAD7/wAAAAAGAAMAAAD7/wEAAAAGAAQAAAD6////AAAGAAIAAAD6/wAAAAAGAAMAAAD6/wEAAAAGAAQAAAD5////AAAGAAEAAAD5/wAAAAAHAAEAAAD5/wEAAAAHAAIAAAD5//7/AAAGAAEAAAD6//7/AAAGAAEAAAD7//7/AAAGAAEAAAD8//7/AAAGAAEAAAD9//7/AAAGAAEAAAD+//7/AAAGAAEAAAD///7/AAAGAAEAAAAAAP7/AAAGAAEAAAABAP7/AAAGAAEAAAACAP7/AAAGAAEAAAADAP7/AAAGAAEAAAAGAP//AAAGAAEAAAAFAP7/AAAGAAEAAAAEAP7/AAAGAAEAAAD5/wIAAAAHAAMAAAD4////AAAGAAEAAAD4//7/AAAGAAEAAAD4/wAAAAAGAAEAAAAGAP7/AAAGAAEAAAD4/wEAAAAGAAEAAAD4/wIAAAAGAAIAAAD4/wMAAAAGAAMAAAD4/wQAAAAHAAQAAAD3/wMAAAAHAAIAAAD3/wQAAAAHAAMAAAD3/wUAAAAHAAQAAAD5/wMAAAAHAAQAAAD3/wIAAAAGAAEAAAD3/wEAAAAGAAEAAAD3/wAAAAAGAAEAAAD3////AAAGAAEAAAD3//7/AAAGAAEAAAD2//7/AAAGAAEAAAD2////AAAGAAEAAAD2/wAAAAAGAAEAAAD2/wEAAAAGAAEAAAD2/wIAAAAGAAEAAAD2/wMAAAAGAAEAAAD2/wQAAAAHAAEAAAD2/wUAAAAHAAEAAAD2/wYAAAAHAAEAAAA=")
+tile_set = SubResource("TileSet_37hpw")
+
+[node name="Floor" type="TileMapLayer" parent="QuestActivatedSwitch/DoorBlock"]
+tile_set = SubResource("TileSet_fvfdd")
+
 [node name="Main Layer" type="TileMapLayer" parent="."]
 texture_filter = 1
 scale = Vector2(5, 5)
@@ -618,17 +1109,19 @@ tile_map_data = PackedByteArray("AAACAAYAAAAIAAAAAAACAAcAAAAIAAEAAAADAAYAAAAJAAA
 tile_set = SubResource("TileSet_bo461")
 
 [node name="Walls" type="TileMapLayer" parent="Main Layer"]
+z_index = 3
 tile_map_data = PackedByteArray("AAAEAAkAAAAFAAAAAAAFAAkAAAAEAAIAAAAFAAgAAAAFAAAAAAAGAAgAAAAGAAAAAAAHAAgAAAAGAAAAAAAIAAgAAAAEAAIAAAAIAAcAAAAFAAAAAAAJAAcAAAAEAAIAAAAJAAYAAAAFAAEAAAAJAAUAAAAFAAEAAAAJAAQAAAAFAAEAAAAJAAMAAAAEAAEAAAAIAAMAAAAFAAIAAAAIAAQAAAAFAAMAAAAIAAUAAAAFAAQAAAAIAAIAAAAFAAEAAAAIAAEAAAAEAAEAAAAHAAEAAAAFAAIAAAAHAAIAAAAFAAMAAAAHAAMAAAAFAAQAAAAGAAAAAAAFAAIAAAAGAAEAAAAFAAMAAAAGAAIAAAAFAAQAAAAFAP//AAAFAAIAAAAFAAAAAAAFAAMAAAAFAAEAAAAFAAQAAAAHAAAAAAAEAAEAAAAGAP//AAAEAAEAAAAHAP//AAABAAEAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAIAAAAAAAEAAAAAAAJAAAAAAAEAAAAAAAJAAEAAAAEAAAAAAAJAAIAAAAEAAAAAAAKAP//AAAEAAAAAAAKAAAAAAAEAAAAAAAKAAEAAAAEAAAAAAAKAAIAAAAEAAAAAAAKAAMAAAAEAAAAAAAKAAQAAAAEAAAAAAAKAAUAAAAEAAAAAAAKAAYAAAAEAAAAAAAKAAcAAAAEAAAAAAAKAAgAAAAEAAAAAAAKAAkAAAAEAAAAAAAGAAkAAAAEAAAAAAAHAAkAAAAEAAAAAAAIAAkAAAAEAAAAAAAJAAkAAAAEAAAAAAALAAkAAAAEAAAAAAAJAAgAAAAEAAAAAAAEAAoAAAAFAAEAAAAFAAoAAAAEAAAAAAAGAAoAAAAEAAAAAAAHAAoAAAAEAAAAAAAIAAoAAAAEAAAAAAAJAAoAAAAEAAAAAAAKAAoAAAAEAAAAAAALAAoAAAAEAAAAAAAMAAoAAAAEAAAAAAALAAgAAAAEAAAAAAALAAcAAAAEAAAAAAD5/wgAAAAGAAAAAAD4/wgAAAAGAAAAAAD6/wgAAAAHAAAAAAD7/wkAAAAHAAAAAAD6/wkAAAADAAIAAAD7/woAAAAHAAEAAAD3/wcAAAAHAAAAAAD3/wgAAAADAAIAAAD2/wcAAAADAAIAAAD2/wYAAAAHAAEAAAD2/wUAAAAHAAEAAAD2/wQAAAAHAAEAAAD2/wMAAAADAAEAAAD3/wMAAAAHAAIAAAD3/wQAAAAHAAMAAAD3/wUAAAAHAAQAAAD4/wIAAAAHAAIAAAD4/wMAAAAHAAMAAAD4/wQAAAAHAAQAAAD5/wEAAAAHAAIAAAD5/wIAAAAHAAMAAAD5/wMAAAAHAAQAAAD6////AAAHAAIAAAD6/wAAAAAHAAMAAAD6/wEAAAAHAAQAAAD3/wIAAAADAAEAAAD4/wEAAAADAAEAAAD5////AAADAAEAAAD5/wAAAAAHAAEAAAD2/wIAAAAGAAEAAAD2/wEAAAAGAAEAAAD3/wEAAAAGAAEAAAD4/wAAAAAGAAEAAAD3/wAAAAAGAAEAAAD2/wAAAAAGAAEAAAD4////AAAGAAEAAAD3////AAAGAAEAAAD2////AAAGAAEAAAD1////AAAGAAEAAAD1/wAAAAAGAAEAAAD1/wEAAAAGAAEAAAD1/wIAAAAGAAEAAAD1/wMAAAAGAAEAAAD1/wQAAAAGAAEAAAD1/wUAAAAGAAEAAAD1/wYAAAAGAAEAAAD1/wcAAAAGAAEAAAD1/wgAAAAGAAEAAAD2/wgAAAAGAAEAAAD0/wkAAAAGAAEAAAD1/wkAAAAGAAEAAAD2/wkAAAAGAAEAAAD3/wkAAAAGAAEAAAD4/wkAAAAGAAEAAAD5/wkAAAAGAAEAAAD6/woAAAAGAAEAAAD5/woAAAAGAAEAAAD4/woAAAAGAAEAAAD3/woAAAAGAAEAAAD2/woAAAAGAAEAAAD1/woAAAAGAAEAAAD0/woAAAAGAAEAAAD0/wcAAAAGAAEAAAD0/wgAAAAGAAEAAAD8//7/AAADAA0AAAD8////AAADAA4AAAD8/wAAAAADAA8AAAD9//7/AAAEAA0AAAD9////AAAEAA4AAAD9/wAAAAAEAA8AAAD+//7/AAAFAA0AAAD+////AAAFAA4AAAD+/wAAAAAFAA8AAAD7//7/AAAGAAIAAAD7////AAAGAAMAAAD7/wAAAAAGAAQAAAABAP7/AAAAAA0AAAABAP//AAAAAA4AAAABAAAAAAAAAA8AAAACAP7/AAABAA0AAAACAP//AAABAA4AAAACAAAAAAABAA8AAAADAP7/AAACAA0AAAADAP//AAACAA4AAAADAAAAAAACAA8AAAAEAP7/AAAGAAIAAAAEAP//AAAGAAMAAAAEAAAAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_gor5r")
 
 [node name="PressurePlate" parent="." instance=ExtResource("3_dkm4e")]
-position = Vector2(-190, 210)
+position = Vector2(-206, 138)
 
 [node name="BarredDoor" parent="." instance=ExtResource("4_oy70c")]
 position = Vector2(-102, 130)
 
 [node name="PushableStatue" parent="." instance=ExtResource("6_t0wiu")]
-position = Vector2(154, 418)
+position = Vector2(234, 418)
+persistent = true
 
 [node name="LevelTransition2" parent="." instance=ExtResource("2_h4uem")]
 position = Vector2(2, 22.5)
@@ -636,5 +1129,6 @@ level = "res://Levels/TestLevels/testDungeonLevel2.tscn"
 size = 3
 side = 2
 
+[connection signal="EnteredFromHere" from="LevelTransition" to="LevelTransition/QuestActivatedSwitch/QuestAdvanceTrigger" method="advanceQuest"]
 [connection signal="activated" from="PressurePlate" to="BarredDoor" method="openDoor"]
 [connection signal="deactivated" from="PressurePlate" to="BarredDoor" method="closeDoor"]

@@ -47,8 +47,8 @@ func updateMaxHP( _maxHP : int ) -> void:
 #Gameover stuff here
 
 
-func showBossHealth( name : String ) -> void:
-	boss_label.text = name 
+func showBossHealth( _name : String ) -> void:
+	boss_label.text = _name 
 	boss_ui.visible = true
 	updateBossHealth( 1, 1 )
 

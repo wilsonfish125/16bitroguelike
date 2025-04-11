@@ -9,6 +9,7 @@ signal IsActivatedChanged( v : bool ) # Emits when state of this node changes
 
 @export var checkType : CheckType = CheckType.HASQUEST : set = _setCheckType
 @export var removeWhenActivated : bool = false
+@export var freeOnRemoved : bool = false # Queue Free on removed rather than mode.process disabled
 @export var reactToGlobalSignal : bool = false # Should this item react instantly or next scene reset?
 
 var isActivated : bool = false
@@ -17,7 +18,8 @@ var isActivated : bool = false
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-	$Sprite2D.queue_free()
+	if has_node( "Sprite2D" ):
+		$Sprite2D.queue_free()
 	# We need to connect to the global signal, but only if reactToGlobalSignal is true
 	if reactToGlobalSignal == true:
 		QuestManager.QuestUpdated.connect( _onQuestUpdated )
@@ -100,7 +102,9 @@ func showChildren() -> void:
 func hideChildren() -> void:
 	for c in get_children():
 		c.set_deferred( "visible", false )
-		c.set_deferred( "process mode", Node.PROCESS_MODE_DISABLED )
+		c.set_deferred( "process_mode", Node.PROCESS_MODE_DISABLED )
+		if freeOnRemoved:
+			c.queue_free()
 
 func _onQuestUpdated( _q : Dictionary ) -> void:
 	checkIsActivated()

@@ -204,8 +204,15 @@ func defeat() -> void:
 	animation_player.play( "destroy" )
 	enableHitboxes( false ) #disables hitboxes
 	PlayerHud.hideBossHealth()
-	persistent_data_handler.setValue()
 	await animation_player.animation_finished
+	$ItemDropper.position = boss_node.position
+	$ItemDropper.dropItem()
+	# Once player picks up item, both boss is saved as dead and doors open
+	$ItemDropper.DropCollected.connect( openDoors )
+
+# Called when we are ready to save the boss as removed
+func openDoors() -> void:
+	persistent_data_handler.setValue()
 	door_block.enabled = false
 
 func enableHitboxes( _v : bool = true ) -> void:

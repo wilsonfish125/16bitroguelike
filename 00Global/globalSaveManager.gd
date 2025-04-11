@@ -95,6 +95,10 @@ func addPersistentValue( value : String ) -> void:
 	if checkPersistentValue( value ) == false: #make sure we dont add any more than one
 		currentSave.persistence.append( value )
 
+func removePersistentValue( value : String ) -> void:
+	var p = currentSave.persistence as Array
+	p.erase( value )
+
 func checkPersistentValue( value : String ) -> bool: #check is NOT load, load is from disk, check is codey
 	var p = currentSave.persistence as Array
 	return p.has( value )

@@ -1,6 +1,8 @@
 @tool #i know the pieces fit, this tells godot we want the script to run in the editor
 class_name LevelTransition extends Area2D
 
+signal EnteredFromHere
+
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM } #easy way for us to track the side it belongs to
 
 @export_file( "*.tscn" ) var level #hey you did wildcard characters in IPT! finally something useful
@@ -54,7 +56,7 @@ func _placePlayer() -> void:
 	if name != LevelManager.targetTransition:
 		return
 	PlayerManager.setPlayerPosition( global_position + LevelManager.positionOffset )
-	pass
+	EnteredFromHere.emit()
 
 func getOffset() -> Vector2:
 	var offset : Vector2 = Vector2.ZERO

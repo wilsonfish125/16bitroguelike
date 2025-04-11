@@ -14,7 +14,6 @@ script = ExtResource("1_jmi7l")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 1
-scale = Vector2(2, 2)
 texture = ExtResource("1_ffnqu")
 centered = false
 hframes = 3

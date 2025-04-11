@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://j2guha514j5r"]
+[gd_scene load_steps=50 format=4 uid="uid://j2guha514j5r"]
 
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_1rgcn"]
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="1_f44vr"]
@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="7_he3ar"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="8_xjf7u"]
 [ext_resource type="AudioStream" uid="uid://dd217q4bsu0gm" path="res://Resources/Michael Games Sprites/wizard_boss/boss_destroy.wav" id="10_h4dqg"]
+[ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="15_lirk0"]
+[ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/magicalFlute.tres" id="16_3wjp8"]
+[ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="17_60haf"]
+[ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="18_n4kv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq8rx"]
 texture = ExtResource("1_f44vr")
@@ -1527,3 +1531,15 @@ texture = SubResource("GradientTexture2D_g44ir")
 position = Vector2(-592, 32)
 scale = Vector2(3, 3)
 texture = SubResource("GradientTexture2D_g44ir")
+
+[node name="ItemDropper" parent="EvilWizardBoss" instance=ExtResource("15_lirk0")]
+itemData = ExtResource("16_3wjp8")
+
+[node name="QuestAdvanceTrigger" parent="EvilWizardBoss/ItemDropper" instance=ExtResource("17_60haf")]
+signalName = "DropCollected"
+linkedQuest = ExtResource("18_n4kv7")
+questStep = 2
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Step: 2 - kill the evil wizard
+Complete: false"

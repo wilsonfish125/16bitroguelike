@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=41 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
 [ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dbd0cgx5c0x5s" path="res://NPC/NPCBehaviorWander.tscn" id="13_ifhc3"]
 [ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="13_t8q1j"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="15_ekmoi"]
+[ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="15_n5aan"]
 [ext_resource type="Resource" uid="uid://dasklqnbrewy5" path="res://NPC/npcSmallJohnny.tres" id="15_t1p6o"]
 [ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="16_ef4rs"]
 [ext_resource type="PackedScene" uid="uid://spdecvl5sh88" path="res://NPC/NPCBehaviorPatrol.tscn" id="16_y6ssu"]
@@ -2231,6 +2232,18 @@ texture = ExtResource("3_a4ycg")
 [sub_resource type="TileSet" id="TileSet_jirth"]
 sources/1 = SubResource("TileSetAtlasSource_txmti")
 
+[sub_resource type="GDScript" id="GDScript_4npjq"]
+script/source = "extends Node
+
+@onready var quest_advance_trigger: QuestAdvanceTrigger = $\"..\"
+
+func _ready() -> void:
+	quest_advance_trigger.Advanced.connect( questComplete )
+
+func questComplete() -> void:
+	PlayerManager.INVENTORYDATA.useItem( load( \"res://Items/magicalFlute.tres\" ) )
+"
+
 [node name="Testnewtilemap" type="Node2D"]
 script = ExtResource("1_qg21n")
 music = ExtResource("2_w1bni")
@@ -2329,43 +2342,51 @@ centerPlayer = true
 size = 1
 side = 2
 
-[node name="NPC" parent="." instance=ExtResource("12_j7onb")]
+[node name="NPCBigJohnny" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(111.931, 1026)
 npcResource = ExtResource("13_t8q1j")
 
-[node name="NpcBehaviorWander" parent="NPC" instance=ExtResource("13_ifhc3")]
+[node name="NpcBehaviorWander" parent="NPCBigJohnny" instance=ExtResource("13_ifhc3")]
 wanderSpeed = 60.0
 
-[node name="DialogueInteraction" parent="NPC" instance=ExtResource("15_ekmoi")]
+[node name="QuestActivatedSwitch" parent="NPCBigJohnny" instance=ExtResource("15_n5aan")]
+removeWhenActivated = true
+reactToGlobalSignal = true
+linkedQuest = ExtResource("21_yqfgs")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if player has quest"
 
-[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction"]
+[node name="DialogueInteraction" parent="NPCBigJohnny/QuestActivatedSwitch" instance=ExtResource("15_ekmoi")]
+
+[node name="DialogueText" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction"]
 script = ExtResource("16_ef4rs")
 text = "Yo Wuddup.
 I'm Big Johnny."
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="DialogueText2" type="Node" parent="NPC/DialogueInteraction"]
+[node name="DialogueText2" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction"]
 script = ExtResource("16_ef4rs")
 text = "[wave]woooah no way[/wave]
 You're THE big johnny?"
 npcInfo = ExtResource("17_wvqx4")
 
-[node name="DialogueText3" type="Node" parent="NPC/DialogueInteraction"]
+[node name="DialogueText3" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction"]
 script = ExtResource("16_ef4rs")
 text = "[wave]Yeeeeeeeah[/wave] motherfucka. It's me.
 You looking for a job?"
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="DialogueChoice" type="Node" parent="NPC/DialogueInteraction"]
+[node name="DialogueChoice" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction"]
 script = ExtResource("18_55lqf")
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="DialogueBranch" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
+[node name="DialogueBranch" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction/DialogueChoice"]
 script = ExtResource("19_v3gbc")
 text = "Yeah Big Johnny!"
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="QuestAdvanceTrigger" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch" instance=ExtResource("20_tgj4k")]
+[node name="QuestAdvanceTrigger" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction/DialogueChoice/DialogueBranch" instance=ExtResource("20_tgj4k")]
 signalName = "Selected"
 linkedQuest = ExtResource("21_yqfgs")
 settingsSummary = "UPDATE QUEST:
@@ -2373,7 +2394,7 @@ Quest: Slay the Evil Wizard
 Step: 0 - N/A
 Complete: false"
 
-[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch"]
+[node name="DialogueText" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction/DialogueChoice/DialogueBranch"]
 script = ExtResource("16_ef4rs")
 text = "Awesome! You're a hero dude!
 So you gotta get my thingo from that evil cave...
@@ -2381,16 +2402,81 @@ So you gotta get my thingo from that evil cave...
 Surely you got this!"
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="DialogueBranch2" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
+[node name="DialogueBranch2" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction/DialogueChoice"]
 script = ExtResource("19_v3gbc")
 text = "Nah man, too busy."
 npcInfo = ExtResource("13_t8q1j")
 
-[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch2"]
+[node name="DialogueText" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch/DialogueInteraction/DialogueChoice/DialogueBranch2"]
 script = ExtResource("16_ef4rs")
 text = "[wave]Duuude what the fuck man...[/wave]
 why woudld you doooo that :("
 npcInfo = ExtResource("13_t8q1j")
+
+[node name="QuestActivatedSwitch3" parent="NPCBigJohnny" instance=ExtResource("15_n5aan")]
+checkType = 3
+removeWhenActivated = true
+reactToGlobalSignal = true
+linkedQuest = ExtResource("21_yqfgs")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if quest is complete"
+
+[node name="QuestActivatedSwitch2" parent="NPCBigJohnny/QuestActivatedSwitch3" instance=ExtResource("15_n5aan")]
+position = Vector2(0.0230064, -19.3334)
+reactToGlobalSignal = true
+linkedQuest = ExtResource("21_yqfgs")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if player has quest"
+
+[node name="QuestActivatedSwitch2" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2" instance=ExtResource("15_n5aan")]
+checkType = 2
+removeWhenActivated = true
+reactToGlobalSignal = true
+linkedQuest = ExtResource("21_yqfgs")
+questStep = 3
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Check if player is on step: return to big johnny"
+
+[node name="DialogueInteraction" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch2" instance=ExtResource("15_ekmoi")]
+
+[node name="DialogueText" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch2/DialogueInteraction"]
+script = ExtResource("16_ef4rs")
+text = "Hey dude, go kill that [wave]EEEEEVIIIIL WIIIIIZAAAARD.[/wave]"
+npcInfo = ExtResource("13_t8q1j")
+
+[node name="QuestActivatedSwitch" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2" instance=ExtResource("15_n5aan")]
+checkType = 2
+reactToGlobalSignal = true
+linkedQuest = ExtResource("21_yqfgs")
+questStep = 3
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Check if player is on step: return to big johnny"
+
+[node name="DialogueInteraction2" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch" instance=ExtResource("15_ekmoi")]
+
+[node name="DialogueText" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch/DialogueInteraction2"]
+script = ExtResource("16_ef4rs")
+text = "Oh damn you found it! 
+I love listening to the song it plays, Evil Wizard theme song.
+Here's a reward dude."
+npcInfo = ExtResource("13_t8q1j")
+
+[node name="QuestAdvanceTrigger" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch/DialogueInteraction2" instance=ExtResource("20_tgj4k")]
+signalName = "Finished"
+linkedQuest = ExtResource("21_yqfgs")
+questStep = 3
+questComplete = true
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Step: 3 - return to big johnny
+Complete: true"
+
+[node name="Node" type="Node" parent="NPCBigJohnny/QuestActivatedSwitch3/QuestActivatedSwitch2/QuestActivatedSwitch/DialogueInteraction2/QuestAdvanceTrigger"]
+script = SubResource("GDScript_4npjq")
 
 [node name="NPC2" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(1050, 1010)
