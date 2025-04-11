@@ -10,6 +10,18 @@ var invulnerable : bool = false
 var hp : int = 6
 var maxHP : int = 6
 
+var level : int = 1
+var xp : int = 0
+
+var attackStat : int = 1 :
+	set( v ):
+		attackStat = v
+		updateDamageValues()
+
+var defenceStat : int = 1
+var bodyStat : int = 1
+var skillTreePoints : int = 0
+
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
 
@@ -33,7 +45,8 @@ func _ready():
 	state_machine.initialise(self)
 	hit_box.Damaged.connect( _takeDamage )
 	updateHP(99)
-	pass
+	updateDamageValues()
+	#PlayerManager.PlayerLevelUp.connect( updateDamageValues )
 
 func _process(_delta: float):
 	
@@ -86,14 +99,16 @@ func animationDirection() -> String:
 func _takeDamage( hurtBox : HurtBox ) -> void:
 	if invulnerable == true:
 		return
-	updateHP( -hurtBox.damage )
+	var dmg : int = hurtBox.damage
 	if hp > 0:
+		if dmg > 0:
+			dmg = clampi( dmg - defenceStat, 1, dmg )
+		updateHP( -hurtBox.damage )
 		PlayerDamaged.emit( hurtBox )
 	else:
 		PlayerDamaged.emit( hurtBox )
 		updateHP( 99) #player never dies
-	
-	pass
+
 
 
 func updateHP( delta : int ) -> void:
@@ -118,3 +133,6 @@ func pickupItem( _t : Throwable ) -> void:
 	# store throwable object so we have a reference
 	carry.throwable = _t
 	pass
+
+func updateDamageValues() -> void:
+	$Interactions/HurtBox.damage = attackStat

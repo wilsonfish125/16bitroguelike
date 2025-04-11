@@ -6,13 +6,14 @@ const INVENTORYDATA : InventoryData = preload("res://GUI/Inventory/playerInvento
 
 signal CameraShook( trauma : float )
 signal InteractPressed #any interactable thing can listen in, detection for button in states
+signal PlayerLevelUp
 
 var interactHandled : bool = true
 var player : Player
 var playerSpawned : bool = false
 
-var xp : int = 0
-
+# Each index for each unique level in ascending
+var levelRequirements = [ 0, 50, 100, 200, 400, 800, 1500 ]
 
 func _ready() -> void:
 	addPlayerInstance()
@@ -38,8 +39,16 @@ func setPlayerHealth( hp : int, maxHP : int ) -> void:
 
 #bugfix methods for ysort issue
 
+
 func rewardXP( _xp : int ) -> void:
-	xp += _xp
+	player.xp += _xp
+	# Check for level up conditions
+	if player.xp >= levelRequirements[ player.level ]:
+		# Level up the player
+		player.level += 1
+		player.attackStat += 1
+		player.defenceStat += 1
+		PlayerLevelUp.emit()
 
 func setAsParent( _p : Node2D ) -> void:
 	#gotta remove player from any other nodes it could be a child of first
@@ -59,4 +68,4 @@ func interact() -> void:
 	InteractPressed.emit()
 
 func shakeCamera( trauma : float = 1 ) -> void:
-	CameraShook.emit( trauma ) 
+	CameraShook.emit( clampi( trauma, 0, 3 ) ) 

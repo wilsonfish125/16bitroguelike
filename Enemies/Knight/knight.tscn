@@ -1244,8 +1244,10 @@ scale = Vector2(3, 3)
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_jr3sn")
+xpReward = 1
 
 [node name="HurtBox" parent="." instance=ExtResource("1_p26p6")]
+damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, 4)
@@ -1282,7 +1284,7 @@ hframes = 2
 [node name="AttackHurtBox" parent="Sprite2D/WeaponSprite2D" instance=ExtResource("1_p26p6")]
 position = Vector2(-3.775, -5.855)
 monitoring = false
-damage = 2
+damage = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/WeaponSprite2D/AttackHurtBox"]
 position = Vector2(-0.447222, 2.18833)

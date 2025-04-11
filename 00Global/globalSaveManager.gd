@@ -10,8 +10,14 @@ signal GameSaved
 var currentSave : Dictionary = {
 	scenePath = "", #this is gonna store the path to the scene the player is in when they save
 	player = {
+		level = 1,
+		xp = 0,
 		hp = 1,
 		maxHP = 1,
+		attack = 1,
+		defense = 1,
+		body = 1, 
+		skillTreePoints = 0,
 		posX = 0,
 		posY = 0
 	},
@@ -58,6 +64,14 @@ func loadGame() -> void:
 	#while the screen is black and we cant see anything, we update the player because game magic
 	PlayerManager.setPlayerPosition( Vector2( currentSave.player.posX, currentSave.player.posY ) )
 	PlayerManager.setPlayerHealth( currentSave.player.hp, currentSave.player.maxHP )
+	var p : Player = PlayerManager.player
+	p.level = currentSave.player.level
+	p.xp = currentSave.player.xp
+	p.attackStat = currentSave.player.attack
+	p.defenceStat = currentSave.player.defense
+	p.bodyStat = currentSave.player.body
+	p.skillTreePoints = currentSave.player.skillTreePoints
+	
 	PlayerManager.INVENTORYDATA.parseSaveData( currentSave.items )
 	QuestManager.currentQuests = currentSave.quests #both dictionaries, both in same format!!
 	
@@ -65,8 +79,6 @@ func loadGame() -> void:
 	await LevelManager.LevelLoaded
 	#screen is white, game is loaded. lets emit for anyone listening
 	GameLoaded.emit()
-	
-	pass
 
 
 #lets make some more funcs so we dont bloat poor saveGame
@@ -76,6 +88,12 @@ func updatePlayerData() -> void:
 	currentSave.player.maxHP = p.maxHP
 	currentSave.player.posX = p.global_position.x
 	currentSave.player.posY = p.global_position.y
+	currentSave.player.level = p.level
+	currentSave.player.xp = p.xp
+	currentSave.player.attack = p.attackStat
+	currentSave.player.defense = p.defenceStat
+	currentSave.player.body = p.bodyStat
+	currentSave.skillTreePoints = p.skillTreePoints
 
 func updateScenePath() -> void:
 	var p : String = ""

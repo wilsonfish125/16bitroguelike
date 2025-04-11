@@ -7,6 +7,7 @@ signal enemy_destroy( hurtBox : HurtBox ) #manages enemy behavior when health is
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 @export var hp : int = 3
+@export var xpReward : int = 0
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO

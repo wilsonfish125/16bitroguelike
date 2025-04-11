@@ -310,7 +310,7 @@ script = ExtResource("5_ldcvr")
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = 229.0
+offset_right = 185.0
 offset_bottom = 63.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_hc7bp")
 
@@ -319,7 +319,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
 modulate = Color(1, 0.858824, 0.552941, 1)
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_mqnbt")
@@ -327,7 +327,7 @@ text = "Notif Type "
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_1q36p")
