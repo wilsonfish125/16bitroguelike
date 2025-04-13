@@ -27,6 +27,7 @@ SaveManager="*res://00Global/globalSaveManager.gd"
 PauseMenu="*res://GUI/PauseMenu/pauseMenu.tscn"
 DialogueSystem="*res://GUI/DialogueSystem/dialogueSystem.tscn"
 QuestManager="*res://Quests/Scripts/globalQuestManager.gd"
+EffectManager="*res://00Global/globalEffectManager.gd"
 
 [display]
 

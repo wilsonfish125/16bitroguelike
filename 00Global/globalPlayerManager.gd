@@ -13,7 +13,7 @@ var player : Player
 var playerSpawned : bool = false
 
 # Each index for each unique level in ascending
-var levelRequirements = [ 0, 50, 100, 200, 400, 800, 1500 ]
+var levelRequirements = [ 0, 50, 150, 300, 500, 800, 1200 ]
 
 func _ready() -> void:
 	addPlayerInstance()
@@ -43,12 +43,23 @@ func setPlayerHealth( hp : int, maxHP : int ) -> void:
 func rewardXP( _xp : int ) -> void:
 	player.xp += _xp
 	# Check for level up conditions
+	checkForLevelAdvance()
+
+# RECURSIVE FUNCTION
+# Calls itself under certain conditions
+# Once it completes conditions, it stops calling itself
+func checkForLevelAdvance() -> void:
+	if player.level >= levelRequirements.size():
+		return # We are max level
+	
 	if player.xp >= levelRequirements[ player.level ]:
 		# Level up the player
 		player.level += 1
 		player.attackStat += 1
 		player.defenceStat += 1
 		PlayerLevelUp.emit()
+		checkForLevelAdvance()
+
 
 func setAsParent( _p : Node2D ) -> void:
 	#gotta remove player from any other nodes it could be a child of first

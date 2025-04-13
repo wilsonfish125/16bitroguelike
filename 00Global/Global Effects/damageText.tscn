@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlrlalww5t2ya"]
+
+[ext_resource type="Script" path="res://00Global/Global Effects/damageText.gd" id="1_hjx78"]
+
+[node name="DamageText" type="Node2D"]
+z_index = 99
+scale = Vector2(2, 2)
+script = ExtResource("1_hjx78")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -64.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 10.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+text = "99"
+horizontal_alignment = 1

@@ -2294,6 +2294,13 @@ offset_right = -524.0
 offset_bottom = 115.0
 text = "LAKE TO GO HERE"
 
+[node name="Label3" type="Label" parent="TempLabels"]
+offset_left = -284.667
+offset_top = 331.333
+offset_right = -113.667
+offset_bottom = 403.333
+text = "EVIL SLIME WITH 100 XP"
+
 [node name="Label2" type="Label" parent="TempLabels"]
 offset_left = 80.6667
 offset_top = 366.0
@@ -2316,21 +2323,38 @@ quantity = 4
 
 [node name="Slime" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(210, 1226)
+hp = null
+xpReward = null
 
 [node name="Slime3" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(282, 1226)
+hp = null
+xpReward = null
+
+[node name="Slime7" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
+position = Vector2(-566, 1130)
+hp = null
+xpReward = 100
 
 [node name="Slime4" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(906, 1562)
+hp = null
+xpReward = null
 
 [node name="Slime5" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(954, 1626)
+hp = null
+xpReward = null
 
 [node name="Slime6" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(1026, 1594)
+hp = null
+xpReward = null
 
 [node name="Slime2" parent="Enemy Manager" instance=ExtResource("4_l3n8p")]
 position = Vector2(250, 1282)
+hp = null
+xpReward = null
 
 [node name="Knight" parent="Enemy Manager" instance=ExtResource("5_fbb2h")]
 position = Vector2(1394, 1258)
@@ -2527,6 +2551,24 @@ position = Vector2(-326, 1106)
 
 [node name="Pot2" parent="." instance=ExtResource("23_plvyu")]
 position = Vector2(-350, 1138)
+
+[node name="Pot10" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-606, 1138)
+
+[node name="Pot7" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-518, 1138)
+
+[node name="Pot8" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-566, 1114)
+
+[node name="Pot9" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-606, 1170)
+
+[node name="Pot11" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-518, 1170)
+
+[node name="Pot12" parent="." instance=ExtResource("23_plvyu")]
+position = Vector2(-558, 1194)
 
 [node name="Pot3" parent="." instance=ExtResource("23_plvyu")]
 position = Vector2(410, 1186)

@@ -46,7 +46,7 @@ func _ready():
 	hit_box.Damaged.connect( _takeDamage )
 	updateHP(99)
 	updateDamageValues()
-	#PlayerManager.PlayerLevelUp.connect( updateDamageValues )
+	PlayerManager.PlayerLevelUp.connect( _onPlayerLevelUp )
 
 func _process(_delta: float):
 	
@@ -136,3 +136,7 @@ func pickupItem( _t : Throwable ) -> void:
 
 func updateDamageValues() -> void:
 	$Interactions/HurtBox.damage = attackStat
+
+func _onPlayerLevelUp() -> void:
+	effect_animation_player.play( "levelUp" )
+	updateHP( 99 )

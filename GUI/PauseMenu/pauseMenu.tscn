@@ -202,10 +202,46 @@ layout_mode = 2
 [node name="QuestStepItem3" parent="Control/TabContainer/Quests/VBoxContainer" instance=ExtResource("10_c8p8i")]
 layout_mode = 2
 
-[node name="System" type="Control" parent="Control/TabContainer"]
+[node name="Skill Tree" type="Control" parent="Control/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
+
+[node name="TabContainer" type="TabContainer" parent="Control/TabContainer/Skill Tree"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+tab_alignment = 1
+current_tab = 0
+
+[node name="Arkus" type="Control" parent="Control/TabContainer/Skill Tree/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Polly" type="Control" parent="Control/TabContainer/Skill Tree/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Emmett" type="Control" parent="Control/TabContainer/Skill Tree/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Bear" type="Control" parent="Control/TabContainer/Skill Tree/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="System" type="Control" parent="Control/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/System"]
 layout_mode = 1
