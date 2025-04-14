@@ -71,18 +71,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 74.0
-offset_top = 102.0
+offset_top = 42.0
 offset_right = 270.0
-offset_bottom = 248.0
+offset_bottom = 202.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxTexture_nr7q2")
 
@@ -113,26 +114,65 @@ layout_mode = 2
 [node name="InventorySlot7" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
 layout_mode = 2
 
+[node name="InventorySlot8" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
+layout_mode = 2
+
 [node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_sqdfp")]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 97.0
-offset_right = 908.0
-offset_bottom = 245.0
+offset_left = 712.0
+offset_top = 43.0
+offset_right = 984.0
+offset_bottom = 191.0
+scale = Vector2(2, 2)
 
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 152.0
-offset_top = 563.0
+offset_top = 555.0
 offset_right = 568.0
-offset_bottom = 619.0
+offset_bottom = 611.0
 theme_override_font_sizes/font_size = 32
 text = "Example Description"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
 script = ExtResource("6_sgv1h")
 metadata/_tab_index = 1
@@ -175,6 +215,7 @@ offset_bottom = 74.0
 scale = Vector2(2, 2)
 
 [node name="TitleLabel" type="Label" parent="Control/TabContainer/Quests/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("6_71wp6")

@@ -4,7 +4,13 @@ class_name PlayerCamera extends Camera2D
 @export var shakeMaxOffset : float = 5.0 #Max shake in pixels 
 @export var shakeDecay : float = 1.0 #How quickly the shake stops
 
+@export var zoomSpeed : float = 5.0
+@export var zoomLevels : Array[Vector2] = [ Vector2(1, 1), Vector2(1.25, 1.25), Vector2(1.5, 1.5) ]
+
 var shakeTrauma : float = 0.0
+
+var currentZoomLevel : int = 0
+var targetZoom : Vector2 = zoom
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,11 +19,21 @@ func _ready() -> void:
 	PlayerManager.CameraShook.connect( addCameraShake ) 
 
 func _physics_process(delta: float) -> void:
-	
+	zoom = zoom.lerp( targetZoom, zoomSpeed * delta )
 	if shakeTrauma > 0:
 		shakeTrauma = max( shakeTrauma - shakeDecay * delta, 0 )
 		shake()
-	pass
+	
+
+func _unhandled_input( event: InputEvent ) -> void:
+	if event.is_action_pressed("zoom_in"):
+		cycleZoom( 1 )
+	elif event.is_action_pressed("zoom_out"):
+		cycleZoom( -1 )
+
+func cycleZoom( _val : int ) -> void:
+	currentZoomLevel = ( currentZoomLevel + _val ) % zoomLevels.size()
+	targetZoom = zoomLevels[ currentZoomLevel ]
 
 func addCameraShake( val : float ) -> void:
 	shakeTrauma = val
