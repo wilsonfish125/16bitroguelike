@@ -1064,6 +1064,7 @@ side = 3
 checkType = 1
 removeWhenActivated = true
 freeOnRemoved = true
+reactToGlobalSignal = true
 linkedQuest = ExtResource("6_3ssen")
 questStep = 1
 settingsSummary = "UPDATE QUEST:

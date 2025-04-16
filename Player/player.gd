@@ -19,6 +19,8 @@ var attackStat : int = 1 :
 		updateDamageValues()
 
 var defenceStat : int = 1
+var defenseBonus : int = 0
+
 var bodyStat : int = 1
 var skillTreePoints : int = 0
 
@@ -47,6 +49,7 @@ func _ready():
 	updateHP(99)
 	updateDamageValues()
 	PlayerManager.PlayerLevelUp.connect( _onPlayerLevelUp )
+	PlayerManager.INVENTORYDATA.EquipmentChanged.connect( _onEquipmentChanged )
 
 func _process(_delta: float):
 	
@@ -102,7 +105,7 @@ func _takeDamage( hurtBox : HurtBox ) -> void:
 	var dmg : int = hurtBox.damage
 	if hp > 0:
 		if dmg > 0:
-			dmg = clampi( dmg - defenceStat, 1, dmg )
+			dmg = clampi( dmg - defenceStat - defenseBonus , 1, dmg )
 		updateHP( -hurtBox.damage )
 		PlayerDamaged.emit( hurtBox )
 	else:
@@ -132,11 +135,17 @@ func pickupItem( _t : Throwable ) -> void:
 	state_machine.changeState( lift )
 	# store throwable object so we have a reference
 	carry.throwable = _t
-	pass
 
 func updateDamageValues() -> void:
-	$Interactions/HurtBox.damage = attackStat
+	# Must now be calculated based on equipment
+	var damageValue : int = attackStat + PlayerManager.INVENTORYDATA.getAttackBonus()
+	
+	$Interactions/HurtBox.damage = damageValue
 
 func _onPlayerLevelUp() -> void:
 	effect_animation_player.play( "levelUp" )
 	updateHP( 99 )
+
+func _onEquipmentChanged() -> void:
+	updateDamageValues()
+	defenseBonus = PlayerManager.INVENTORYDATA.getDefenseBonus()

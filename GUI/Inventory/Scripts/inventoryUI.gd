@@ -15,9 +15,7 @@ func _ready() -> void:
 	#when we run lets start with a clean slate
 	clearInventory()
 	data.changed.connect( onInventoryChanged )
-
-
-#in order to make our inventory work we wanna a. clear old items, b. update to display new ones
+	data.EquipmentChanged.connect( onInventoryChanged )
 
 func clearInventory() -> void:
 	for c in get_children():
@@ -43,5 +41,4 @@ func updateInventory( applyFocus : bool = true ) -> void:
 		get_child( 0 ).grab_focus()
 
 func onInventoryChanged() -> void:
-	clearInventory()
-	updateInventory()
+	updateInventory( false )

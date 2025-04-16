@@ -3,6 +3,8 @@ extends CanvasLayer
 #hook up to inventory with signals
 signal Shown
 signal Hidden
+# Whenever we highlight an item and it is equippable, emit this
+signal PreviewStatsChanged( item : ItemData ) 
 
 @onready var tab_container: TabContainer = $Control/TabContainer
 
@@ -72,6 +74,17 @@ func _onLoadPressed() -> void:
 func _onQuitPressed() -> void:
 	get_tree().quit()
 
+func focusItemChanged( slot : SlotData ) -> void:
+	if slot:
+		if slot.itemData:
+			updateItemDescription( slot.itemData.description )
+			# Update Stats
+			previewStats( slot.itemData )
+	else:
+		updateItemDescription( "" )
+		# Update Stats
+		previewStats( null )
+
 func updateItemDescription( newDescription : String ) -> void:
 	item_description.text = newDescription
 
@@ -81,8 +94,11 @@ func playAudio( audio : AudioStream ) -> void:
 
 func changeTab( _i : int = 1 ) -> void:
 	tab_container.current_tab = wrapi( 
-			tab_container.current_tab + _i, # Current Value
-			0,                              # Minimum Value
-			tab_container.get_tab_count()   # Maximum Value
+			tab_container.current_tab + _i,  # Current Value
+			0,                               # Minimum Value
+			tab_container.get_tab_count()    # Maximum Value
 		 ) 
 	tab_container.get_tab_bar().grab_focus() # Resets focus to tab bar accordingly
+
+func previewStats( item : ItemData ) -> void:
+	PreviewStatsChanged.emit( item )
