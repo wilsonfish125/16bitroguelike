@@ -1,13 +1,23 @@
 class_name InventoryData extends Resource
 #here is the resource that keeps track of inv data, see slotData.gd for other fun stuff
 
-@export var slots : Array[ SlotData ]
+signal EquipmentChanged
 
+@export var slots : Array[ SlotData ]
+var equipmentSlotCount : int = 4
 
 #ready for resources
 func _init() -> void:
 	connectSlots()
-	pass
+
+func inventorySlots() -> Array[ SlotData ]:
+	# We only want to return the inventory slots that are not equipped items
+	return slots.slice( 0, -equipmentSlotCount )
+
+func equipmentSlots() -> Array[ SlotData ]:
+	# We only want to return the equippable slots
+	return slots.slice( -equipmentSlotCount, slots.size() )
+
 
 #some cool stuff, we can add functions to resources! even though this just tracks data, funcs can organise
 #return bool so that if the inv is full, we can return false. also needs to be smart enough to stack items
@@ -17,8 +27,9 @@ func addItem( item : ItemData, count : int = 1 ) -> bool:
 			if s.itemData == item: #does the item data of the slot equal the item we pass it in?
 				s.quantity += count
 				return true
+	
 	#what if we pick up an item, but we dont already have it?
-	for i in slots.size(): #if it works it works!!
+	for i in inventorySlots().size():
 		if slots[ i ] == null: #if there is an empty slot, lets add the item
 			var newSlot = SlotData.new() #we are programmers so all we do is copy paste
 			newSlot.itemData = item

@@ -4,6 +4,10 @@ const INVENTORYSLOT = preload("res://GUI/Inventory/inventorySlot.tscn")
 
 @export var data : InventoryData
 
+@onready var inventory_slot_armour: InventorySlotUI = %InventorySlotArmour
+@onready var inventory_slot_amulet: InventorySlotUI = %InventorySlotAmulet
+@onready var inventory_slot_weapon: InventorySlotUI = %InventorySlotWeapon
+@onready var inventory_slot_ring: InventorySlotUI = %InventorySlotRing
 
 func _ready() -> void:
 	PauseMenu.Shown.connect( updateInventory )
@@ -11,26 +15,33 @@ func _ready() -> void:
 	#when we run lets start with a clean slate
 	clearInventory()
 	data.changed.connect( onInventoryChanged )
-	pass
 
 
 #in order to make our inventory work we wanna a. clear old items, b. update to display new ones
 
 func clearInventory() -> void:
 	for c in get_children():
-		c.queue_free()
+		c.setSlotData( null )
 
-func updateInventory() -> void:
-	for s in data.slots:
-		#first we need to create a slot, add it to the container, and add some slot data
-		var newSlot = INVENTORYSLOT.instantiate()
-		add_child( newSlot )
-		#as we add each slot to the inventory,
-		newSlot.slotData = s
+func updateInventory( applyFocus : bool = true ) -> void:
+	clearInventory()
 	
-	get_child( 0 ).grab_focus()
+	# Handles all regular inventory
+	var inventorySlots : Array[ SlotData ] = data.inventorySlots()
+	for i in inventorySlots.size():
+		var slot : InventorySlotUI = get_child( i )
+		slot.setSlotData( inventorySlots[ i ] )
+	
+	# Handles equipment slots
+	var equipmentSlots : Array[ SlotData ] = data.equipmentSlots()
+	inventory_slot_armour.setSlotData( equipmentSlots[ 0 ] )
+	inventory_slot_weapon.setSlotData( equipmentSlots[ 1 ] )
+	inventory_slot_amulet.setSlotData( equipmentSlots[ 2 ] )
+	inventory_slot_ring.setSlotData( equipmentSlots[ 3 ] )
+	
+	if applyFocus:
+		get_child( 0 ).grab_focus()
 
 func onInventoryChanged() -> void:
 	clearInventory()
 	updateInventory()
-	pass

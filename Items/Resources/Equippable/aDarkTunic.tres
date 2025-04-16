@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://cyovhkyi6061n"]
+
+[ext_resource type="Script" path="res://Items/ItemEffects/itemEffect.gd" id="1_3bt57"]
+[ext_resource type="Script" path="res://Items/Scripts/equippableItemModifier.gd" id="2_ldany"]
+[ext_resource type="Script" path="res://Items/Scripts/equippableItemData.gd" id="3_max2v"]
+[ext_resource type="Texture2D" uid="uid://b4ii3pwgdinvg" path="res://Resources/Michael Games Sprites/player_equipment/player_equipment/gear.png" id="4_8ha2o"]
+
+[sub_resource type="Resource" id="Resource_g55aj"]
+script = ExtResource("2_ldany")
+type = 2
+value = 2
+
+[sub_resource type="Resource" id="Resource_rd7t1"]
+script = ExtResource("2_ldany")
+type = 1
+value = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udoyu"]
+atlas = ExtResource("4_8ha2o")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_max2v")
+type = 1
+modifiers = Array[ExtResource("2_ldany")]([SubResource("Resource_g55aj"), SubResource("Resource_rd7t1")])
+name = "Evil Tunic"
+description = "EEEEVIIIL TUUUNIC EEEEVIIIL TUNICCCC"
+texture = SubResource("AtlasTexture_udoyu")
+effects = Array[ExtResource("1_3bt57")]([])

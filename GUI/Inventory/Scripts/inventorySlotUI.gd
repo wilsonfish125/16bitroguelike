@@ -22,10 +22,17 @@ func _ready() -> void:
 func setSlotData( value : SlotData ) -> void:
 	slotData = value
 	if slotData == null:
+		# If there is an item here, and it becomes null, we want to clear its properties
+		texture_rect.texture = null
+		label.text = ""
 		return
+	
 	texture_rect.texture = slotData.itemData.texture
-	label.text = str( slotData.quantity )
-	pass
+	if slotData.itemData is EquippableItemData:
+		label.text = "" # Equipment should only have one instance in the world
+	else:
+		label.text = str( slotData.quantity )
+	
 
 func itemFocused() -> void:
 	if slotData != null:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cg8lpqwwm553e"]
+[gd_scene load_steps=22 format=3 uid="uid://cg8lpqwwm553e"]
 
 [ext_resource type="Script" path="res://GUI/PauseMenu/pauseMenu.gd" id="1_syltk"]
 [ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="2_jvcgh"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://fwtvi1l8wu1n" path="res://GUI/PauseMenu/Quests/questItem.tscn" id="6_gt8jj"]
 [ext_resource type="Script" path="res://GUI/PauseMenu/Quests/questsUI.gd" id="6_sgv1h"]
 [ext_resource type="PackedScene" uid="uid://bl0sr3tnmcwni" path="res://GUI/PauseMenu/stats.tscn" id="6_sqdfp"]
+[ext_resource type="Texture2D" uid="uid://b4ii3pwgdinvg" path="res://Resources/Michael Games Sprites/player_equipment/player_equipment/gear.png" id="6_vtry1"]
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="7_17wwq"]
 [ext_resource type="PackedScene" uid="uid://bn8w2msja1h1h" path="res://GUI/PauseMenu/Quests/questStepItem.tscn" id="10_c8p8i"]
 
@@ -26,6 +27,31 @@ texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7v7r"]
+atlas = ExtResource("6_vtry1")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4uven"]
+load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sng1t"]
+atlas = SubResource("CompressedTexture2D_4uven")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rmah4"]
+load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53i40"]
+atlas = SubResource("CompressedTexture2D_rmah4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrx1y"]
+load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh10y"]
+atlas = SubResource("CompressedTexture2D_vrx1y")
+region = Rect2(16, 16, 16, 16)
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -71,19 +97,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
-offset_left = 74.0
-offset_top = 42.0
-offset_right = 270.0
-offset_bottom = 202.0
+offset_left = 32.0
+offset_top = 43.0
+offset_right = 228.0
+offset_bottom = 203.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxTexture_nr7q2")
 
@@ -153,26 +178,97 @@ layout_mode = 2
 [node name="InventorySlot20" parent="Control/TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("3_84ssm")]
 layout_mode = 2
 
+[node name="PanelContainer2" type="PanelContainer" parent="Control/TabContainer/Inventory"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 259.0
+offset_right = 847.0
+offset_bottom = 347.0
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxTexture_nr7q2")
+
+[node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/PanelContainer2"]
+layout_mode = 2
+columns = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_j7v7r")
+stretch_mode = 3
+
+[node name="InventorySlotArmour" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer" instance=ExtResource("3_84ssm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_sng1t")
+stretch_mode = 3
+
+[node name="InventorySlotAmulet" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer" instance=ExtResource("3_84ssm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_53i40")
+stretch_mode = 3
+
+[node name="InventorySlotWeapon" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer" instance=ExtResource("3_84ssm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_vh10y")
+stretch_mode = 3
+
+[node name="InventorySlotRing" parent="Control/TabContainer/Inventory/PanelContainer2/GridContainer" instance=ExtResource("3_84ssm")]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_sqdfp")]
 layout_mode = 0
-offset_left = 712.0
+offset_left = 650.0
 offset_top = 43.0
-offset_right = 984.0
-offset_bottom = 191.0
+offset_right = 953.0
+offset_bottom = 147.0
 scale = Vector2(2, 2)
 
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
-layout_mode = 0
-offset_left = 152.0
-offset_top = 555.0
-offset_right = 568.0
-offset_bottom = 611.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -93.0
+offset_right = 208.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "Example Description"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("6_sgv1h")
 metadata/_tab_index = 1

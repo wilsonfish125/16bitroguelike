@@ -1,8 +1,20 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://b6d6rc77ngjyi"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=7 format=3 uid="uid://b6d6rc77ngjyi"]
 
 [ext_resource type="Script" path="res://GUI/Inventory/Scripts/inventoryData.gd" id="1_7vovl"]
 [ext_resource type="Script" path="res://GUI/Inventory/Scripts/slotData.gd" id="2_affun"]
+[ext_resource type="Resource" uid="uid://ce1op7v3mae2v" path="res://Items/Resources/Equippable/aTunic.tres" id="3_5xfym"]
+[ext_resource type="Resource" uid="uid://x707pbdibs4y" path="res://Items/Resources/Equippable/wIronSword.tres" id="4_mh2vj"]
+
+[sub_resource type="Resource" id="Resource_psp8k"]
+script = ExtResource("2_affun")
+itemData = ExtResource("3_5xfym")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_javyq"]
+script = ExtResource("2_affun")
+itemData = ExtResource("4_mh2vj")
+quantity = 1
 
 [resource]
 script = ExtResource("1_7vovl")
-slots = Array[ExtResource("2_affun")]([null, null, null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_affun")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_psp8k"), SubResource("Resource_javyq"), null, null])
