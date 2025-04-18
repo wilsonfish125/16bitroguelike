@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwhfnluog5jpp"]
 
-[ext_resource type="Script" path="res://Quests/Utility Nodes/questAdvanceTrigger.gd" id="1_ktmmr"]
+[ext_resource type="Script" uid="uid://cwhhvyfpufn4x" path="res://Quests/Utility Nodes/questAdvanceTrigger.gd" id="1_ktmmr"]
 [ext_resource type="Texture2D" uid="uid://bypptsyoilyqt" path="res://Quests/Utility Nodes/Icons/quest_advance.png" id="2_3wwkn"]
 
 [node name="QuestAdvanceTrigger" type="Node2D"]

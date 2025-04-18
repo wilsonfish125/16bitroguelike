@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://66k76ctxkn4x"]
 
-[ext_resource type="Script" path="res://Enemies/Hazards/Energy Orb/energyOrb.gd" id="1_iwc2v"]
+[ext_resource type="Script" uid="uid://bjf1efwontvk0" path="res://Enemies/Hazards/Energy Orb/energyOrb.gd" id="1_iwc2v"]
 [ext_resource type="AudioStream" uid="uid://duxkna4mkwlyw" path="res://Resources/Michael Games Sprites/wizard_boss/boss_fireball.wav" id="2_cesn1"]
 [ext_resource type="Material" uid="uid://b8k4ja608wqay" path="res://Shaders & Materials/lightMaterial.tres" id="2_d5m2n"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_stxjc"]

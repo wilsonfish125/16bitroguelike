@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://brfx6gsyhxuw4"]
 
-[ext_resource type="Script" path="res://GeneralNodes/ItemMagnet/itemMagnet.gd" id="1_kkrvv"]
-[ext_resource type="AudioStream" uid="uid://dystitxqv7kr6" path="res://Resources/Michael Games Sprites/catch.wav" id="2_u28me"]
+[ext_resource type="Script" uid="uid://bns1xgdospxku" path="res://GeneralNodes/ItemMagnet/itemMagnet.gd" id="1_kkrvv"]
+[ext_resource type="AudioStream" uid="uid://dystitxqv7kr6" path="res://Resources/Michael Games Sprites/example_music/catch.wav" id="2_u28me"]
 
 [node name="ItemMagnet" type="Area2D"]
 collision_layer = 0

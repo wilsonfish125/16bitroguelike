@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://d0pqtnffg8c5m"]
 
-[ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_6ufj0"]
+[ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_6ufj0"]
 [ext_resource type="PackedScene" uid="uid://b1f8pfexnwkxq" path="res://Other/Scenes/tilesetTesting.tscn" id="2_xqpnq"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="3_oikqx"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="4_dx7qd"]

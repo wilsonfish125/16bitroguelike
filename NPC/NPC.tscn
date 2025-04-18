@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://y1hgbyti4sve"]
 
-[ext_resource type="Script" path="res://NPC/Scripts/NPC.gd" id="1_4rnqi"]
+[ext_resource type="Script" uid="uid://b5n45w2d1uoct" path="res://NPC/Scripts/NPC.gd" id="1_4rnqi"]
 [ext_resource type="Texture2D" uid="uid://52l5j1hptjyx" path="res://Resources/Old Tilesets/Old Tilesets/npcGameboy.png" id="2_yblop"]
 
 [sub_resource type="Animation" id="Animation_pyfqk"]
@@ -116,13 +116,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bwcag"]
 _data = {
-"RESET": SubResource("Animation_pyfqk"),
-"idleDown": SubResource("Animation_rgva1"),
-"idleHorizontal": SubResource("Animation_rtx1e"),
-"idleUp": SubResource("Animation_8njqn"),
-"walkDown": SubResource("Animation_a4kyv"),
-"walkHorizontal": SubResource("Animation_ntuth"),
-"walkUp": SubResource("Animation_mys3l")
+&"RESET": SubResource("Animation_pyfqk"),
+&"idleDown": SubResource("Animation_rgva1"),
+&"idleHorizontal": SubResource("Animation_rtx1e"),
+&"idleUp": SubResource("Animation_8njqn"),
+&"walkDown": SubResource("Animation_a4kyv"),
+&"walkHorizontal": SubResource("Animation_ntuth"),
+&"walkUp": SubResource("Animation_mys3l")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jjk5i"]

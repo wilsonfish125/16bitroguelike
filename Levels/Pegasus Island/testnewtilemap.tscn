@@ -1,7 +1,7 @@
-[gd_scene load_steps=44 format=4 uid="uid://bplxsf3f3jpae"]
+[gd_scene load_steps=54 format=4 uid="uid://bplxsf3f3jpae"]
 
 [ext_resource type="Texture2D" uid="uid://b52s75fyjfqa1" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grassland.png" id="1_0hxoe"]
-[ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
+[ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
 [ext_resource type="Texture2D" uid="uid://gx54iqpb5mid" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grasslandrev2.png" id="2_mwd1t"]
 [ext_resource type="AudioStream" uid="uid://bvawfaolww78g" path="res://Resources/Michael Games Sprites/example_music/example_music_02.ogg" id="2_w1bni"]
 [ext_resource type="Texture2D" uid="uid://d2te2biv6nfc2" path="res://Resources/New Tileset (v2)/NEW Overworld (Classic)(v2).png" id="3_a4ycg"]
@@ -11,23 +11,26 @@
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="5_fbb2h"]
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="6_wcj0u"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="7_ubvom"]
+[ext_resource type="PackedScene" uid="uid://ba34wes5rbkd" path="res://Levels/levelTransitionInteract.tscn" id="12_1o1sh"]
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="12_j7onb"]
 [ext_resource type="PackedScene" uid="uid://dbd0cgx5c0x5s" path="res://NPC/NPCBehaviorWander.tscn" id="13_ifhc3"]
 [ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="13_t8q1j"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="15_ekmoi"]
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="15_n5aan"]
 [ext_resource type="Resource" uid="uid://dasklqnbrewy5" path="res://NPC/npcSmallJohnny.tres" id="15_t1p6o"]
-[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="16_ef4rs"]
+[ext_resource type="Script" uid="uid://dibm0sw4mb3u8" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="16_ef4rs"]
 [ext_resource type="PackedScene" uid="uid://spdecvl5sh88" path="res://NPC/NPCBehaviorPatrol.tscn" id="16_y6ssu"]
 [ext_resource type="PackedScene" uid="uid://la2r0u1m7tbn" path="res://NPC/patrolLocation.tscn" id="17_n80ir"]
 [ext_resource type="Resource" uid="uid://c7gwignismips" path="res://NPC/npcArkusYoung.tres" id="17_wvqx4"]
-[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="18_55lqf"]
-[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="19_v3gbc"]
+[ext_resource type="Script" uid="uid://doesf52yw1ogg" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="18_55lqf"]
+[ext_resource type="Script" uid="uid://cdk6dpee5kak6" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="19_v3gbc"]
 [ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="20_tgj4k"]
 [ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="21_yqfgs"]
 [ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="23_plvyu"]
 [ext_resource type="PackedScene" uid="uid://q5apn55fptji" path="res://Props/Plants/bush.tscn" id="24_aig36"]
 [ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="28_r1lel"]
+[ext_resource type="Texture2D" uid="uid://2g3vt1u56bv0" path="res://Resources/Michael Games Sprites/player_updates/sprites/Props.png" id="28_vg25j"]
+[ext_resource type="AudioStream" uid="uid://cs6dj564cc04q" path="res://Resources/Michael Games Sprites/player_updates/audio/pot_destroy.wav" id="29_ishqp"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="29_spcsb"]
 [ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="30_j4reb"]
 
@@ -2247,6 +2250,113 @@ func questComplete() -> void:
 	PlayerManager.INVENTORYDATA.useItem( load( \"res://Items/magicalFlute.tres\" ) )
 "
 
+[sub_resource type="Gradient" id="Gradient_3ygha"]
+offsets = PackedFloat32Array(0.322034, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c3pso"]
+gradient = SubResource("Gradient_3ygha")
+width = 20
+height = 12
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Animation" id="Animation_mib0u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2DShadow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cbbp6"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_b0b4f"]
+resource_name = "destroy"
+step = 0.075
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3, 0.384615, 0.461538),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 8, 9, 47]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2DShadow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("29_ishqp")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_388dl"]
+_data = {
+&"RESET": SubResource("Animation_mib0u"),
+&"default": SubResource("Animation_cbbp6"),
+&"destroy": SubResource("Animation_b0b4f")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjl0d"]
+size = Vector2(16, 8)
+
 [node name="Testnewtilemap" type="Node2D"]
 script = ExtResource("1_qg21n")
 music = ExtResource("2_w1bni")
@@ -2303,6 +2413,13 @@ offset_top = 331.333
 offset_right = -113.667
 offset_bottom = 403.333
 text = "EVIL SLIME WITH 100 XP"
+
+[node name="Label4" type="Label" parent="TempLabels"]
+offset_left = -389.333
+offset_top = 389.333
+offset_right = -218.333
+offset_bottom = 461.333
+text = "POT WITH A STORE INSIDE"
 
 [node name="Label2" type="Label" parent="TempLabels"]
 offset_left = 80.6667
@@ -2368,6 +2485,13 @@ level = "res://Levels/TestLevels/testDungeonLevel.tscn"
 centerPlayer = true
 size = 1
 side = 2
+
+[node name="LevelTransitionShop" parent="." instance=ExtResource("12_1o1sh")]
+position = Vector2(-872, 1176)
+level = "uid://cwr6vdd8vf6sh"
+size = 1
+side = 2
+snapToGrid = true
 
 [node name="NPCBigJohnny" parent="." instance=ExtResource("12_j7onb")]
 position = Vector2(111.931, 1026)
@@ -2551,6 +2675,37 @@ position = Vector2(-302, 1138)
 
 [node name="Pot6" parent="." instance=ExtResource("23_plvyu")]
 position = Vector2(-326, 1106)
+
+[node name="Pot13" type="Node2D" parent="."]
+position = Vector2(-872, 1136)
+scale = Vector2(2, 2)
+
+[node name="Sprite2DShadow" type="Sprite2D" parent="Pot13"]
+position = Vector2(0, 1)
+texture = SubResource("GradientTexture2D_c3pso")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pot13"]
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("28_vg25j")
+hframes = 16
+vframes = 3
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pot13"]
+libraries = {
+&"": SubResource("AnimationLibrary_388dl")
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pot13"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pot13/StaticBody2D"]
+shape = SubResource("RectangleShape2D_wjl0d")
+debug_color = Color(0, 0.6, 0.7, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Pot13"]
 
 [node name="Pot2" parent="." instance=ExtResource("23_plvyu")]
 position = Vector2(-350, 1138)

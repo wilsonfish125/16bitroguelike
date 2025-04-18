@@ -1,21 +1,21 @@
 [gd_scene load_steps=48 format=3 uid="uid://dmlf6isdeerhd"]
 
-[ext_resource type="Script" path="res://Enemies/Scripts/enemy.gd" id="1_jr3sn"]
+[ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_jr3sn"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="1_p26p6"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="2_doj60"]
 [ext_resource type="Texture2D" uid="uid://bufha6drs5jyx" path="res://Enemies/Knight/knight.png" id="3_2tdqp"]
-[ext_resource type="Script" path="res://Enemies/Scripts/enemyStateMachine.gd" id="5_4cvsp"]
+[ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="5_4cvsp"]
 [ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="5_5j0lj"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="5_gpsl5"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="5_ix4hq"]
 [ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="6_bqlus"]
-[ext_resource type="Script" path="res://Enemies/Scripts/States/enemyStateIdle.gd" id="6_py51r"]
-[ext_resource type="Script" path="res://Enemies/Scripts/States/enemyStateWalk.gd" id="7_5rmuq"]
-[ext_resource type="Script" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="8_arlmh"]
-[ext_resource type="Script" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="9_ant6j"]
-[ext_resource type="Script" path="res://Enemies/Scripts/dropData.gd" id="10_1rh7s"]
+[ext_resource type="Script" uid="uid://buu327xf5k1iq" path="res://Enemies/Scripts/States/enemyStateIdle.gd" id="6_py51r"]
+[ext_resource type="Script" uid="uid://c0n8d25joo2rw" path="res://Enemies/Scripts/States/enemyStateWalk.gd" id="7_5rmuq"]
+[ext_resource type="Script" uid="uid://blfv6up580jgu" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="8_arlmh"]
+[ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="9_ant6j"]
+[ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="10_1rh7s"]
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="14_cxvh8"]
-[ext_resource type="Script" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="16_phrp5"]
+[ext_resource type="Script" uid="uid://okc8e4dpk12b" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="16_phrp5"]
 [ext_resource type="PackedScene" uid="uid://cy8ykq3e30uyd" path="res://Enemies/visionArea.tscn" id="17_8jh00"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ic5f4"]
@@ -1141,27 +1141,27 @@ tracks/2/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5grqc"]
 _data = {
-"ChaseDown": SubResource("Animation_aggqm"),
-"ChaseHorizontal": SubResource("Animation_xq8r8"),
-"ChaseLeft": SubResource("Animation_eqlye"),
-"ChaseUp": SubResource("Animation_0uiah"),
-"DestroyDown": SubResource("Animation_5m4in"),
-"DestroyHorizontal": SubResource("Animation_l0ct3"),
-"DestroyLeft": SubResource("Animation_5mkd0"),
-"DestroyUp": SubResource("Animation_pvfas"),
-"IdleDown": SubResource("Animation_hyrwy"),
-"IdleHorizontal": SubResource("Animation_ccg7x"),
-"IdleLeft": SubResource("Animation_xhwyx"),
-"IdleUp": SubResource("Animation_pvb5g"),
-"RESET": SubResource("Animation_m65xt"),
-"RunDown": SubResource("Animation_c5ba7"),
-"RunHorizontal": SubResource("Animation_de02g"),
-"RunLeft": SubResource("Animation_f2fs7"),
-"RunUp": SubResource("Animation_krbgk"),
-"StunDown": SubResource("Animation_0mhc3"),
-"StunHorizontal": SubResource("Animation_qs6va"),
-"StunLeft": SubResource("Animation_dx4pi"),
-"StunUp": SubResource("Animation_m350t")
+&"ChaseDown": SubResource("Animation_aggqm"),
+&"ChaseHorizontal": SubResource("Animation_xq8r8"),
+&"ChaseLeft": SubResource("Animation_eqlye"),
+&"ChaseUp": SubResource("Animation_0uiah"),
+&"DestroyDown": SubResource("Animation_5m4in"),
+&"DestroyHorizontal": SubResource("Animation_l0ct3"),
+&"DestroyLeft": SubResource("Animation_5mkd0"),
+&"DestroyUp": SubResource("Animation_pvfas"),
+&"IdleDown": SubResource("Animation_hyrwy"),
+&"IdleHorizontal": SubResource("Animation_ccg7x"),
+&"IdleLeft": SubResource("Animation_xhwyx"),
+&"IdleUp": SubResource("Animation_pvb5g"),
+&"RESET": SubResource("Animation_m65xt"),
+&"RunDown": SubResource("Animation_c5ba7"),
+&"RunHorizontal": SubResource("Animation_de02g"),
+&"RunLeft": SubResource("Animation_f2fs7"),
+&"RunUp": SubResource("Animation_krbgk"),
+&"StunDown": SubResource("Animation_0mhc3"),
+&"StunHorizontal": SubResource("Animation_qs6va"),
+&"StunLeft": SubResource("Animation_dx4pi"),
+&"StunUp": SubResource("Animation_m350t")
 }
 
 [sub_resource type="Resource" id="Resource_3jv6o"]
@@ -1234,8 +1234,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lcr25"]
 _data = {
-"RESET": SubResource("Animation_r5enb"),
-"destroy": SubResource("Animation_jo6lv")
+&"RESET": SubResource("Animation_r5enb"),
+&"destroy": SubResource("Animation_jo6lv")
 }
 
 [node name="Knight" type="CharacterBody2D"]

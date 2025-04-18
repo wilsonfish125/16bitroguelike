@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://gsaua6pwv7lr"]
 
-[ext_resource type="Script" path="res://Quests/Scripts/questRewardItem.gd" id="1_hd5gh"]
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_hd5gh"]
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="2_k18pn"]
-[ext_resource type="Script" path="res://Quests/Scripts/questResource.gd" id="2_pscfo"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_pscfo"]
 
 [sub_resource type="Resource" id="Resource_g68oi"]
 script = ExtResource("1_hd5gh")

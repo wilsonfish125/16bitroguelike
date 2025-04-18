@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://biu7e3gk7di3b"]
 
-[ext_resource type="Script" path="res://Player/Abilities/boomerang.gd" id="1_qidcv"]
-[ext_resource type="AudioStream" uid="uid://dystitxqv7kr6" path="res://Resources/Michael Games Sprites/catch.wav" id="2_axjcj"]
+[ext_resource type="Script" uid="uid://dilvilgx780nn" path="res://Player/Abilities/boomerang.gd" id="1_qidcv"]
+[ext_resource type="AudioStream" uid="uid://dystitxqv7kr6" path="res://Resources/Michael Games Sprites/example_music/catch.wav" id="2_axjcj"]
 [ext_resource type="Texture2D" uid="uid://b1yggl0mhaphv" path="res://Resources/Michael Games Sprites/boomerang.png" id="2_w6cis"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="3_2163a"]
-[ext_resource type="AudioStream" uid="uid://b83f6wqqvb8a6" path="res://Resources/Michael Games Sprites/boomerang.wav" id="4_860ft"]
+[ext_resource type="AudioStream" uid="uid://b83f6wqqvb8a6" path="res://Resources/Michael Games Sprites/example_music/boomerang.wav" id="4_860ft"]
 [ext_resource type="PackedScene" uid="uid://brfx6gsyhxuw4" path="res://GeneralNodes/ItemMagnet/itemMagnet.tscn" id="6_0bcjr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lysu6"]
@@ -45,8 +45,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dhats"]
 _data = {
-"RESET": SubResource("Animation_nhpj0"),
-"boomerang": SubResource("Animation_vsdo1")
+&"RESET": SubResource("Animation_nhpj0"),
+&"boomerang": SubResource("Animation_vsdo1")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rnj6e"]

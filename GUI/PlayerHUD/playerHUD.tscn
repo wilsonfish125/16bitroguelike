@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://bbt3kwfycmc6i"]
 
-[ext_resource type="Script" path="res://GUI/PlayerHUD/playerHUD.gd" id="1_21iu4"]
+[ext_resource type="Script" uid="uid://bqxiy1hp7q6vi" path="res://GUI/PlayerHUD/playerHUD.gd" id="1_21iu4"]
 [ext_resource type="PackedScene" uid="uid://bowf8hb50yx3c" path="res://GUI/PlayerHUD/heartGUI.tscn" id="1_44l4d"]
 [ext_resource type="FontFile" uid="uid://ddnrrsylcf52p" path="res://Resources/Michael Games Sprites/npc_and_dialog/fonts/m5x7.ttf" id="3_e23lp"]
 [ext_resource type="Texture2D" uid="uid://c8ykbniqg7dj3" path="res://Resources/Michael Games Sprites/wizard_boss/boss-hp.png" id="3_el4fc"]
-[ext_resource type="Script" path="res://GUI/PlayerHUD/notifications.gd" id="5_ldcvr"]
+[ext_resource type="Script" uid="uid://b487f8xcwdkt5" path="res://GUI/PlayerHUD/notifications.gd" id="5_ldcvr"]
 [ext_resource type="Texture2D" uid="uid://jci552math5p" path="res://Resources/Michael Games Sprites/quests/panel_notification.png" id="5_u4upu"]
 [ext_resource type="FontFile" uid="uid://8c0v8ui2crtu" path="res://GUI/Fonts/Abaddon Bold.ttf" id="6_mqnbt"]
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="7_1q36p"]
@@ -128,8 +128,8 @@ tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h17e8"]
 _data = {
-"RESET": SubResource("Animation_3u8ix"),
-"showNotification": SubResource("Animation_up323")
+&"RESET": SubResource("Animation_3u8ix"),
+&"showNotification": SubResource("Animation_up323")
 }
 
 [node name="PlayerHud" type="CanvasLayer"]

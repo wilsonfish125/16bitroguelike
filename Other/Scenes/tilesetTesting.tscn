@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://b1f8pfexnwkxq"]
 
 [ext_resource type="Texture2D" uid="uid://ot2drds3vwp" path="res://Resources/New Tileset (v2)/NEW Overworld (Default)(v2).png" id="1_ky56x"]
-[ext_resource type="Script" path="res://Other/Scripts/levelTilemap.gd" id="2_sp1kl"]
+[ext_resource type="Script" uid="uid://dy8q4wn2lhr0c" path="res://Other/Scripts/levelTilemap.gd" id="2_sp1kl"]
 [ext_resource type="Texture2D" uid="uid://gw44o518mjsn" path="res://Resources/New Tileset (v2)/NEW Dungeons (v2).png" id="3_4lqq0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbhfk"]

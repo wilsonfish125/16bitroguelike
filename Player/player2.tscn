@@ -1,26 +1,26 @@
 [gd_scene load_steps=70 format=3 uid="uid://dyoad8y2vcdpa"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_e4rxs"]
+[ext_resource type="Script" uid="uid://64tf12gt24p4" path="res://Player/player.gd" id="1_e4rxs"]
 [ext_resource type="Texture2D" uid="uid://46afmieuh2rt" path="res://Resources/Old Tilesets/Old Tilesets/playergreen1.png" id="2_v363s"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="3_mpl4u"]
 [ext_resource type="Texture2D" uid="uid://2g3vt1u56bv0" path="res://Resources/Michael Games Sprites/player_updates/sprites/Props.png" id="4_kporb"]
-[ext_resource type="Script" path="res://Player/playerStateMachine.gd" id="4_yuacc"]
-[ext_resource type="Script" path="res://Player/States/stateIdle.gd" id="5_i47y1"]
-[ext_resource type="Script" path="res://Player/States/stateWalk.gd" id="6_sgtyk"]
-[ext_resource type="Script" path="res://Player/States/stateAttack.gd" id="7_ajyfn"]
+[ext_resource type="Script" uid="uid://dvc7na4q5mk8b" path="res://Player/playerStateMachine.gd" id="4_yuacc"]
+[ext_resource type="Script" uid="uid://dydgw2k74a6hu" path="res://Player/States/stateIdle.gd" id="5_i47y1"]
+[ext_resource type="Script" uid="uid://dmus616rwq6p2" path="res://Player/States/stateWalk.gd" id="6_sgtyk"]
+[ext_resource type="Script" uid="uid://cc33kop64nhe2" path="res://Player/States/stateAttack.gd" id="7_ajyfn"]
 [ext_resource type="AudioStream" uid="uid://7ga26mf7dks1" path="res://Resources/SweetSounds_SFX/WAV/Sword_Slash.wav" id="8_m1b4e"]
-[ext_resource type="Script" path="res://Player/States/stateStun.gd" id="9_swrls"]
-[ext_resource type="Script" path="res://Player/playerCamera.gd" id="10_ejskq"]
-[ext_resource type="Script" path="res://Player/States/stateLift.gd" id="11_exsvu"]
-[ext_resource type="Script" path="res://Player/playerInteractionsHost.gd" id="11_ie2j0"]
-[ext_resource type="Script" path="res://Player/States/stateCarry.gd" id="12_5hqy1"]
+[ext_resource type="Script" uid="uid://ba3lrmx647tc8" path="res://Player/States/stateStun.gd" id="9_swrls"]
+[ext_resource type="Script" uid="uid://cj2ohokr8b2ib" path="res://Player/playerCamera.gd" id="10_ejskq"]
+[ext_resource type="Script" uid="uid://dc71q5tsqhvv8" path="res://Player/States/stateLift.gd" id="11_exsvu"]
+[ext_resource type="Script" uid="uid://dm7mfr1qtftsk" path="res://Player/playerInteractionsHost.gd" id="11_ie2j0"]
+[ext_resource type="Script" uid="uid://c33vqmcu0c6eg" path="res://Player/States/stateCarry.gd" id="12_5hqy1"]
 [ext_resource type="AudioStream" uid="uid://dtqllr406k2hl" path="res://Resources/Michael Games Sprites/player_updates/audio/huwh.wav" id="12_kp1as"]
-[ext_resource type="Script" path="res://Player/pushArea.gd" id="12_s0uyu"]
+[ext_resource type="Script" uid="uid://cqrx34g45d7tr" path="res://Player/pushArea.gd" id="12_s0uyu"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="12_tpq6g"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="13_egsra"]
 [ext_resource type="AudioStream" uid="uid://cjq672bujyedx" path="res://Resources/Michael Games Sprites/player_updates/audio/throw.wav" id="14_gyxba"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="14_rt4ae"]
-[ext_resource type="Script" path="res://Player/Abilities/abilities.gd" id="16_ktcs0"]
+[ext_resource type="Script" uid="uid://bjcr2b3fvhvmv" path="res://Player/Abilities/abilities.gd" id="16_ktcs0"]
 [ext_resource type="PackedScene" uid="uid://brfx6gsyhxuw4" path="res://GeneralNodes/ItemMagnet/itemMagnet.tscn" id="17_7mgmt"]
 [ext_resource type="AudioStream" uid="uid://1n5xg8fmgxvk" path="res://Resources/Michael Games Sprites/level_up_jingle.wav" id="21_ujv8m"]
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="23_w3jim"]
@@ -1504,36 +1504,36 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_07ohy"]
 _data = {
-"RESET": SubResource("Animation_pkiby"),
-"newplayeranimation": SubResource("Animation_ejpdf"),
-"playerAttackDown": SubResource("Animation_kk85q"),
-"playerAttackHorizontal": SubResource("Animation_yirsm"),
-"playerAttackLeft": SubResource("Animation_p4j22"),
-"playerAttackUp": SubResource("Animation_ijoq6"),
-"playerCarryDown": SubResource("Animation_hc1j7"),
-"playerCarryHorizontal": SubResource("Animation_76ti3"),
-"playerCarryLeft": SubResource("Animation_fhdhk"),
-"playerCarryUp": SubResource("Animation_7pes3"),
-"playerCarryWalkDown": SubResource("Animation_gdonb"),
-"playerCarryWalkHorizontal": SubResource("Animation_tv6ng"),
-"playerCarryWalkLeft": SubResource("Animation_lnqmh"),
-"playerCarryWalkUp": SubResource("Animation_ofii2"),
-"playerIdleDown": SubResource("Animation_3ctxp"),
-"playerIdleHorizontal": SubResource("Animation_8i12m"),
-"playerIdleLeft": SubResource("Animation_641q0"),
-"playerIdleUp": SubResource("Animation_b7ak1"),
-"playerLiftDown": SubResource("Animation_itdvk"),
-"playerLiftHorizontal": SubResource("Animation_elo8t"),
-"playerLiftLeft": SubResource("Animation_c017n"),
-"playerLiftUp": SubResource("Animation_2s216"),
-"playerRunDown": SubResource("Animation_andyu"),
-"playerRunHorizontal": SubResource("Animation_b5bww"),
-"playerRunLeft": SubResource("Animation_8cn4y"),
-"playerRunUp": SubResource("Animation_m5hft"),
-"playerStunDown": SubResource("Animation_r431e"),
-"playerStunHorizontal": SubResource("Animation_dwde3"),
-"playerStunLeft": SubResource("Animation_b1trr"),
-"playerStunUp": SubResource("Animation_xd6vn")
+&"RESET": SubResource("Animation_pkiby"),
+&"newplayeranimation": SubResource("Animation_ejpdf"),
+&"playerAttackDown": SubResource("Animation_kk85q"),
+&"playerAttackHorizontal": SubResource("Animation_yirsm"),
+&"playerAttackLeft": SubResource("Animation_p4j22"),
+&"playerAttackUp": SubResource("Animation_ijoq6"),
+&"playerCarryDown": SubResource("Animation_hc1j7"),
+&"playerCarryHorizontal": SubResource("Animation_76ti3"),
+&"playerCarryLeft": SubResource("Animation_fhdhk"),
+&"playerCarryUp": SubResource("Animation_7pes3"),
+&"playerCarryWalkDown": SubResource("Animation_gdonb"),
+&"playerCarryWalkHorizontal": SubResource("Animation_tv6ng"),
+&"playerCarryWalkLeft": SubResource("Animation_lnqmh"),
+&"playerCarryWalkUp": SubResource("Animation_ofii2"),
+&"playerIdleDown": SubResource("Animation_3ctxp"),
+&"playerIdleHorizontal": SubResource("Animation_8i12m"),
+&"playerIdleLeft": SubResource("Animation_641q0"),
+&"playerIdleUp": SubResource("Animation_b7ak1"),
+&"playerLiftDown": SubResource("Animation_itdvk"),
+&"playerLiftHorizontal": SubResource("Animation_elo8t"),
+&"playerLiftLeft": SubResource("Animation_c017n"),
+&"playerLiftUp": SubResource("Animation_2s216"),
+&"playerRunDown": SubResource("Animation_andyu"),
+&"playerRunHorizontal": SubResource("Animation_b5bww"),
+&"playerRunLeft": SubResource("Animation_8cn4y"),
+&"playerRunUp": SubResource("Animation_m5hft"),
+&"playerStunDown": SubResource("Animation_r431e"),
+&"playerStunHorizontal": SubResource("Animation_dwde3"),
+&"playerStunLeft": SubResource("Animation_b1trr"),
+&"playerStunUp": SubResource("Animation_xd6vn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly1fl"]
@@ -1762,10 +1762,10 @@ tracks/5/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mui71"]
 _data = {
-"RESET": SubResource("Animation_1hres"),
-"damaged": SubResource("Animation_7f3as"),
-"default": SubResource("Animation_t6lg4"),
-"levelUp": SubResource("Animation_aneos")
+&"RESET": SubResource("Animation_1hres"),
+&"damaged": SubResource("Animation_7f3as"),
+&"default": SubResource("Animation_t6lg4"),
+&"levelUp": SubResource("Animation_aneos")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q665k"]
@@ -1829,7 +1829,7 @@ frame = 4
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
 libraries = {
-"": SubResource("AnimationLibrary_07ohy")
+&"": SubResource("AnimationLibrary_07ohy")
 }
 
 [node name="StateMachine" type="Node" parent="."]
@@ -1915,7 +1915,7 @@ debug_color = Color(0.656811, 0.511248, 0.204269, 0.42)
 
 [node name="EffectAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_mui71")
+&"": SubResource("AnimationLibrary_mui71")
 }
 
 [node name="Abilities" type="Node" parent="."]
@@ -1943,6 +1943,6 @@ horizontal_alignment = 1
 z_index = 5
 emitting = false
 amount = 50
-process_material = SubResource("ParticleProcessMaterial_gfxda")
 one_shot = true
 explosiveness = 0.25
+process_material = SubResource("ParticleProcessMaterial_gfxda")

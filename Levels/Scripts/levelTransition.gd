@@ -9,7 +9,6 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM } #easy way for us to track the side it bel
 @export var targetTransitionArea : String = "LevelTransition" #value will be used to point the player to another map scene
 @export var centerPlayer : bool = false
 
-
 @export_category("Collision Area Settings")
 
 @export_range(1, 12, 1, "or_greater") var size : int = 2 :
@@ -23,14 +22,9 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM } #easy way for us to track the side it bel
 		side = _v
 		_updateArea()
 
-
 @export var snapToGrid : bool = false
 
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
-
-
-
-
 
 func _ready() -> void:
 	_updateArea()

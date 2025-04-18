@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://cgr2s7524inad"]
 
-[ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_71nrl"]
+[ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_71nrl"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="1_mvg87"]
 [ext_resource type="AudioStream" uid="uid://cbfox4oga6wgs" path="res://Resources/Michael Games Sprites/example_music/example_music_03.ogg" id="2_b3hyd"]
 [ext_resource type="Texture2D" uid="uid://b4n2thvf224h7" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/mountain.png" id="2_xamrq"]

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://cyovhkyi6061n"]
 
-[ext_resource type="Script" path="res://Items/ItemEffects/itemEffect.gd" id="1_3bt57"]
-[ext_resource type="Script" path="res://Items/Scripts/equippableItemModifier.gd" id="2_ldany"]
-[ext_resource type="Script" path="res://Items/Scripts/equippableItemData.gd" id="3_max2v"]
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_3bt57"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_ldany"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_max2v"]
 [ext_resource type="Texture2D" uid="uid://b4ii3pwgdinvg" path="res://Resources/Michael Games Sprites/player_equipment/player_equipment/gear.png" id="4_8ha2o"]
 
 [sub_resource type="Resource" id="Resource_g55aj"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://6bswg500vpay"]
 
-[ext_resource type="Script" path="res://GUI/SceneTransition/sceneTransition.gd" id="1_8sey8"]
+[ext_resource type="Script" uid="uid://bwx4wgqyw6qm0" path="res://GUI/SceneTransition/sceneTransition.gd" id="1_8sey8"]
 
-[sub_resource type="Animation" id="Animation_6hyiq"]
-resource_name = "default"
+[sub_resource type="Animation" id="Animation_blppi"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,8 +17,8 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_blppi"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_6hyiq"]
+resource_name = "default"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,10 +66,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5ydn7"]
 _data = {
-"RESET": SubResource("Animation_blppi"),
-"default": SubResource("Animation_6hyiq"),
-"fadeIn": SubResource("Animation_k5aar"),
-"fadeOut": SubResource("Animation_vltw7")
+&"RESET": SubResource("Animation_blppi"),
+&"default": SubResource("Animation_6hyiq"),
+&"fadeIn": SubResource("Animation_k5aar"),
+&"fadeOut": SubResource("Animation_vltw7")
 }
 
 [node name="SceneTransition" type="CanvasLayer"]

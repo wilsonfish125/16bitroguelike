@@ -1,16 +1,16 @@
 [gd_scene load_steps=42 format=3 uid="uid://dubyb126p7tsb"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_f4fd0"]
+[ext_resource type="Script" uid="uid://64tf12gt24p4" path="res://Player/player.gd" id="1_f4fd0"]
 [ext_resource type="Texture2D" uid="uid://46afmieuh2rt" path="res://Resources/Old Tilesets/Old Tilesets/playergreen1.png" id="2_nxtqq"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="3_gjd2a"]
-[ext_resource type="Script" path="res://Player/playerStateMachine.gd" id="4_15ijf"]
-[ext_resource type="Script" path="res://Player/States/stateIdle.gd" id="5_6r1w8"]
-[ext_resource type="Script" path="res://Player/States/stateWalk.gd" id="6_jx32i"]
-[ext_resource type="Script" path="res://Player/States/stateAttack.gd" id="7_awihw"]
+[ext_resource type="Script" uid="uid://dvc7na4q5mk8b" path="res://Player/playerStateMachine.gd" id="4_15ijf"]
+[ext_resource type="Script" uid="uid://dydgw2k74a6hu" path="res://Player/States/stateIdle.gd" id="5_6r1w8"]
+[ext_resource type="Script" uid="uid://dmus616rwq6p2" path="res://Player/States/stateWalk.gd" id="6_jx32i"]
+[ext_resource type="Script" uid="uid://cc33kop64nhe2" path="res://Player/States/stateAttack.gd" id="7_awihw"]
 [ext_resource type="AudioStream" uid="uid://7ga26mf7dks1" path="res://Resources/SweetSounds_SFX/WAV/Sword_Slash.wav" id="8_u5gd6"]
-[ext_resource type="Script" path="res://Player/States/stateStun.gd" id="9_54vnq"]
-[ext_resource type="Script" path="res://Player/playerCamera.gd" id="10_v8f2n"]
-[ext_resource type="Script" path="res://Player/playerInteractionsHost.gd" id="11_kv7fm"]
+[ext_resource type="Script" uid="uid://ba3lrmx647tc8" path="res://Player/States/stateStun.gd" id="9_54vnq"]
+[ext_resource type="Script" uid="uid://cj2ohokr8b2ib" path="res://Player/playerCamera.gd" id="10_v8f2n"]
+[ext_resource type="Script" uid="uid://dm7mfr1qtftsk" path="res://Player/playerInteractionsHost.gd" id="11_kv7fm"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="12_chj4o"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="13_okf6n"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="14_5a615"]
@@ -842,24 +842,24 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_07ohy"]
 _data = {
-"RESET": SubResource("Animation_pkiby"),
-"newplayeranimation": SubResource("Animation_ejpdf"),
-"playerAttackDown": SubResource("Animation_kk85q"),
-"playerAttackHorizontal": SubResource("Animation_yirsm"),
-"playerAttackLeft": SubResource("Animation_p4j22"),
-"playerAttackUp": SubResource("Animation_ijoq6"),
-"playerIdleDown": SubResource("Animation_3ctxp"),
-"playerIdleHorizontal": SubResource("Animation_8i12m"),
-"playerIdleLeft": SubResource("Animation_641q0"),
-"playerIdleUp": SubResource("Animation_b7ak1"),
-"playerRunDown": SubResource("Animation_andyu"),
-"playerRunHorizontal": SubResource("Animation_b5bww"),
-"playerRunLeft": SubResource("Animation_8cn4y"),
-"playerRunUp": SubResource("Animation_m5hft"),
-"playerStunDown": SubResource("Animation_r431e"),
-"playerStunHorizontal": SubResource("Animation_dwde3"),
-"playerStunLeft": SubResource("Animation_b1trr"),
-"playerStunUp": SubResource("Animation_xd6vn")
+&"RESET": SubResource("Animation_pkiby"),
+&"newplayeranimation": SubResource("Animation_ejpdf"),
+&"playerAttackDown": SubResource("Animation_kk85q"),
+&"playerAttackHorizontal": SubResource("Animation_yirsm"),
+&"playerAttackLeft": SubResource("Animation_p4j22"),
+&"playerAttackUp": SubResource("Animation_ijoq6"),
+&"playerIdleDown": SubResource("Animation_3ctxp"),
+&"playerIdleHorizontal": SubResource("Animation_8i12m"),
+&"playerIdleLeft": SubResource("Animation_641q0"),
+&"playerIdleUp": SubResource("Animation_b7ak1"),
+&"playerRunDown": SubResource("Animation_andyu"),
+&"playerRunHorizontal": SubResource("Animation_b5bww"),
+&"playerRunLeft": SubResource("Animation_8cn4y"),
+&"playerRunUp": SubResource("Animation_m5hft"),
+&"playerStunDown": SubResource("Animation_r431e"),
+&"playerStunHorizontal": SubResource("Animation_dwde3"),
+&"playerStunLeft": SubResource("Animation_b1trr"),
+&"playerStunUp": SubResource("Animation_xd6vn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ly1fl"]
@@ -933,9 +933,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mui71"]
 _data = {
-"RESET": SubResource("Animation_1hres"),
-"damaged": SubResource("Animation_7f3as"),
-"default": SubResource("Animation_t6lg4")
+&"RESET": SubResource("Animation_1hres"),
+&"damaged": SubResource("Animation_7f3as"),
+&"default": SubResource("Animation_t6lg4")
 }
 
 [node name="Player" type="CharacterBody2D"]

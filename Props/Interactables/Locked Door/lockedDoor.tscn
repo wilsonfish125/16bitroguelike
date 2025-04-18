@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bao3kl6bmfjks"]
 
 [ext_resource type="Texture2D" uid="uid://cwvr6oc2hniqy" path="res://Resources/Michael Games Sprites/dungeon_props.png" id="1_1dg8n"]
-[ext_resource type="Script" path="res://Props/Interactables/Locked Door/lockedDoor.gd" id="1_43rwh"]
+[ext_resource type="Script" uid="uid://klduhv1oxpav" path="res://Props/Interactables/Locked Door/lockedDoor.gd" id="1_43rwh"]
 [ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="2_bchvr"]
 [ext_resource type="PackedScene" uid="uid://2e0h8mj62td1" path="res://GeneralNodes/PersistentDataHandler/persistentDataHandler.tscn" id="2_xgm02"]
-[ext_resource type="AudioStream" uid="uid://vqdsse8frdta" path="res://Resources/Michael Games Sprites/locked_door.wav" id="3_0vtq1"]
-[ext_resource type="AudioStream" uid="uid://bwm6guilsd83h" path="res://Resources/Michael Games Sprites/unlock_door.wav" id="4_gr2ce"]
+[ext_resource type="AudioStream" uid="uid://vqdsse8frdta" path="res://Resources/Michael Games Sprites/example_music/locked_door.wav" id="3_0vtq1"]
+[ext_resource type="AudioStream" uid="uid://bwm6guilsd83h" path="res://Resources/Michael Games Sprites/example_music/unlock_door.wav" id="4_gr2ce"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6mm8"]
 size = Vector2(63.3333, 60.6667)
@@ -147,11 +147,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qfhsy"]
 _data = {
-"RESET": SubResource("Animation_7bvfa"),
-"closeDoor": SubResource("Animation_hhlcx"),
-"closed": SubResource("Animation_d60u8"),
-"openDoor": SubResource("Animation_otswm"),
-"opened": SubResource("Animation_xp1xr")
+&"RESET": SubResource("Animation_7bvfa"),
+&"closeDoor": SubResource("Animation_hhlcx"),
+&"closed": SubResource("Animation_d60u8"),
+&"openDoor": SubResource("Animation_otswm"),
+&"opened": SubResource("Animation_xp1xr")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_un3bv"]

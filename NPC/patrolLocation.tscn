@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://la2r0u1m7tbn"]
 
-[ext_resource type="Script" path="res://NPC/Scripts/patrolLocation.gd" id="1_7ok6n"]
+[ext_resource type="Script" uid="uid://36ihtt8o7ub6" path="res://NPC/Scripts/patrolLocation.gd" id="1_7ok6n"]
 [ext_resource type="FontFile" uid="uid://hfgmnua5imtm" path="res://GUI/Fonts/m6x11.ttf" id="2_6673e"]
 
 [sub_resource type="Gradient" id="Gradient_xu0s3"]

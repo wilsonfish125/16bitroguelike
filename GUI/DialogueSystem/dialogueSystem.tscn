@@ -1,12 +1,12 @@
 [gd_scene load_steps=17 format=3 uid="uid://d36l7keq0j2v"]
 
-[ext_resource type="Script" path="res://GUI/DialogueSystem/Scripts/dialogueSystem.gd" id="1_kw4ey"]
+[ext_resource type="Script" uid="uid://cpdgx3mtre4i5" path="res://GUI/DialogueSystem/Scripts/dialogueSystem.gd" id="1_kw4ey"]
 [ext_resource type="Texture2D" uid="uid://dma5h7fdlohxx" path="res://GUI/DialogueSystem/text-bubble.png" id="2_173aa"]
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="3_fiuji"]
 [ext_resource type="FontFile" uid="uid://8c0v8ui2crtu" path="res://GUI/Fonts/Abaddon Bold.ttf" id="4_ubga4"]
 [ext_resource type="Texture2D" uid="uid://crtxgq14u76k" path="res://Resources/Michael Games Sprites/npc_and_dialog/sprites/portraits/npc_portrait_01.png" id="5_4qpk4"]
 [ext_resource type="FontFile" uid="uid://hfgmnua5imtm" path="res://GUI/Fonts/m6x11.ttf" id="5_nldyi"]
-[ext_resource type="Script" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialoguePortrait.gd" id="6_2gesg"]
+[ext_resource type="Script" uid="uid://3s70181mwol4" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialoguePortrait.gd" id="6_2gesg"]
 [ext_resource type="AudioStream" uid="uid://b0yl8fsxoxwmx" path="res://Resources/Michael Games Sprites/npc_and_dialog/audio/voice_blip.wav" id="6_3axov"]
 [ext_resource type="Theme" uid="uid://i50i312dgi5k" path="res://GUI/DialogueSystem/dialogueChoiceTheme.tres" id="9_vxeod"]
 
@@ -74,8 +74,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3b6hk"]
 _data = {
-"RESET": SubResource("Animation_0iw6f"),
-"default": SubResource("Animation_wcvq4")
+&"RESET": SubResource("Animation_0iw6f"),
+&"default": SubResource("Animation_wcvq4")
 }
 
 [node name="DialogueSystem" type="CanvasLayer"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://csci2lncscmr6"]
 
-[ext_resource type="Script" path="res://Enemies/Hazards/Energy Beam/energyBeamAttack.gd" id="1_2sk7m"]
+[ext_resource type="Script" uid="uid://cbyn8qq6hgw3x" path="res://Enemies/Hazards/Energy Beam/energyBeamAttack.gd" id="1_2sk7m"]
 [ext_resource type="Material" uid="uid://b8k4ja608wqay" path="res://Shaders & Materials/lightMaterial.tres" id="1_k04rp"]
 [ext_resource type="Texture2D" uid="uid://c6cei5n4p4ib6" path="res://Resources/Michael Games Sprites/wizard_boss/energy-beam.png" id="1_qlrhb"]
-[ext_resource type="Script" path="res://Enemies/Hazards/Energy Beam/energyBeamSprite.gd" id="3_ff0hm"]
+[ext_resource type="Script" uid="uid://c1x173gr85ws" path="res://Enemies/Hazards/Energy Beam/energyBeamSprite.gd" id="3_ff0hm"]
 [ext_resource type="Texture2D" uid="uid://cg6oot7psgyrx" path="res://Resources/Michael Games Sprites/wizard_boss/energy-beam-large.png" id="4_x55v0"]
 [ext_resource type="AudioStream" uid="uid://csakkitaowkx5" path="res://Resources/Michael Games Sprites/wizard_boss/boss_beam.wav" id="5_3xf3q"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="5_iptvx"]
@@ -192,9 +192,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vrr7j"]
 _data = {
-"RESET": SubResource("Animation_fqubf"),
-"attack": SubResource("Animation_c6ius"),
-"default": SubResource("Animation_kt4on")
+&"RESET": SubResource("Animation_fqubf"),
+&"attack": SubResource("Animation_c6ius"),
+&"default": SubResource("Animation_kt4on")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82pfm"]

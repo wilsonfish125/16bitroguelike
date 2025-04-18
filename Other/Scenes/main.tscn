@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://cnuxl7koy7qi5"]
 
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="1_f7ujs"]
-[ext_resource type="Script" path="res://Levels/Scripts/level.gd" id="1_hqajm"]
+[ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_hqajm"]
 [ext_resource type="PackedScene" uid="uid://b1f8pfexnwkxq" path="res://Other/Scenes/tilesetTesting.tscn" id="2_h6muy"]
 [ext_resource type="PackedScene" uid="uid://q5apn55fptji" path="res://Props/Plants/bush.tscn" id="3_wf3tc"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="4_ijy1t"]

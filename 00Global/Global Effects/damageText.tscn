@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dlrlalww5t2ya"]
 
-[ext_resource type="Script" path="res://00Global/Global Effects/damageText.gd" id="1_hjx78"]
+[ext_resource type="Script" uid="uid://brffaavbcrm7j" path="res://00Global/Global Effects/damageText.gd" id="1_hjx78"]
 
 [node name="DamageText" type="Node2D"]
 z_index = 99

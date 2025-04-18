@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7lfepmi73rnn"]
 
-[ext_resource type="Script" path="res://Props/Interactables/Pressure Plate/pressurePlate.gd" id="1_8git2"]
+[ext_resource type="Script" uid="uid://f782hpomp86y" path="res://Props/Interactables/Pressure Plate/pressurePlate.gd" id="1_8git2"]
 [ext_resource type="Texture2D" uid="uid://cwvr6oc2hniqy" path="res://Resources/Michael Games Sprites/dungeon_props.png" id="2_874qx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ui4ya"]
