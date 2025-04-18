@@ -27,7 +27,7 @@
 [ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="21_yqfgs"]
 [ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="23_plvyu"]
 [ext_resource type="PackedScene" uid="uid://q5apn55fptji" path="res://Props/Plants/bush.tscn" id="24_aig36"]
-[ext_resource type="Resource" uid="uid://x707pbdibs4y" path="res://Items/Resources/Equippable/wIronSword.tres" id="28_vmd5i"]
+[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="28_r1lel"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="29_spcsb"]
 [ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="30_j4reb"]
 
@@ -2593,7 +2593,7 @@ position = Vector2(330, 1194)
 
 [node name="Treasurechest" parent="." instance=ExtResource("5_7unfm")]
 position = Vector2(-318, 954)
-itemData = ExtResource("28_vmd5i")
+itemData = ExtResource("28_r1lel")
 
 [node name="ItemPickup" parent="." instance=ExtResource("29_spcsb")]
 position = Vector2(-390, 954)
