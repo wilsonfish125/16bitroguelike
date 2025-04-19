@@ -1,10 +1,20 @@
-[gd_scene load_steps=6 format=4 uid="uid://cwr6vdd8vf6sh"]
+[gd_scene load_steps=16 format=4 uid="uid://cwr6vdd8vf6sh"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_3jpus"]
 [ext_resource type="TileSet" uid="uid://brlcklxkbfee5" path="res://Levels/TestLevels/guanaTileSet.tres" id="1_cvaid"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_eru1f"]
 [ext_resource type="PackedScene" uid="uid://32xgchm26o8g" path="res://Props/Torches/torchDungeon.tscn" id="4_dsytu"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="5_6n82k"]
+[ext_resource type="PackedScene" uid="uid://cj2fhb0hvaa3a" path="res://Props/Interactables/Shopkeeper/shopkeeper.tscn" id="6_sry2x"]
+[ext_resource type="Script" uid="uid://b5oke4uvap4uf" path="res://Items/Scripts/itemData.gd" id="7_1jiv0"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="8_r1d4i"]
+[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="9_jt5m7"]
+[ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="10_kkrrh"]
+[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="11_bklhw"]
+[ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="12_bklhw"]
+[ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="13_x0ret"]
+[ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="14_ohd8w"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="15_dj7pn"]
 
 [node name="TestShop" type="Node2D"]
 script = ExtResource("1_3jpus")
@@ -42,3 +52,25 @@ position = Vector2(144, -392)
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_6n82k")]
 position = Vector2(16, -288)
+
+[node name="Shopkeeper" parent="." instance=ExtResource("6_sry2x")]
+position = Vector2(66.5867, -573.033)
+shopInventory = Array[ExtResource("7_1jiv0")]([ExtResource("8_r1d4i"), ExtResource("9_jt5m7"), ExtResource("10_kkrrh"), ExtResource("11_bklhw")])
+
+[node name="Treasurechest2" parent="." instance=ExtResource("14_ohd8w")]
+position = Vector2(-128, -488)
+itemData = ExtResource("15_dj7pn")
+quantity = 900
+
+[node name="QuestActivatedSwitch" parent="." instance=ExtResource("12_bklhw")]
+checkType = 3
+reactToGlobalSignal = true
+linkedQuest = ExtResource("13_x0ret")
+settingsSummary = "UPDATE QUEST:
+Quest: Slay the Evil Wizard
+Checking if quest is complete"
+
+[node name="Treasurechest" parent="QuestActivatedSwitch" instance=ExtResource("14_ohd8w")]
+position = Vector2(-56, -488)
+itemData = ExtResource("15_dj7pn")
+quantity = 900

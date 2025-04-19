@@ -13,4 +13,5 @@ script = ExtResource("2_ku11j")
 name = "Small Dungeon Key"
 description = "Looks like a standard key"
 texture = SubResource("AtlasTexture_ni12g")
+cost = 10
 effects = Array[ExtResource("1_7an0h")]([])

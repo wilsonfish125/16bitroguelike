@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1j7aa0kk5i1a"]
+[gd_scene load_steps=4 format=3 uid="uid://c1j7aa0kk5i1a"]
 
 [ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="1_4ix4m"]
+[ext_resource type="Script" uid="uid://cqgc3jaq14apg" path="res://GUI/Shop Menu/shopItemButton.gd" id="1_au51i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_au51i"]
 atlas = ExtResource("1_4ix4m")
@@ -9,6 +10,7 @@ region = Rect2(0, 0, 32, 32)
 [node name="ShopItemButton" type="Button"]
 custom_minimum_size = Vector2(220, 36)
 scale = Vector2(3, 3)
+script = ExtResource("1_au51i")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -33,6 +35,7 @@ horizontal_alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
+layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 texture = SubResource("AtlasTexture_au51i")

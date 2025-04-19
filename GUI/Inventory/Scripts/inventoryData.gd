@@ -180,3 +180,13 @@ func getEquipmentBonus( bonusType : EquippableItemModifier.Type, compare : Equip
 				bonus += m.value
 	
 	return bonus
+
+func getItemHeldCount( _item : ItemData ) -> int:
+	# Go over every slot in inventory, check to see if item matches _item passed in
+	for slot in slots:
+		if slot:
+			if slot.itemData:
+				if slot.itemData == _item:
+					# We now know this is the item we want!
+					return slot.quantity
+	return 0

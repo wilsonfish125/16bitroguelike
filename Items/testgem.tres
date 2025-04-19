@@ -13,4 +13,5 @@ script = ExtResource("1_q3ji2")
 name = "Gem"
 description = "Circular gem (test item)"
 texture = SubResource("AtlasTexture_e4jf4")
+cost = 1
 effects = Array[ExtResource("1_lg8bg")]([])

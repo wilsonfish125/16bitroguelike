@@ -1,5 +1,4 @@
 @tool
-#ooh custom icons
 @icon( "res://NPC/Icons/npc.svg" )
 class_name NPC extends CharacterBody2D
 

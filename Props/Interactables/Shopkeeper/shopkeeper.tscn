@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj2fhb0hvaa3a"]
+
+[ext_resource type="Script" uid="uid://bya5wisar4xge" path="res://Props/Interactables/Shopkeeper/shopkeeper.gd" id="1_52day"]
+[ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="2_x1woj"]
+[ext_resource type="Resource" uid="uid://c8f3ka6kpiljh" path="res://NPC/Resources/npcShopkeeper.tres" id="3_twuid"]
+[ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="4_ubhb6"]
+[ext_resource type="Script" uid="uid://dibm0sw4mb3u8" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="5_ipsfk"]
+[ext_resource type="Script" uid="uid://doesf52yw1ogg" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="6_yj6xw"]
+[ext_resource type="Script" uid="uid://cdk6dpee5kak6" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="7_k6mdx"]
+
+[node name="Shopkeeper" type="Node2D"]
+script = ExtResource("1_52day")
+
+[node name="NPC" parent="." instance=ExtResource("2_x1woj")]
+npcResource = ExtResource("3_twuid")
+
+[node name="DialogueInteraction" parent="NPC" instance=ExtResource("4_ubhb6")]
+
+[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction"]
+script = ExtResource("5_ipsfk")
+text = "
+Yo Wuddup... 
+
+You found my evil pot house.."
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://dibm0sw4mb3u8"
+
+[node name="DialogueText2" type="Node" parent="NPC/DialogueInteraction"]
+script = ExtResource("5_ipsfk")
+text = "
+
+Do you wanna buy something?"
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://dibm0sw4mb3u8"
+
+[node name="DialogueChoice" type="Node" parent="NPC/DialogueInteraction"]
+script = ExtResource("6_yj6xw")
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://doesf52yw1ogg"
+
+[node name="DialogueBranch" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
+script = ExtResource("7_k6mdx")
+text = "Yeah"
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://cdk6dpee5kak6"
+
+[node name="DialogueBranch2" type="Node" parent="NPC/DialogueInteraction/DialogueChoice"]
+script = ExtResource("7_k6mdx")
+text = "No..."
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://cdk6dpee5kak6"
+
+[node name="DialogueText" type="Node" parent="NPC/DialogueInteraction/DialogueChoice/DialogueBranch2"]
+script = ExtResource("5_ipsfk")
+text = "WHAT!!
+
+Wow....
+
+Leave me now.."
+npcInfo = ExtResource("3_twuid")
+metadata/_custom_type_script = "uid://dibm0sw4mb3u8"

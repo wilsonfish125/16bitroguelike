@@ -21,4 +21,5 @@ script = ExtResource("1_g742i")
 name = "Potion"
 description = "dababy potion"
 texture = SubResource("AtlasTexture_fq5ru")
+cost = 50
 effects = Array[ExtResource("1_3gka1")]([SubResource("Resource_bqshd")])

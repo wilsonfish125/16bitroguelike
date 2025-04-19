@@ -69,7 +69,11 @@ func showDialogue( _items : Array[ DialogueItem ] ) -> void:
 	dialogueItemsIndex = 0
 	get_tree().paused = true
 	await get_tree().process_frame #await a tick since we execute lots at once
-	startDialogue()
+	if dialogueItems.size() == 0:
+		hideDialogue() # Prevents a crash at the end of dialogue
+	else:
+		startDialogue()
+	
 
 func hideDialogue() -> void:
 	isActive = false

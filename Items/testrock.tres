@@ -13,4 +13,5 @@ script = ExtResource("1_455m0")
 name = "Rock"
 description = "CAN YOU SMELL"
 texture = SubResource("AtlasTexture_xrfhe")
+cost = 5
 effects = Array[ExtResource("1_db5xe")]([])

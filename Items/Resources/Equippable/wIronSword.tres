@@ -21,4 +21,5 @@ modifiers = Array[ExtResource("2_cja5r")]([SubResource("Resource_g55aj")])
 name = "Iron Sword"
 description = "Awesome Sword deeewd"
 texture = SubResource("AtlasTexture_udoyu")
+cost = 25
 effects = Array[ExtResource("1_rkfdg")]([])

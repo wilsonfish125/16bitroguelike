@@ -21,4 +21,5 @@ modifiers = Array[ExtResource("2_o71eg")]([SubResource("Resource_g55aj")])
 name = "Regular Tunic"
 description = "Tunic that fucks shit up (not stolen)"
 texture = SubResource("AtlasTexture_udoyu")
+cost = 50
 effects = Array[ExtResource("1_ma47b")]([])
