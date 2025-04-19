@@ -102,6 +102,12 @@ func useItem( item : ItemData, count : int = 1 ) -> bool:
 				return true
 	return false
 
+func swapItemsByIndex( i1 : int, i2 : int ) -> void:
+	# Grab the item from slot1 (temp), put item from slot2 into slot1, then put item1 into slot2
+	var temp : SlotData = slots[ i1 ]
+	slots[ i1 ] = slots[ i2 ]
+	slots[ i2 ] = temp
+
 func equipItem( slot : SlotData ) -> void:
 	# Make sure that we have a valid slot or item to equip
 	if slot == null or not slot.itemData is EquippableItemData:

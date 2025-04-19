@@ -2415,11 +2415,12 @@ offset_bottom = 403.333
 text = "EVIL SLIME WITH 100 XP"
 
 [node name="Label4" type="Label" parent="TempLabels"]
-offset_left = -389.333
-offset_top = 389.333
-offset_right = -218.333
-offset_bottom = 461.333
-text = "POT WITH A STORE INSIDE"
+offset_left = -386.667
+offset_top = 381.333
+offset_right = -215.667
+offset_bottom = 453.333
+text = "POT WITH AN 
+EVIL DIMENSION INSIDE"
 
 [node name="Label2" type="Label" parent="TempLabels"]
 offset_left = 80.6667

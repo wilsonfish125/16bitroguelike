@@ -1406,7 +1406,7 @@ hframes = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EvilWizardBoss/BossNode/CloakSprite"]
 libraries = {
-"": SubResource("AnimationLibrary_cp881")
+&"": SubResource("AnimationLibrary_cp881")
 }
 autoplay = "down"
 
@@ -1475,13 +1475,13 @@ bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EvilWizardBoss/BossNode"]
 libraries = {
-"": SubResource("AnimationLibrary_oqega")
+&"": SubResource("AnimationLibrary_oqega")
 }
 autoplay = "idle"
 
 [node name="AnimationPlayerDamaged" type="AnimationPlayer" parent="EvilWizardBoss/BossNode"]
 libraries = {
-"": SubResource("AnimationLibrary_h2if4")
+&"": SubResource("AnimationLibrary_h2if4")
 }
 autoplay = "default"
 
