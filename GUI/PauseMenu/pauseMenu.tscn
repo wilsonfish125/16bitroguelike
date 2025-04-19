@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://boutykjiyabgq" path="res://GUI/Fonts/Abaddon Light.ttf" id="7_17wwq"]
 [ext_resource type="PackedScene" uid="uid://bn8w2msja1h1h" path="res://GUI/PauseMenu/Quests/questStepItem.tscn" id="10_c8p8i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b1r1p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh85w"]
 atlas = ExtResource("2_jvcgh")
 region = Rect2(96, 0, 32, 32)
 
@@ -22,7 +22,7 @@ content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-texture = SubResource("AtlasTexture_b1r1p")
+texture = SubResource("AtlasTexture_nh85w")
 texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
@@ -32,25 +32,25 @@ texture_margin_bottom = 14.0
 atlas = ExtResource("6_vtry1")
 region = Rect2(0, 16, 16, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4uven"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ipuqr"]
 load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sng1t"]
-atlas = SubResource("CompressedTexture2D_4uven")
+atlas = SubResource("CompressedTexture2D_ipuqr")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rmah4"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qdld5"]
 load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53i40"]
-atlas = SubResource("CompressedTexture2D_rmah4")
+atlas = SubResource("CompressedTexture2D_qdld5")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrx1y"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8uqq7"]
 load_path = "res://.godot/imported/gear.png-569b9689876d490f0f5dda3824749ce1.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vh10y"]
-atlas = SubResource("CompressedTexture2D_vrx1y")
+atlas = SubResource("CompressedTexture2D_8uqq7")
 region = Rect2(16, 16, 16, 16)
 
 [node name="PauseMenu" type="CanvasLayer"]

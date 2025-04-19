@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://cwr6vdd8vf6sh"]
+[gd_scene load_steps=6 format=4 uid="uid://cwr6vdd8vf6sh"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_3jpus"]
 [ext_resource type="TileSet" uid="uid://brlcklxkbfee5" path="res://Levels/TestLevels/guanaTileSet.tres" id="1_cvaid"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="2_eru1f"]
 [ext_resource type="PackedScene" uid="uid://32xgchm26o8g" path="res://Props/Torches/torchDungeon.tscn" id="4_dsytu"]
+[ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="5_6n82k"]
 
 [node name="TestShop" type="Node2D"]
 script = ExtResource("1_3jpus")
@@ -38,3 +39,6 @@ blend_mode = 2
 
 [node name="TorchDungeon" parent="." instance=ExtResource("4_dsytu")]
 position = Vector2(144, -392)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("5_6n82k")]
+position = Vector2(16, -288)

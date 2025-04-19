@@ -28,6 +28,7 @@ PauseMenu="*res://GUI/PauseMenu/pauseMenu.tscn"
 DialogueSystem="*res://GUI/DialogueSystem/dialogueSystem.tscn"
 QuestManager="*res://Quests/Scripts/globalQuestManager.gd"
 EffectManager="*res://00Global/globalEffectManager.gd"
+ShopMenu="*res://GUI/Shop Menu/shopMenu.tscn"
 
 [display]
 
