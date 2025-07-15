@@ -115,7 +115,7 @@ size = Vector2(16, 8)
 size = Vector2(24, 12)
 
 [node name="Pot" type="Node2D"]
-scale = Vector2(2, 2)
+z_index = 5
 
 [node name="Sprite2DShadow" type="Sprite2D" parent="."]
 position = Vector2(0, 1)
@@ -131,7 +131,7 @@ frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_388dl")
+&"": SubResource("AnimationLibrary_388dl")
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

@@ -58,7 +58,6 @@ radius = 14.05
 [node name="Boomerang" type="Node2D"]
 z_index = 2
 position = Vector2(2, -6)
-scale = Vector2(2, 2)
 script = ExtResource("1_qidcv")
 catchAudio = ExtResource("2_axjcj")
 
@@ -77,7 +76,7 @@ shape = SubResource("CircleShape2D_lysu6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_dhats")
+&"": SubResource("AnimationLibrary_dhats")
 }
 autoplay = "boomerang"
 

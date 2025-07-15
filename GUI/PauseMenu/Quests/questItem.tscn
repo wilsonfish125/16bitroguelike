@@ -6,6 +6,7 @@
 
 [node name="QuestItem" type="Button"]
 custom_minimum_size = Vector2(200, 45)
+scale = Vector2(2, 2)
 script = ExtResource("1_wu1il")
 
 [node name="TitleLabel" type="Label" parent="."]

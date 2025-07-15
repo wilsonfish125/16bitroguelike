@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://b2do7no6jnuj2"]
+
+[ext_resource type="Script" uid="uid://cmvhrrbvh2mpf" path="res://NPC/Scripts/npcResource.gd" id="1_mat7v"]
+[ext_resource type="Texture2D" uid="uid://crb4dtx8rbexd" path="res://Resources/Michael Games Sprites/shopkeeper/shopkeeper/portrait_placeholder.png" id="1_y6mon"]
+[ext_resource type="Texture2D" uid="uid://bitux8xmduc64" path="res://Resources/ShardsArt/spritesheets/stupidhomie.png" id="2_dwjh5"]
+
+[resource]
+script = ExtResource("1_mat7v")
+npcName = "Warrior Gorin"
+sprite = ExtResource("2_dwjh5")
+portrait = ExtResource("1_y6mon")
+dialogueAudioPitch = 0.66
+metadata/_custom_type_script = "uid://cmvhrrbvh2mpf"

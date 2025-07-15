@@ -1,10 +1,10 @@
 [gd_scene load_steps=45 format=3 uid="uid://dodishrbxibgn"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_0turd"]
-[ext_resource type="Texture2D" uid="uid://dadyemno7erfo" path="res://Enemies/Slimes/slimies.png" id="1_ruiio"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="3_6iord"]
 [ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="3_h8xji"]
 [ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="4_0qbup"]
+[ext_resource type="Texture2D" uid="uid://cc7d3jucuipo2" path="res://Resources/ShardsArt/spritesheets/stupidslime.png" id="4_04a8j"]
 [ext_resource type="Script" uid="uid://buu327xf5k1iq" path="res://Enemies/Scripts/States/enemyStateIdle.gd" id="4_4rn44"]
 [ext_resource type="Script" uid="uid://c0n8d25joo2rw" path="res://Enemies/Scripts/States/enemyStateWalk.gd" id="5_8xds4"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="6_asanj"]
@@ -848,7 +848,7 @@ _data = {
 [node name="Slime" type="CharacterBody2D"]
 z_index = 2
 y_sort_enabled = true
-scale = Vector2(3, 3)
+scale = Vector2(0.5, 0.5)
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_0turd")
@@ -870,9 +870,9 @@ debug_color = Color(0.464357, 0.5811, 0.329796, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_ruiio")
+texture = ExtResource("4_04a8j")
 hframes = 2
-vframes = 10
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
@@ -881,7 +881,7 @@ shape = SubResource("CapsuleShape2D_7kg0j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_e2k14")
+&"": SubResource("AnimationLibrary_e2k14")
 }
 
 [node name="EnemyStateMachine" type="Node" parent="."]
@@ -911,11 +911,12 @@ max_polyphony = 4
 visible = false
 texture_filter = 1
 texture_repeat = 1
+scale = Vector2(3, 3)
 texture = ExtResource("8_6ajog")
 hframes = 6
 frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffect"]
 libraries = {
-"": SubResource("AnimationLibrary_lcr25")
+&"": SubResource("AnimationLibrary_lcr25")
 }

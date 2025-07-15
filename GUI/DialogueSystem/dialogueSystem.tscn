@@ -110,10 +110,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -960.0
-offset_top = -304.0
-offset_right = -40.0
-offset_bottom = -40.0
+offset_left = -472.0
+offset_top = -168.0
+offset_right = -24.0
+offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_3wnq5")
@@ -123,8 +123,8 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.439216, 0.396078, 0.321569, 1)
 theme_override_fonts/normal_font = ExtResource("3_fiuji")
 theme_override_fonts/bold_font = ExtResource("4_ubga4")
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 text = "Example [b]Text[/b]
 [wave]WOOOOOAH[/wave]
@@ -133,10 +133,10 @@ scroll_active = false
 
 [node name="NameLabel" type="Label" parent="DialogueUI"]
 layout_mode = 0
-offset_left = 328.0
-offset_top = 376.0
-offset_right = 824.0
-offset_bottom = 429.0
+offset_left = 168.0
+offset_top = 152.0
+offset_right = 664.0
+offset_bottom = 205.0
 theme_override_colors/font_color = Color(0.901961, 0.870588, 0.811765, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
@@ -147,8 +147,8 @@ text = "NAME"
 
 [node name="PortraitSprite" type="Sprite2D" parent="DialogueUI"]
 texture_filter = 1
-position = Vector2(168, 472)
-scale = Vector2(3.32, 3.32)
+position = Vector2(92, 259)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("5_4qpk4")
 hframes = 4
 script = ExtResource("6_2gesg")
@@ -164,10 +164,10 @@ bus = &"SFX"
 [node name="DialogueProgressIndicator" type="PanelContainer" parent="DialogueUI"]
 self_modulate = Color(0.346976, 0.355272, 0.530482, 1)
 layout_mode = 0
-offset_left = 1168.0
-offset_top = 640.0
-offset_right = 1256.0
-offset_bottom = 696.0
+offset_left = 536.0
+offset_top = 288.0
+offset_right = 624.0
+offset_bottom = 344.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_84eqh")
 
 [node name="Label" type="Label" parent="DialogueUI/DialogueProgressIndicator"]
@@ -180,7 +180,7 @@ vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogueUI/DialogueProgressIndicator"]
 libraries = {
-"": SubResource("AnimationLibrary_3b6hk")
+&"": SubResource("AnimationLibrary_3b6hk")
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DialogueUI"]
@@ -190,13 +190,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -288.0
-offset_top = -344.0
-offset_right = 148.0
-offset_bottom = -88.0
+offset_left = -152.0
+offset_top = -220.0
+offset_right = 284.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
 theme = ExtResource("9_vxeod")
 alignment = 1
 

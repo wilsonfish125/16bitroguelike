@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_qg21n"]
 [ext_resource type="Texture2D" uid="uid://gx54iqpb5mid" path="res://Resources/Official Sunspire Sprites/Tilemaps/Testing/grasslandrev2.png" id="2_mwd1t"]
 [ext_resource type="AudioStream" uid="uid://bvawfaolww78g" path="res://Resources/Michael Games Sprites/example_music/example_music_02.ogg" id="2_w1bni"]
-[ext_resource type="Texture2D" uid="uid://d2te2biv6nfc2" path="res://Resources/New Tileset (v2)/NEW Overworld (Classic)(v2).png" id="3_a4ycg"]
+[ext_resource type="Texture2D" uid="uid://d2te2biv6nfc2" path="res://Resources/Old Tilesets/New Tileset (v2)/NEW Overworld (Classic)(v2).png" id="3_a4ycg"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="3_cghyv"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="4_l3n8p"]
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="5_7unfm"]

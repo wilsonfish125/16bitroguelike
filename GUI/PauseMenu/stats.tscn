@@ -21,7 +21,6 @@ texture_margin_bottom = 14.0
 [node name="Stats" type="PanelContainer"]
 offset_right = 173.0
 offset_bottom = 148.0
-scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxTexture_nr7q2")
 script = ExtResource("2_gwly4")
 

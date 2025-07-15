@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://2vvbeni83v2m"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_vxfdi"]
-[ext_resource type="Texture2D" uid="uid://gw44o518mjsn" path="res://Resources/New Tileset (v2)/NEW Dungeons (v2).png" id="2_hq2ml"]
+[ext_resource type="Texture2D" uid="uid://gw44o518mjsn" path="res://Resources/Old Tilesets/New Tileset (v2)/NEW Dungeons (v2).png" id="2_hq2ml"]
 [ext_resource type="Script" uid="uid://dy8q4wn2lhr0c" path="res://Other/Scripts/levelTilemap.gd" id="3_4a5y6"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_t1w3f"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="5_1eu1f"]

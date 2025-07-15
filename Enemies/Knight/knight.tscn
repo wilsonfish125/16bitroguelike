@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_jr3sn"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="1_p26p6"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="2_doj60"]
-[ext_resource type="Texture2D" uid="uid://bufha6drs5jyx" path="res://Enemies/Knight/knight.png" id="3_2tdqp"]
+[ext_resource type="Texture2D" uid="uid://bjgn0hlph1d15" path="res://Resources/ShardsArt/spritesheets/stupidskelly.png" id="4_wak43"]
 [ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="5_4cvsp"]
 [ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="5_5j0lj"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="5_gpsl5"]
@@ -1240,7 +1240,7 @@ _data = {
 
 [node name="Knight" type="CharacterBody2D"]
 z_index = 2
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_jr3sn")
@@ -1271,7 +1271,7 @@ shape = SubResource("CapsuleShape2D_201bx")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-texture = ExtResource("3_2tdqp")
+texture = ExtResource("4_wak43")
 hframes = 3
 vframes = 2
 
@@ -1294,7 +1294,7 @@ debug_color = Color(0.854559, 0.355496, 0.261058, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_5grqc")
+&"": SubResource("AnimationLibrary_5grqc")
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -1336,7 +1336,7 @@ frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffect"]
 libraries = {
-"": SubResource("AnimationLibrary_lcr25")
+&"": SubResource("AnimationLibrary_lcr25")
 }
 
 [node name="VisionArea" parent="." instance=ExtResource("17_8jh00")]

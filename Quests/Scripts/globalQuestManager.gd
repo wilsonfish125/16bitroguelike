@@ -15,7 +15,7 @@ func _ready() -> void:
 	gatherQuestData()
 
 func _unhandled_input( event: InputEvent ) -> void:
-	if event.is_action_pressed( "test" ):
+	if event.is_action_pressed( "questTest" ):
 		#print( findQuest( load( "res://Quests/evilWizardQuest.tres" ) as Quest ) )
 		# The way it works, quests cannot be added and completed at once
 		#updateQuest( "a short quest" )
@@ -24,7 +24,6 @@ func _unhandled_input( event: InputEvent ) -> void:
 		#updateQuest( "a long quest" )
 		#updateQuest( "a long quest", "1" )
 		#updateQuest( "a long quest", "2" )
-		
 		pass
 
 func gatherQuestData() -> void:

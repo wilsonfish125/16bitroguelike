@@ -109,12 +109,11 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -243.0
-offset_top = 4.0
-offset_right = -136.0
-offset_bottom = 44.0
+offset_left = -120.0
+offset_top = 16.0
+offset_right = -13.0
+offset_bottom = 56.0
 grow_horizontal = 0
-scale = Vector2(2, 2)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]
 layout_mode = 2
@@ -145,11 +144,10 @@ libraries = {
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 88.0
-offset_right = 245.0
-offset_bottom = 256.0
-scale = Vector2(3, 3)
+offset_left = 56.0
+offset_top = 112.0
+offset_right = 293.0
+offset_bottom = 280.0
 follow_focus = true
 horizontal_scroll_mode = 0
 
@@ -182,11 +180,10 @@ layout_mode = 2
 
 [node name="DetailsPanel" type="PanelContainer" parent="Control"]
 layout_mode = 0
-offset_left = 728.0
-offset_top = 88.0
-offset_right = 904.0
-offset_bottom = 256.0
-scale = Vector2(3, 3)
+offset_left = 424.0
+offset_top = 80.0
+offset_right = 600.0
+offset_bottom = 248.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_cu34e")
 
 [node name="Control" type="Control" parent="Control/DetailsPanel"]
@@ -297,10 +294,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -176.0
-offset_top = -104.0
-offset_right = -40.0
-offset_bottom = -51.0
+offset_left = -184.0
+offset_top = -80.0
+offset_right = -48.0
+offset_bottom = -27.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 40

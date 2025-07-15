@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cmvhrrbvh2mpf" path="res://NPC/Scripts/npcResource.gd" id="1_8c0cv"]
 [ext_resource type="Texture2D" uid="uid://crb4dtx8rbexd" path="res://Resources/Michael Games Sprites/shopkeeper/shopkeeper/portrait_placeholder.png" id="1_gmpqm"]
-[ext_resource type="Texture2D" uid="uid://52l5j1hptjyx" path="res://Resources/Old Tilesets/Old Tilesets/npcGameboy.png" id="3_gmpqm"]
+[ext_resource type="Texture2D" uid="uid://d0xeuxl8lv4fq" path="res://Resources/ShardsArt/spritesheets/stupidoldman.png" id="3_gmpqm"]
 
 [resource]
 script = ExtResource("1_8c0cv")
-npcName = "Rat Shopkeeper"
+npcName = "Old Man Shopkeeper"
 sprite = ExtResource("3_gmpqm")
 portrait = ExtResource("1_gmpqm")
 dialogueAudioPitch = 1.8
