@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="17_60haf"]
 [ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="18_n4kv7"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kq8rx"]
 texture = ExtResource("1_f44vr")
 0:0/0 = 0

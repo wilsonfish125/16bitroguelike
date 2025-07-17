@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="9_x0fm1"]
 [ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="10_u6cd8"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fiduo"]
 texture = ExtResource("2_hq2ml")
 0:0/0 = 0

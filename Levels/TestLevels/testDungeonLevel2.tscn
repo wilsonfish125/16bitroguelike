@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="10_y8os2"]
 [ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="14_ba6ch"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_arcd5"]
 texture = ExtResource("2_xamrq")
 0:0/0 = 0

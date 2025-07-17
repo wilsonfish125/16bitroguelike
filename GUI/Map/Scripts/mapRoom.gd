@@ -17,6 +17,8 @@ const ICONS := {
 
 var avaliable := false : set = setAvaliable
 var room : Room : set = setRoom
+var level : Level : set = setLevel
+var levelName : String : set = setLevelName
 
 func setAvaliable( newValue : bool ) -> void:
 	avaliable = newValue
@@ -33,6 +35,14 @@ func setRoom( newData : Room) -> void:
 	sprite_2d.texture = ICONS[room.type][0]
 	sprite_2d.scale = ICONS[room.type][1]
 
+func setLevel( newData : Level ) -> void:
+	level = newData
+	print("Level Set")
+
+func setLevelName( newData : String ) -> void:
+	levelName = newData
+	print("Level Name Set")
+
 func showSelected() -> void:
 	line_2d.modulate = Color.WHITE
 
@@ -42,6 +52,11 @@ func _on_input_event(viewport, event, shape_idx):
 	
 	room.selected = true
 	animation_player.play("select")
+	await get_tree().create_timer(2).timeout
+	print(levelName)
+	LevelManager.loadNewLevel(levelName, "LevelTransition", Vector2.ZERO)
+	# Conditions for entering room here, by default monster
+	
 
 # Used in AnimationPlayer on MapRoom
 func _onMapRoomSelected() -> void:

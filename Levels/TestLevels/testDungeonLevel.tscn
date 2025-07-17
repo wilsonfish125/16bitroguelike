@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="6_3ssen"]
 [ext_resource type="PackedScene" uid="uid://bg3omyj3j65ts" path="res://Props/Interactables/Pushable Statue/pushableStatue.tscn" id="6_t0wiu"]
 
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phi30"]
 texture = ExtResource("1_4v52j")
 0:0/0 = 0

@@ -14,3 +14,6 @@ func _ready() -> void:
 func _freeLevel() -> void:
 	PlayerManager.unparentPlayer( self )
 	queue_free() #this way the player wont be part of the level when it gets removed from the game
+
+func _getName() -> String:
+	return name

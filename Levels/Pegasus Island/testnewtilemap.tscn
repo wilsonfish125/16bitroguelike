@@ -2482,7 +2482,7 @@ position = Vector2(1394, 1258)
 
 [node name="LevelTransition" parent="." instance=ExtResource("7_ubvom")]
 position = Vector2(506, 1082)
-level = "res://Levels/TestLevels/testDungeonLevel.tscn"
+level = "uid://ctirkmy8fyhl2"
 centerPlayer = true
 size = 1
 side = 2

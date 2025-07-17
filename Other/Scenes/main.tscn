@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="11_7tok5"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="12_sicrm"]
 
+
 [node name="LevelScene" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_hqajm")

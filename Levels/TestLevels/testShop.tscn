@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="14_ohd8w"]
 [ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="15_dj7pn"]
 
+
 [node name="TestShop" type="Node2D"]
 script = ExtResource("1_3jpus")
 
