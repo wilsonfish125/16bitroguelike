@@ -16,8 +16,6 @@ func _ready() -> void:
 	await get_tree().process_frame
 	LevelLoaded.emit()
 
-
-
 #Anytime we load a new tilemap we call this script and this function
 func changeTilemapBounds( bounds : Array[ Vector2 ] ) -> void:
 	currentTilemapBounds = bounds

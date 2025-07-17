@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dylot3cyekilp"]
+
+[node name="MapLine" type="Line2D"]
+texture_repeat = 2
+texture_mode = 1

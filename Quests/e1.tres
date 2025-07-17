@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://cbab4bb8dqd77"]
+
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_on3vr"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="2_lfw5u"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="3_xdc3h"]
+
+[sub_resource type="Resource" id="Resource_lka8v"]
+script = ExtResource("1_on3vr")
+item = ExtResource("2_lfw5u")
+quantity = 1
+metadata/_custom_type_script = "uid://b62mnalgibn5g"
+
+[resource]
+script = ExtResource("3_xdc3h")
+title = "Save the Crops"
+description = "The farmers crops are overrun by enemies! Slay them for a reward!"
+steps = Array[String](["Slay the Enemies", "Return to the Farmer"])
+rewardXP = 25
+rewardItems = Array[ExtResource("1_on3vr")]([SubResource("Resource_lka8v")])
+metadata/_custom_type_script = "uid://d0eebcw17f3je"
