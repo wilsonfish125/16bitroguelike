@@ -89,6 +89,7 @@ _data = {
 [node name="MapRoom" type="Area2D"]
 collision_layer = 65536
 collision_mask = 0
+monitorable = false
 script = ExtResource("1_ndpj1")
 
 [node name="Visuals" type="Node2D" parent="."]

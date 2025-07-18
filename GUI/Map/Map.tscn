@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://knfoj71gyrhf"]
+[gd_scene load_steps=7 format=3 uid="uid://knfoj71gyrhf"]
 
 [ext_resource type="Script" uid="uid://bvmufq3vl5l5d" path="res://GUI/Map/Scripts/mapGenerator.gd" id="1_8xius"]
 [ext_resource type="Script" uid="uid://bqbbtxnegd8ii" path="res://GUI/Map/Scripts/map.gd" id="1_hvgjf"]
+[ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="3_wn65y"]
+[ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_lhfgg"]
 
 [sub_resource type="Gradient" id="Gradient_hvgjf"]
 colors = PackedColorArray(0.215388, 0.215388, 0.215388, 1, 0.97749, 0.718887, 0.518113, 1)
@@ -37,3 +39,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_wn65y")
+
+[node name="LevelTransition" parent="." instance=ExtResource("3_wn65y")]
+position = Vector2(376, 292)
+size = 1
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("4_lhfgg")]

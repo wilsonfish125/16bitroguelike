@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://de54lt1gt840h"]
+[gd_scene load_steps=23 format=4 uid="uid://de54lt1gt840h"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_03fs2"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_kihf6"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="18_y2wsb"]
 [ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="19_k6d1f"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="20_wnvmt"]
+[ext_resource type="PackedScene" uid="uid://ba34wes5rbkd" path="res://Levels/levelTransitionInteract.tscn" id="22_davbd"]
 
 [node name="E1A1" type="Node2D"]
 script = ExtResource("1_03fs2")
@@ -219,5 +220,11 @@ settingsSummary = "UPDATE QUEST:
 Quest: Save the Crops
 Step: 1 - slay the enemies
 Complete: false"
+
+[node name="LevelTransitionInteract" parent="." instance=ExtResource("22_davbd")]
+position = Vector2(114, 185)
+level = "uid://knfoj71gyrhf"
+size = 1
+side = 2
 
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]
