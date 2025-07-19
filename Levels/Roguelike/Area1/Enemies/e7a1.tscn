@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_qmry1"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_hbfvw"]
-[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/Tilesets/BASETILE.tres" id="3_n8hxg"]
-[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/Tilesets/floortile.tres" id="4_w6bgh"]
-[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/Tilesets/treesrocks.tres" id="5_gi6yo"]
-[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/Tilesets/propswalls.tres" id="6_revjc"]
+[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/00Tilesets/BASETILE.tres" id="3_n8hxg"]
+[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/00Tilesets/floortile.tres" id="4_w6bgh"]
+[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="5_gi6yo"]
+[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="6_revjc"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="7_jw5ox"]
+
 
 [node name="E7A1" type="Node2D"]
 script = ExtResource("1_qmry1")

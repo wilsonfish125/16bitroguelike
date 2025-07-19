@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_jo3ub"]
 [ext_resource type="AudioStream" uid="uid://33jqmsjcx0pr" path="res://Resources/Music/AMBIENT/REMEMBERING.wav" id="2_p76g3"]
-[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/Tilesets/BASETILE.tres" id="3_hgl46"]
-[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/Tilesets/floortile.tres" id="4_xiiyh"]
-[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/Tilesets/treesrocks.tres" id="5_vbc63"]
-[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/Tilesets/propswalls.tres" id="6_w21ub"]
+[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/00Tilesets/BASETILE.tres" id="3_hgl46"]
+[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/00Tilesets/floortile.tres" id="4_xiiyh"]
+[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="5_vbc63"]
+[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="6_w21ub"]
 [ext_resource type="PackedScene" uid="uid://cj2fhb0hvaa3a" path="res://Props/Interactables/Shopkeeper/shopkeeper.tscn" id="7_m04b7"]
 [ext_resource type="Script" uid="uid://b5oke4uvap4uf" path="res://Items/Scripts/itemData.gd" id="8_0qlov"]
 [ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="9_q0u14"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://la2r0u1m7tbn" path="res://NPC/patrolLocation.tscn" id="16_okp5n"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="17_t7fdp"]
 [ext_resource type="Script" uid="uid://dibm0sw4mb3u8" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="18_3b0fo"]
+
 
 [node name="TestTilemap" type="Node2D"]
 script = ExtResource("1_jo3ub")

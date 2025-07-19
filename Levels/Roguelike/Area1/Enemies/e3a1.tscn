@@ -2,13 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_4ue1r"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_p55jx"]
-[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/Tilesets/BASETILE.tres" id="3_1yuse"]
-[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/Tilesets/floortile.tres" id="4_thwco"]
-[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/Tilesets/treesrocks.tres" id="5_4n2on"]
-[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/Tilesets/propswalls.tres" id="6_saxli"]
+[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/00Tilesets/BASETILE.tres" id="3_1yuse"]
+[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/00Tilesets/floortile.tres" id="4_thwco"]
+[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="5_4n2on"]
+[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="6_saxli"]
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="7_ryty0"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="8_jnf4c"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="9_p7dxx"]
+
 
 [node name="E3A1" type="Node2D"]
 script = ExtResource("1_4ue1r")

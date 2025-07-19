@@ -1,11 +1,11 @@
 [gd_scene load_steps=26 format=4 uid="uid://de54lt1gt840h"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_27li6"]
-[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/Tilesets/BASETILE.tres" id="2_bmryo"]
+[ext_resource type="TileSet" uid="uid://b31tckt43bf5c" path="res://Levels/Roguelike/Area1/00Tilesets/BASETILE.tres" id="2_bmryo"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_s7j08"]
-[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/Tilesets/floortile.tres" id="3_s7j08"]
-[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/Tilesets/treesrocks.tres" id="4_fqgqp"]
-[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/Tilesets/propswalls.tres" id="5_3d5jc"]
+[ext_resource type="TileSet" uid="uid://ddemauk1qfmdm" path="res://Levels/Roguelike/Area1/00Tilesets/floortile.tres" id="3_s7j08"]
+[ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="4_fqgqp"]
+[ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="5_3d5jc"]
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="7_fqgqp"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="8_3d5jc"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="9_3d5jc"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="11_0vc5y"]
 [ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/npcWarrior.tres" id="12_b1hks"]
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="13_38hhi"]
-[ext_resource type="Resource" uid="uid://cbab4bb8dqd77" path="res://Quests/Scenes/Area1/e1.tres" id="14_cbuaa"]
+[ext_resource type="Resource" uid="uid://cbab4bb8dqd77" path="res://Quests/e1.tres" id="14_cbuaa"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="15_oievb"]
 [ext_resource type="Resource" uid="uid://8hkerrqbw760" path="res://NPC/npcBigJohnny.tres" id="16_exffj"]
 [ext_resource type="Script" uid="uid://dibm0sw4mb3u8" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="16_l2vwh"]
@@ -24,6 +24,7 @@
 [ext_resource type="Resource" uid="uid://c7gwignismips" path="res://NPC/npcArkusYoung.tres" id="19_eu8l2"]
 [ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="19_y6bvq"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="20_5yf31"]
+
 
 [sub_resource type="GDScript" id="GDScript_8wrcn"]
 script/source = "extends Node
