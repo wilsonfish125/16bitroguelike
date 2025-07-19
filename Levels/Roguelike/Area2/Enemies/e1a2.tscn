@@ -5,7 +5,6 @@
 [ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="3_r83m1"]
 [ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="4_cauyl"]
 
-
 [node name="E1A2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="4_lhfgg"]
 
 [sub_resource type="Gradient" id="Gradient_hvgjf"]
-colors = PackedColorArray(0.215388, 0.215388, 0.215388, 1, 0.97749, 0.718887, 0.518113, 1)
+colors = PackedColorArray(0.215388, 0.215388, 0.215388, 1, 0.162276, 0.236196, 0.0599618, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_wn65y"]
 gradient = SubResource("Gradient_hvgjf")

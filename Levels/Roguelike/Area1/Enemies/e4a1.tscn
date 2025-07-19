@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="7_fmawb"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="8_fq40o"]
 
-
 [node name="E4A1" type="Node2D"]
 script = ExtResource("1_nh30h")
 music = ExtResource("2_y5hbg")
