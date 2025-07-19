@@ -18,8 +18,12 @@ var cameraEdgeY : float
 func _ready():
 	cameraEdgeY = MapGenerator.YDIST * (MapGenerator.FLOORS - 1)
 	
-	generateNewMap()
-	unlockFloor(0)
+	
+	if floorsClimbed == 0:
+		generateNewMap()
+		MapManager.unlockFloor(0)
+	else:
+		MapManager.unlockNextRooms()
 
 func _input(event : InputEvent):
 	if event.is_action_pressed("scroll_up"):
@@ -28,11 +32,6 @@ func _input(event : InputEvent):
 		camera_2d.position.y += SCROLLSPEED
 	
 	camera_2d.position.y = clamp(camera_2d.position.y, -cameraEdgeY, 0)
-
-func generateNewMap() -> void:
-	floorsClimbed = 0
-	mapData = mapGenerator.generateMap()
-	createMap()
 
 func createMap() -> void:
 	for currentFloor : Array in mapData:
@@ -49,23 +48,23 @@ func createMap() -> void:
 	visuals.position.x = (get_viewport_rect().size.x - mapWidthPixels) / 2
 	visuals.position.y = get_viewport_rect().size.y / 2
 
+func generateNewMap() -> void:
+	floorsClimbed = 0
+	mapData = mapGenerator.generateMap()
+
 func unlockFloor( whichFloor : int = floorsClimbed ) -> void:
-	for mapRoom : MapRoom in rooms.get_children():
-		if mapRoom.room.row == whichFloor:
-			mapRoom.avaliable = true
+	MapManager.unlockFloor( whichFloor )
 
 func unlockNextRooms() -> void:
-	for mapRoom : MapRoom in rooms.get_children():
-		if lastRoom.nextRooms.has(mapRoom.room):
-			mapRoom.avaliable = true
+	MapManager.unlockNextRooms()
 
 func showMap() -> void:
-	show()
-	camera_2d.enabled = true
+	self.show()
+	self.camera_2d.enabled = true
 
 func hideMap() -> void:
-	hide()
-	camera_2d.enabled = false
+	self.hide()
+	self.camera_2d.enabled = false
 
 func _spawnRoom( room : Room ) -> void:
 	var newMapRoom := MAPROOM.instantiate() as MapRoom
@@ -88,10 +87,5 @@ func _connectLines( room : Room ) -> void:
 		lines.add_child(newMapLine)
 
 func _onMapRoomSelected( room : Room ) -> void:
-	for mapRoom : MapRoom in rooms.get_children():
-		if mapRoom.room.row == room.row:
-			mapRoom.avaliable = false
-	
-	lastRoom = room
-	floorsClimbed += 1
+	MapManager._onMapRoomSelected(room)
 	MapManager.MapExited.emit(room)

@@ -145,7 +145,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture_filter = 1
@@ -162,6 +162,7 @@ offset_right = 183.0
 offset_bottom = 116.0
 grow_horizontal = 2
 scale = Vector2(2, 2)
+mouse_filter = 2
 theme_override_constants/v_separation = 2
 alignment = 1
 
