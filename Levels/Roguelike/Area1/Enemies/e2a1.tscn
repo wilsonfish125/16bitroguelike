@@ -76,10 +76,6 @@ position = Vector2(40, 200)
 
 [node name="LevelTransitionInteract" parent="." instance=ExtResource("11_pt47j")]
 position = Vector2(-106, 15)
-enter_only = null
 level = "uid://knfoj71gyrhf"
-targetTransitionArea = null
-centerPlayer = "LevelTransition"
-size = null
 side = 2
 snapToGrid = true

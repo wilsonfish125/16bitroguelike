@@ -18,8 +18,11 @@ func _ready():
 	print(MapManager.floorsClimbed)
 	if MapManager.floorsClimbed == -1:
 		MapManager.floorsClimbed = 0
-	generateNewMap()
-	unlockFloor(MapManager.floorsClimbed)
+		generateNewMap()
+		unlockFloor(0)
+		return
+	else: 
+		unlockNextRooms()
 
 func _input(event : InputEvent):
 	if event.is_action_pressed("scroll_up"):

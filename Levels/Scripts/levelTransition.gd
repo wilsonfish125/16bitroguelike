@@ -103,4 +103,3 @@ func _updateArea() -> void:
 	
 	collision_shape.shape.size = newRect
 	collision_shape.position = newPosition
-	

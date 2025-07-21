@@ -22,4 +22,3 @@ var level = monsterRooms[randi_range(0, 1)]
 
 func loadLevel() -> void:
 	LevelManager.loadNewLevel(level, "LevelTransition", Vector2.ZERO)
-	

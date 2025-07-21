@@ -42,7 +42,6 @@ texture = SubResource("GradientTexture1D_wn65y")
 
 [node name="LevelTransition" parent="." instance=ExtResource("3_wn65y")]
 position = Vector2(376, 292)
-enter_only = false
 size = 1
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_lhfgg")]
