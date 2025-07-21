@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu8nr755e4ra3"]
+
+[ext_resource type="Script" uid="uid://bhhyt7tlyeo5q" path="res://GUI/Map/Scripts/mapRun.gd" id="1_l3ceh"]
+[ext_resource type="PackedScene" uid="uid://knfoj71gyrhf" path="res://GUI/Map/Map.tscn" id="2_32sk1"]
+
+[node name="MapRun" type="Node2D"]
+script = ExtResource("1_l3ceh")
+
+[node name="Map" parent="." instance=ExtResource("2_32sk1")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="DebugButton" type="VBoxContainer" parent="."]
+offset_right = 33.0
+offset_bottom = 176.0
+
+[node name="MapButton" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"
+
+[node name="MapButton2" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"
+
+[node name="MapButton3" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"
+
+[node name="MapButton4" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"
+
+[node name="MapButton5" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"
+
+[node name="MapButton6" type="Button" parent="DebugButton"]
+layout_mode = 2
+text = "Map"

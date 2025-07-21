@@ -14,9 +14,11 @@ const ICONS := {
 @onready var line_2d = $Visuals/Line2D
 @onready var sprite_2d = $Visuals/Sprite2D
 @onready var animation_player = $AnimationPlayer
+@onready var label: Label = $Label
 
 var avaliable := false : set = setAvaliable
 var room : Room : set = setRoom
+var level : String 
 
 func setAvaliable( newValue : bool ) -> void:
 	avaliable = newValue
@@ -29,6 +31,8 @@ func setAvaliable( newValue : bool ) -> void:
 func setRoom( newData : Room) -> void:
 	room = newData
 	position = room.position
+	level = MapManager.monsterRooms.pick_random()
+	label.text = str(MapManager.monsterRooms.find(level))
 	line_2d.rotation_degrees = randi_range(0, 360)
 	sprite_2d.texture = ICONS[room.type][0]
 	sprite_2d.scale = ICONS[room.type][1]

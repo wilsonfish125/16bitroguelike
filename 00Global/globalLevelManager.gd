@@ -50,3 +50,33 @@ func loadNewLevel(
 	LevelLoaded.emit()
 	
 	pass
+
+func loadLevelByPacked(
+		level : PackedScene,
+		_targetTransition : String,
+		_positionOffset : Vector2 
+) -> void:
+	
+	get_tree().paused = true
+	targetTransition = _targetTransition
+	positionOffset = _positionOffset
+	
+	#instead of waiting for process frame, lets await the scene transition functions we made 
+	
+	await SceneTransition.fadeOut()
+	
+	LevelLoadStarted.emit()
+	
+	await get_tree().process_frame #inbetween level load started and next part of code we wanna remove old level
+	
+	get_tree().change_scene_to_packed( level )
+	
+	await SceneTransition.fadeIn()
+	
+	get_tree().paused = false
+	
+	await get_tree().process_frame
+	
+	LevelLoaded.emit()
+	
+	pass

@@ -112,4 +112,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_ndpj1")
 }
 
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 18.0
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]

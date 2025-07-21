@@ -5,6 +5,7 @@ signal EnteredFromHere
 
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM } #easy way for us to track the side it belongs to
 
+@export var enter_only : bool = false
 @export_file( "*.tscn" ) var level #hey you did wildcard characters in IPT! finally something useful
 @export var targetTransitionArea : String = "LevelTransition" #value will be used to point the player to another map scene
 @export var centerPlayer : bool = false
@@ -35,9 +36,10 @@ func _ready() -> void:
 	_placePlayer()
 	
 	await LevelManager.LevelLoaded
-	
-	monitoring = true #it only works when monitoring is off
-	body_entered.connect( _playerEntered )
+
+	if !enter_only:
+		monitoring = true #it only works when monitoring is off
+		body_entered.connect( _playerEntered )
 	
 	pass
 
@@ -51,6 +53,7 @@ func _placePlayer() -> void:
 		return
 	PlayerManager.setPlayerPosition( global_position + LevelManager.positionOffset )
 	EnteredFromHere.emit()
+	print("Entered")
 
 func getOffset() -> Vector2:
 	var offset : Vector2 = Vector2.ZERO
