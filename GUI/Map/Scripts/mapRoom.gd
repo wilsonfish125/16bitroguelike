@@ -16,14 +16,14 @@ const ICONS := {
 @onready var animation_player = $AnimationPlayer
 @onready var label: Label = $Label
 
-var avaliable := false : set = setAvaliable
+var available := false : set = setAvaliable
 var room : Room : set = setRoom
 var level : String 
 
 func setAvaliable( newValue : bool ) -> void:
-	avaliable = newValue
+	available = newValue
 	
-	if avaliable:
+	if available:
 		animation_player.play("highlight")
 	elif not room.selected:
 		animation_player.play("RESET")
@@ -31,8 +31,6 @@ func setAvaliable( newValue : bool ) -> void:
 func setRoom( newData : Room) -> void:
 	room = newData
 	position = room.position
-	level = MapManager.monsterRooms.pick_random()
-	label.text = str(MapManager.monsterRooms.find(level))
 	line_2d.rotation_degrees = randi_range(0, 360)
 	sprite_2d.texture = ICONS[room.type][0]
 	sprite_2d.scale = ICONS[room.type][1]
@@ -41,7 +39,7 @@ func showSelected() -> void:
 	line_2d.modulate = Color.WHITE
 
 func _on_input_event(viewport, event, shape_idx):
-	if not avaliable or not event.is_action_pressed("left_click"):
+	if not available or not event.is_action_pressed("left_click"):
 		return
 	
 	room.selected = true
@@ -52,4 +50,4 @@ func _on_input_event(viewport, event, shape_idx):
 # Used in AnimationPlayer on MapRoom
 func _onMapRoomSelected() -> void:
 	Selected.emit(room)
-	MapManager.loadLevel()
+	MapManager.selected.emit(room)

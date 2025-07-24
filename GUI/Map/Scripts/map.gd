@@ -10,19 +10,26 @@ const MAPLINE = preload("res://GUI/Map/mapLine.tscn")
 @onready var visuals : Node2D = $Visuals
 @onready var camera_2d : Camera2D = $Camera2D
 
+var map_data : Array [Array]
+var floors_climbed : int
+var last_room : Room
 var cameraEdgeY : float
 
-func _ready():
-	print(MapManager.mapData)
+
+func _ready() -> void:
+	floors_climbed=MapManager.floorsClimbed
+	last_room = MapManager.lastRoom
 	cameraEdgeY = MapGenerator.YDIST * (MapGenerator.FLOORS - 1)
-	print(MapManager.floorsClimbed)
-	if MapManager.floorsClimbed == -1:
-		MapManager.floorsClimbed = 0
-		generateNewMap()
+	_start_run()
+
+func _start_run () -> void:
+	generateNewMap()
+	if floors_climbed>0:
+		for _floor in floors_climbed:
+			unlockNextRooms()
+	else:
 		unlockFloor(0)
-		return
-	else: 
-		unlockNextRooms()
+
 
 func _input(event : InputEvent):
 	if event.is_action_pressed("scroll_up"):
@@ -35,10 +42,13 @@ func _input(event : InputEvent):
 func generateNewMap() -> void:
 	if MapManager.mapData.is_empty():
 		MapManager.mapData = mapGenerator.generateMap()
+		map_data=MapManager.mapData
+	else:
+		map_data=MapManager.mapData
 	createMap()
 
 func createMap() -> void:
-	for currentFloor : Array in MapManager.mapData:
+	for currentFloor : Array in map_data:
 		for room : Room in currentFloor:
 			if room.nextRooms.size() > 0:
 				_spawnRoom(room)
@@ -46,21 +56,21 @@ func createMap() -> void:
 		
 	# Boss Room has no next room but we need to spawn it
 	var middle := floori(MapGenerator.MAPWIDTH * 0.5)
-	_spawnRoom(MapManager.mapData[MapGenerator.FLOORS - 1][middle])
+	_spawnRoom(map_data[MapGenerator.FLOORS - 1][middle])
 	
 	var mapWidthPixels := MapGenerator.XDIST * (MapGenerator.MAPWIDTH - 1)
 	visuals.position.x = (get_viewport_rect().size.x - mapWidthPixels) / 2
 	visuals.position.y = get_viewport_rect().size.y / 2
 
-func unlockFloor( whichFloor : int = MapManager.floorsClimbed ) -> void:
+func unlockFloor( whichFloor : int = floors_climbed ) -> void:
 	for mapRoom : MapRoom in rooms.get_children():
 		if mapRoom.room.row == whichFloor:
-			mapRoom.avaliable = true
+			mapRoom.available = true
 
 func unlockNextRooms() -> void:
 	for mapRoom : MapRoom in rooms.get_children():
-		if MapManager.lastRoom.nextRooms.has(mapRoom.room):
-			mapRoom.avaliable = true
+		if last_room.nextRooms.has(mapRoom.room):
+			mapRoom.available = true
 
 func showMap() -> void:
 	show()
@@ -77,7 +87,7 @@ func _spawnRoom( room : Room ) -> void:
 	newMapRoom.Selected.connect(_onMapRoomSelected)
 	_connectLines(room)
 	
-	if room.selected and room.row < MapManager.floorsClimbed:
+	if room.selected and room.row < floors_climbed:
 		newMapRoom.showSelected()
 
 func _connectLines( room : Room ) -> void:
@@ -93,8 +103,7 @@ func _connectLines( room : Room ) -> void:
 func _onMapRoomSelected( room : Room ) -> void:
 	for mapRoom : MapRoom in rooms.get_children():
 		if mapRoom.room.row == room.row:
-			mapRoom.avaliable = false
-	
+			mapRoom.available = false
 	MapManager.lastRoom = room
-	MapManager.floorsClimbed += 1
-	MapManager.MapExited.emit(room)
+	MapManager.floorsClimbed += 1	
+	

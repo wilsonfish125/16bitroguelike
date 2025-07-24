@@ -20,9 +20,6 @@ var randomRoomTypeTotalWeight := 0
 var mapData : Array[Array] # SENG1110 Reference
 # 15 different 7-long arrays forms a 15x7 matrix
 
-func _ready() -> void:
-	MapManager.mapData = mapData
-
 func generateMap() -> Array[Array]:
 	mapData = _generateInitialGrid()
 	var startingPoints := _getRandomStartingPoints()
