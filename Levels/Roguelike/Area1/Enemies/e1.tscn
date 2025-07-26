@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="9_3d5jc"]
 [ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="10_t4am2"]
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="11_0vc5y"]
-[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/npcWarrior.tres" id="12_b1hks"]
+[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/Area1/npcWarrior.tres" id="12_b1hks"]
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="13_38hhi"]
 [ext_resource type="Resource" uid="uid://cbab4bb8dqd77" path="res://Quests/e1.tres" id="14_cbuaa"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="15_oievb"]

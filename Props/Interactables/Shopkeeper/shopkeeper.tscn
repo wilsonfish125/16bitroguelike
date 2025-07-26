@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bya5wisar4xge" path="res://Props/Interactables/Shopkeeper/shopkeeper.gd" id="1_52day"]
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="2_x1woj"]
-[ext_resource type="Resource" uid="uid://c8f3ka6kpiljh" path="res://NPC/Resources/npcShopkeeper.tres" id="3_twuid"]
+[ext_resource type="Resource" uid="uid://c8f3ka6kpiljh" path="res://NPC/Resources/Area1/npcShopkeeper.tres" id="3_twuid"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="4_ubhb6"]
 [ext_resource type="Script" uid="uid://dibm0sw4mb3u8" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueText.gd" id="5_ipsfk"]
 [ext_resource type="Script" uid="uid://doesf52yw1ogg" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="6_yj6xw"]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://cbieacin52xo4"]
+
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_hnx3t"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="2_jogkw"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_qxc53"]
+
+[sub_resource type="Resource" id="Resource_im4ak"]
+script = ExtResource("1_hnx3t")
+item = ExtResource("2_jogkw")
+quantity = 100
+metadata/_custom_type_script = "uid://b62mnalgibn5g"
+
+[resource]
+script = ExtResource("2_qxc53")
+title = "Defeat the Gerblins"
+description = "A horde of gerblins have stolen a travelling hero and merchant's supplies! Get them back and you're sure to get a good reward."
+steps = Array[String](["Defeat the Gerblins", "Get the Flute", "Talk to the Merchant"])
+rewardXP = 20
+rewardItems = Array[ExtResource("1_hnx3t")]([SubResource("Resource_im4ak")])
+metadata/_custom_type_script = "uid://d0eebcw17f3je"

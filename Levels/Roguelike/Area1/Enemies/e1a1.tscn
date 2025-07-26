@@ -8,7 +8,7 @@
 [ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="5_51qpq"]
 [ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="6_s7u36"]
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="7_s84ym"]
-[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/npcWarrior.tres" id="8_y1h3l"]
+[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/Area1/npcWarrior.tres" id="8_y1h3l"]
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="9_pq6fg"]
 [ext_resource type="Resource" uid="uid://cbab4bb8dqd77" path="res://Quests/e1.tres" id="10_axwkh"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="11_5vu72"]

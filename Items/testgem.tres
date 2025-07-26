@@ -10,8 +10,8 @@ region = Rect2(0, 0, 32, 32)
 
 [resource]
 script = ExtResource("1_q3ji2")
-name = "Gem"
-description = "Circular gem (test item)"
+name = "Coin"
+description = "Merchants will trade for these"
 texture = SubResource("AtlasTexture_e4jf4")
 cost = 1
 effects = Array[ExtResource("1_lg8bg")]([])

@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ba34wes5rbkd" path="res://Levels/levelTransitionInteract.tscn" id="11_bb51u"]
 [ext_resource type="PackedScene" uid="uid://binm6yik6hi7g" path="res://Props/Pot/pot.tscn" id="12_tx0yc"]
 [ext_resource type="PackedScene" uid="uid://y1hgbyti4sve" path="res://NPC/NPC.tscn" id="13_bjhaw"]
-[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/npcWarrior.tres" id="14_sugqn"]
+[ext_resource type="Resource" uid="uid://b2do7no6jnuj2" path="res://NPC/Resources/Area1/npcWarrior.tres" id="14_sugqn"]
 [ext_resource type="PackedScene" uid="uid://spdecvl5sh88" path="res://NPC/NPCBehaviorPatrol.tscn" id="15_vk1pi"]
 [ext_resource type="PackedScene" uid="uid://la2r0u1m7tbn" path="res://NPC/patrolLocation.tscn" id="16_0yl0q"]
 [ext_resource type="PackedScene" uid="uid://bye5t66l5ak5c" path="res://Props/Interactables/Dialogue Interaction/dialogueInteraction.tscn" id="17_8yqkb"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://bsi17p4fxc6cf"]
+
+[ext_resource type="Texture2D" uid="uid://crb4dtx8rbexd" path="res://Resources/Michael Games Sprites/shopkeeper/shopkeeper/portrait_placeholder.png" id="1_4cj2f"]
+[ext_resource type="Script" uid="uid://cmvhrrbvh2mpf" path="res://NPC/Scripts/npcResource.gd" id="1_d8ala"]
+[ext_resource type="Texture2D" uid="uid://dl64rifctnvvm" path="res://Resources/ShardsArt/spritesheets/npcLostHero.png" id="2_4cj2f"]
+
+[resource]
+script = ExtResource("1_d8ala")
+npcName = "Lost Hero"
+sprite = ExtResource("2_4cj2f")
+portrait = ExtResource("1_4cj2f")
+dialogueAudioPitch = 1.3
+metadata/_custom_type_script = "uid://cmvhrrbvh2mpf"
