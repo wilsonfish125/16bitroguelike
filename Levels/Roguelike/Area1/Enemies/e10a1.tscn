@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cold1tkfiqnog"]
+[gd_scene load_steps=25 format=4 uid="uid://cold1tkfiqnog"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_nio3s"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_j0468"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="20_xfkhw"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="21_2bld0"]
 [ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/magicalFlute.tres" id="22_4u5qb"]
+[ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="23_4u5qb"]
 
 [sub_resource type="GDScript" id="GDScript_2bld0"]
 script/source = "extends Node
@@ -63,7 +64,7 @@ tile_map_data = PackedByteArray("AAAAAPj/AAAEAAQAAAABAPj/AAACAAQAAAACAPj/AAACAAQ
 tile_set = ExtResource("6_pdss6")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("7_e6fqa")]
-position = Vector2(-489, 165)
+position = Vector2(-467, 161)
 
 [node name="EnemyCounter" parent="." instance=ExtResource("8_evuia")]
 
@@ -281,5 +282,9 @@ settingsSummary = "UPDATE QUEST:
 Quest: Defeat the Gerblins
 Step: 2 - get the flute
 Complete: false"
+
+[node name="LevelTransition" parent="." instance=ExtResource("23_4u5qb")]
+position = Vector2(-457, 146)
+enter_only = true
 
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]
