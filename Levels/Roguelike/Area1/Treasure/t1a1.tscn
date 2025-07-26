@@ -47,5 +47,5 @@ tile_map_data = PackedByteArray("AADk//D/AAABAAQAAADk//H/AAAAAAQAAADk//L/AAAAAAQ
 tile_set = ExtResource("5_lcvlx")
 
 [node name="Treasurechest" parent="." instance=ExtResource("6_stflw")]
-position = Vector2(89, -63)
+position = Vector2(77, -54)
 itemData = ExtResource("7_7gckk")

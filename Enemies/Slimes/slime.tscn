@@ -852,6 +852,8 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 256
 collision_mask = 16
 script = ExtResource("1_0turd")
+hp = 1
+xpReward = 1
 
 [node name="HurtBox" parent="." instance=ExtResource("6_asanj")]
 

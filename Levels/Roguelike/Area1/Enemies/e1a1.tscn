@@ -186,12 +186,15 @@ itemData = ExtResource("19_k6d1f")
 
 [node name="Knight" parent="EnemyCounter2" instance=ExtResource("20_wnvmt")]
 position = Vector2(-696, 328)
+hp = 0
 
 [node name="Knight2" parent="EnemyCounter2" instance=ExtResource("20_wnvmt")]
 position = Vector2(-608, 368)
+hp = 0
 
 [node name="Knight3" parent="EnemyCounter2" instance=ExtResource("20_wnvmt")]
 position = Vector2(-560, 320)
+hp = 0
 
 [node name="QuestActivatedSwitch" parent="." instance=ExtResource("9_pq6fg")]
 checkType = 2
@@ -206,12 +209,15 @@ Check if player is on step: slay the enemies"
 
 [node name="Knight" parent="QuestActivatedSwitch/EnemyCounter" instance=ExtResource("20_wnvmt")]
 position = Vector2(480, 440)
+hp = 0
 
 [node name="Knight2" parent="QuestActivatedSwitch/EnemyCounter" instance=ExtResource("20_wnvmt")]
 position = Vector2(400, 440)
+hp = 0
 
 [node name="Knight3" parent="QuestActivatedSwitch/EnemyCounter" instance=ExtResource("20_wnvmt")]
 position = Vector2(680, 440)
+hp = 0
 
 [node name="QuestAdvanceTrigger" parent="QuestActivatedSwitch/EnemyCounter" instance=ExtResource("15_gc83l")]
 signalName = "EnemiesDefeated"
@@ -222,10 +228,19 @@ Quest: Save the Crops
 Step: 1 - slay the enemies
 Complete: false"
 
-[node name="LevelTransitionInteract" parent="." instance=ExtResource("22_davbd")]
-position = Vector2(114, 185)
+[node name="QuestActivatedSwitch2" parent="." instance=ExtResource("9_pq6fg")]
+checkType = 3
+reactToGlobalSignal = true
+linkedQuest = ExtResource("10_axwkh")
+settingsSummary = "UPDATE QUEST:
+Quest: Save the Crops
+Checking if quest is complete"
+
+[node name="LevelTransitionInteract" parent="QuestActivatedSwitch2" instance=ExtResource("22_davbd")]
+position = Vector2(301, 303)
 level = "uid://knfoj71gyrhf"
-side = 1
+size = 1
+side = 3
 snapToGrid = true
 
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]

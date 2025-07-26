@@ -18,7 +18,11 @@ var lastRoom : Room = null
 var monsterRooms : Array[String] = [
 	"res://Levels/Roguelike/Area1/Enemies/e1a1.tscn", 
 	"res://Levels/Roguelike/Area1/Enemies/e2a1.tscn",
-	"res://Levels/Roguelike/Area1/Enemies/e3a1.tscn"
+	"res://Levels/Roguelike/Area1/Enemies/e3a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e4a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e5a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e6a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e7a1.tscn"
 ]
 
 var shopRooms : Array[String] = [
