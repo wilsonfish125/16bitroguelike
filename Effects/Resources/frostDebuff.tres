@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=2 format=3 uid="uid://ctl78x8eapmvu"]
+
+[ext_resource type="Script" uid="uid://cxvpa7dbj6ims" path="res://Effects/buff.gd" id="1_euwy7"]
+
+[resource]
+script = ExtResource("1_euwy7")
+buffName = "Frost"
+duration = 5.0
+attackBonus = 0
+defenseBonus = -2
+speedBonus = -2
+canMove = true
+metadata/_custom_type_script = "uid://cxvpa7dbj6ims"

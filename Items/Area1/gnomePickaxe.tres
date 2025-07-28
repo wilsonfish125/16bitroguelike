@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://dsilcae8wqtxr"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_4v0mb"]
+[ext_resource type="Script" uid="uid://b5oke4uvap4uf" path="res://Items/Scripts/itemData.gd" id="2_urg3t"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="3_urg3t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw61o"]
+atlas = ExtResource("3_urg3t")
+region = Rect2(2016, 128, 32, 32)
+
+[resource]
+script = ExtResource("2_urg3t")
+name = "Gnome Pickaxe"
+description = "The Gnome's Pickaxe stolen by the Gerblins. You should return it."
+texture = SubResource("AtlasTexture_vw61o")
+cost = 10
+effects = Array[ExtResource("1_4v0mb")]([])
+metadata/_custom_type_script = "uid://b5oke4uvap4uf"

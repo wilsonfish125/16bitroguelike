@@ -42,6 +42,7 @@ window/stretch/scale_mode="integer"
 
 folder_colors={
 "res://00Global/": "gray",
+"res://Effects/": "blue",
 "res://Enemies/": "red",
 "res://GUI/": "teal",
 "res://GeneralNodes/": "green",

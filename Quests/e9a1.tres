@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://rpkatjuolxyb"]
+
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_b4aq4"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_duels"]
+[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="2_vkjrq"]
+
+[sub_resource type="Resource" id="Resource_b25qi"]
+script = ExtResource("1_b4aq4")
+item = ExtResource("2_vkjrq")
+quantity = 1
+metadata/_custom_type_script = "uid://b62mnalgibn5g"
+
+[resource]
+script = ExtResource("2_duels")
+title = "Help the Gnomes"
+description = "Help the Gnomes recover their mining materials"
+steps = Array[String](["Defeat the Gerblins", "Recover the Pickaxe", "Talk to the Hooded Gnome"])
+rewardXP = 20
+rewardItems = Array[ExtResource("1_b4aq4")]([SubResource("Resource_b25qi")])
+metadata/_custom_type_script = "uid://d0eebcw17f3je"

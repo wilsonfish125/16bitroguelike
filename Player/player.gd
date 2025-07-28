@@ -24,6 +24,8 @@ var defenseBonus : int = 0
 var bodyStat : int = 1
 var skillTreePoints : int = 0
 
+var activeBuffs : Array = []
+
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
 
