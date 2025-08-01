@@ -1,9 +1,10 @@
-[gd_scene load_steps=48 format=3 uid="uid://dwfho8nbvmffj"]
+[gd_scene load_steps=49 format=3 uid="uid://dwfho8nbvmffj"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_qksnx"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_rs1ei"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="3_b1dkd"]
 [ext_resource type="Texture2D" uid="uid://da8yixsirxn6b" path="res://Resources/ShardsArt/spritesheets/gerblinBruteSprite.png" id="4_qksnx"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="4_rs1ei"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="5_j8liq"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="6_topaf"]
 [ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="7_sh2gw"]
@@ -1270,6 +1271,7 @@ shape = SubResource("CapsuleShape2D_201bx")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
+material = ExtResource("4_rs1ei")
 scale = Vector2(2, 2)
 texture = ExtResource("4_qksnx")
 hframes = 3
@@ -1304,15 +1306,18 @@ script = ExtResource("8_lp6ig")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("afterIdleState")]
 script = ExtResource("9_1avwk")
+stateDirectionMax = 2.0
 afterIdleState = NodePath("../Walk")
 
 [node name="Walk" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
 script = ExtResource("10_n5bd5")
+walkSpeed = 50.0
 stateAnimationDuration = 0.6
 nextState = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
 script = ExtResource("11_yutva")
+knockbackSpeed = 100.0
 nextState = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
@@ -1321,6 +1326,8 @@ drops = Array[ExtResource("13_c287l")]([SubResource("Resource_3jv6o"), SubResour
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "attackArea", "nextState")]
 script = ExtResource("15_ub1nd")
+chaseSpeed = 60.0
+turnRate = 0.2
 visionArea = NodePath("../../VisionArea")
 attackArea = NodePath("../../Sprite2D/WeaponSprite2D/AttackHurtBox")
 stateAggroDuration = 5.0

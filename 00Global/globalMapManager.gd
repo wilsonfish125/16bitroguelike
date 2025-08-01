@@ -18,6 +18,9 @@ const MONSTERROOMS : Array[String] = [
 	"res://Levels/Roguelike/Area1/Enemies/e9a1.tscn",
 	"res://Levels/Roguelike/Area1/Enemies/e10a1.tscn",
 	"res://Levels/Roguelike/Area1/Enemies/e11a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e12a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e13a1.tscn",
+	"res://Levels/Roguelike/Area1/Enemies/e14a1.tscn",
 ]
 
 var shopRooms : Array[String] = [

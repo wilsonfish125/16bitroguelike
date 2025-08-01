@@ -1,32 +1,29 @@
-[gd_scene load_steps=49 format=3 uid="uid://cnbgp6c760d0r"]
+[gd_scene load_steps=47 format=3 uid="uid://j65h4jtl8bvc"]
 
-[ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_0plar"]
-[ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_vtdo7"]
-[ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="3_s314p"]
-[ext_resource type="Texture2D" uid="uid://bmmol15s6nqxg" path="res://Resources/ShardsArt/spritesheets/gerblinSprite.png" id="4_bqn5e"]
-[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="4_vtdo7"]
-[ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="5_bk4fb"]
-[ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="6_jgun8"]
-[ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="7_qbh82"]
-[ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="8_51mb8"]
-[ext_resource type="Script" uid="uid://buu327xf5k1iq" path="res://Enemies/Scripts/States/enemyStateIdle.gd" id="9_8thpj"]
-[ext_resource type="Script" uid="uid://c0n8d25joo2rw" path="res://Enemies/Scripts/States/enemyStateWalk.gd" id="10_18u0d"]
-[ext_resource type="Script" uid="uid://blfv6up580jgu" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="11_63h8u"]
-[ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="12_fjjmm"]
-[ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="13_ta5ed"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="14_lp4cy"]
-[ext_resource type="Script" uid="uid://okc8e4dpk12b" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="15_842j5"]
-[ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="16_s44vj"]
-[ext_resource type="PackedScene" uid="uid://cy8ykq3e30uyd" path="res://Enemies/visionArea.tscn" id="17_hbsda"]
+[ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_e12kv"]
+[ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_qyuxv"]
+[ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="3_mt8wb"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="4_jiarw"]
+[ext_resource type="Texture2D" uid="uid://cisdguidgi6qw" path="res://Resources/ShardsArt/spritesheets/caveDragon.png" id="5_d5fvc"]
+[ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="6_0hig3"]
+[ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="7_hsrcu"]
+[ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="8_07hby"]
+[ext_resource type="Script" uid="uid://buu327xf5k1iq" path="res://Enemies/Scripts/States/enemyStateIdle.gd" id="9_sbf37"]
+[ext_resource type="Script" uid="uid://c0n8d25joo2rw" path="res://Enemies/Scripts/States/enemyStateWalk.gd" id="10_h1xyo"]
+[ext_resource type="Script" uid="uid://blfv6up580jgu" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="11_hon71"]
+[ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="12_xhe21"]
+[ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="13_3xr03"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="14_hkug2"]
+[ext_resource type="Script" uid="uid://okc8e4dpk12b" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="15_pwscp"]
+[ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="16_we7qo"]
+[ext_resource type="PackedScene" uid="uid://cy8ykq3e30uyd" path="res://Enemies/visionArea.tscn" id="17_3887k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ic5f4"]
+radius = 18.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_201bx"]
-radius = 13.0
-height = 26.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkwf0"]
-size = Vector2(13.3333, 18.6667)
+radius = 22.0
+height = 44.0
 
 [sub_resource type="Animation" id="Animation_aggqm"]
 resource_name = "ChaseDown"
@@ -55,54 +52,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/WeaponSprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(3, 6), Vector2(3, 5)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/WeaponSprite2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [3.14159]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/WeaponSprite2D:z_index")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/WeaponSprite2D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_xq8r8"]
@@ -133,54 +82,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/WeaponSprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(7, 4), Vector2(8, 4)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/WeaponSprite2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5708]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/WeaponSprite2D:z_index")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [-1]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/WeaponSprite2D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_eqlye"]
 resource_name = "ChaseLeft"
@@ -205,54 +106,6 @@ tracks/1/path = NodePath("Sprite2D:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/WeaponSprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.0154999, 0.233333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(-7, 0), Vector2(-8, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/WeaponSprite2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.0154999),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [4.71239]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/WeaponSprite2D:z_index")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.0154999),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/WeaponSprite2D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -286,54 +139,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/WeaponSprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(-2.5, -8), Vector2(-2.5, -7)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/WeaponSprite2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/WeaponSprite2D:z_index")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [-1]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/WeaponSprite2D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_5m4in"]
@@ -372,7 +177,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.277573,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -387,7 +192,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.683257,
 "start_offset": 0.0,
-"stream": ExtResource("7_qbh82")
+"stream": ExtResource("7_hsrcu")
 }],
 "times": PackedFloat32Array(0.133333)
 }
@@ -451,7 +256,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.277573,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -466,7 +271,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.683257,
 "start_offset": 0.0,
-"stream": ExtResource("7_qbh82")
+"stream": ExtResource("7_hsrcu")
 }],
 "times": PackedFloat32Array(0.133333)
 }
@@ -530,7 +335,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.277573,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -545,7 +350,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.683257,
 "start_offset": 0.0,
-"stream": ExtResource("7_qbh82")
+"stream": ExtResource("7_hsrcu")
 }],
 "times": PackedFloat32Array(0.133333)
 }
@@ -609,7 +414,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.277573,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -624,7 +429,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.683257,
 "start_offset": 0.0,
-"stream": ExtResource("7_qbh82")
+"stream": ExtResource("7_hsrcu")
 }],
 "times": PackedFloat32Array(0.133333)
 }
@@ -806,54 +611,6 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/WeaponSprite2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-2.5, -8)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D/WeaponSprite2D:rotation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite2D/WeaponSprite2D:z_index")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Sprite2D/WeaponSprite2D:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_c5ba7"]
 resource_name = "RunDown"
@@ -1007,7 +764,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1049,7 +806,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1091,7 +848,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1133,7 +890,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("6_jgun8")
+"stream": ExtResource("6_0hig3")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -1165,15 +922,15 @@ _data = {
 }
 
 [sub_resource type="Resource" id="Resource_3jv6o"]
-script = ExtResource("13_ta5ed")
-item = ExtResource("14_lp4cy")
+script = ExtResource("13_3xr03")
+item = ExtResource("14_hkug2")
 probability = 100.0
 minAmount = 1
 maxAmount = 1
 
 [sub_resource type="Resource" id="Resource_2ydvl"]
-script = ExtResource("13_ta5ed")
-item = ExtResource("14_lp4cy")
+script = ExtResource("13_3xr03")
+item = ExtResource("14_hkug2")
 probability = 50.0
 minAmount = 1
 maxAmount = 3
@@ -1238,22 +995,23 @@ _data = {
 &"destroy": SubResource("Animation_jo6lv")
 }
 
-[node name="Gerblin" type="CharacterBody2D"]
+[node name="CaveDragon" type="CharacterBody2D"]
 z_index = 2
 collision_layer = 256
 collision_mask = 16
-script = ExtResource("1_0plar")
-hp = 2
-xpReward = 1
+script = ExtResource("1_e12kv")
+hp = 10
+xpReward = 7
 
-[node name="HurtBox" parent="." instance=ExtResource("2_vtdo7")]
+[node name="HurtBox" parent="." instance=ExtResource("2_qyuxv")]
+damage = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-1, 2)
 shape = SubResource("CircleShape2D_ic5f4")
 debug_color = Color(0.854559, 0.355496, 0.261058, 0.42)
 
-[node name="HitBox" parent="." instance=ExtResource("3_s314p")]
+[node name="HitBox" parent="." instance=ExtResource("3_mt8wb")]
 z_index = 1
 scale = Vector2(1.74, 1.74)
 
@@ -1269,27 +1027,10 @@ shape = SubResource("CapsuleShape2D_201bx")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
-material = ExtResource("4_vtdo7")
-texture = ExtResource("4_bqn5e")
+material = ExtResource("4_jiarw")
+texture = ExtResource("5_d5fvc")
 hframes = 3
 vframes = 2
-
-[node name="WeaponSprite2D" type="Sprite2D" parent="Sprite2D"]
-visible = false
-position = Vector2(-2.5, -8)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("5_bk4fb")
-hframes = 2
-
-[node name="AttackHurtBox" parent="Sprite2D/WeaponSprite2D" instance=ExtResource("2_vtdo7")]
-position = Vector2(-3.775, -5.855)
-monitoring = false
-damage = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/WeaponSprite2D/AttackHurtBox"]
-position = Vector2(-0.224999, 0.521667)
-shape = SubResource("RectangleShape2D_mkwf0")
-debug_color = Color(0.854559, 0.355496, 0.261058, 0.42)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -1299,30 +1040,31 @@ libraries = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="EnemyStateMachine" type="Node" parent="."]
-script = ExtResource("8_51mb8")
+script = ExtResource("8_07hby")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("afterIdleState")]
-script = ExtResource("9_8thpj")
+script = ExtResource("9_sbf37")
 afterIdleState = NodePath("../Walk")
 
 [node name="Walk" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
-script = ExtResource("10_18u0d")
+script = ExtResource("10_h1xyo")
+walkSpeed = 50.0
 stateAnimationDuration = 0.6
 nextState = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
-script = ExtResource("11_63h8u")
+script = ExtResource("11_hon71")
+knockbackSpeed = 50.0
+decelerateSpeed = 5.0
 nextState = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
-script = ExtResource("12_fjjmm")
-drops = Array[ExtResource("13_ta5ed")]([SubResource("Resource_3jv6o"), SubResource("Resource_2ydvl")])
+script = ExtResource("12_xhe21")
+drops = Array[ExtResource("13_3xr03")]([SubResource("Resource_3jv6o"), SubResource("Resource_2ydvl")])
 
-[node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "attackArea", "nextState")]
-script = ExtResource("15_842j5")
-chaseSpeed = 80.0
+[node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "nextState")]
+script = ExtResource("15_pwscp")
 visionArea = NodePath("../../VisionArea")
-attackArea = NodePath("../../Sprite2D/WeaponSprite2D/AttackHurtBox")
 stateAggroDuration = 5.0
 nextState = NodePath("../Idle")
 
@@ -1330,7 +1072,7 @@ nextState = NodePath("../Idle")
 visible = false
 texture_filter = 1
 texture_repeat = 1
-texture = ExtResource("16_s44vj")
+texture = ExtResource("16_we7qo")
 hframes = 6
 frame = 3
 
@@ -1339,8 +1081,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_lcr25")
 }
 
-[node name="VisionArea" parent="." instance=ExtResource("17_hbsda")]
+[node name="VisionArea" parent="." instance=ExtResource("17_3887k")]
 scale = Vector2(2, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
-polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
+polygon = PackedVector2Array(-133.5, -91.5, 134, -82.5, 128, 128, -128, 128)

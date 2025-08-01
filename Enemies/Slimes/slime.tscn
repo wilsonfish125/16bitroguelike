@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://dodishrbxibgn"]
+[gd_scene load_steps=46 format=3 uid="uid://dodishrbxibgn"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_0turd"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="1_oufme"]
 [ext_resource type="AudioStream" uid="uid://bgat0po2728d5" path="res://Resources/SweetSounds_SFX/WAV/Hurt.wav" id="3_6iord"]
 [ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="3_h8xji"]
 [ext_resource type="AudioStream" uid="uid://d1qbsotqgqu7d" path="res://Resources/SweetSounds_SFX/WAV/Explosion.wav" id="4_0qbup"]
@@ -872,6 +873,7 @@ debug_color = Color(0.464357, 0.5811, 0.329796, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+material = ExtResource("1_oufme")
 texture = ExtResource("4_04a8j")
 hframes = 2
 vframes = 2

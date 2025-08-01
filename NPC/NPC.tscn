@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://y1hgbyti4sve"]
+[gd_scene load_steps=13 format=3 uid="uid://y1hgbyti4sve"]
 
 [ext_resource type="Script" uid="uid://b5n45w2d1uoct" path="res://NPC/Scripts/NPC.gd" id="1_4rnqi"]
 [ext_resource type="Texture2D" uid="uid://d0xeuxl8lv4fq" path="res://Resources/ShardsArt/spritesheets/stupidoldman.png" id="2_gxmj8"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="2_qm8nd"]
 
 [sub_resource type="Animation" id="Animation_pyfqk"]
 length = 0.001
@@ -137,6 +138,7 @@ script = ExtResource("1_4rnqi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+material = ExtResource("2_qm8nd")
 position = Vector2(0, -8)
 texture = ExtResource("2_gxmj8")
 hframes = 8

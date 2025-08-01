@@ -1,8 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://dmlf6isdeerhd"]
+[gd_scene load_steps=49 format=3 uid="uid://dmlf6isdeerhd"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_jr3sn"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="1_p26p6"]
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="2_doj60"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="4_f8nry"]
 [ext_resource type="Texture2D" uid="uid://bjgn0hlph1d15" path="res://Resources/ShardsArt/spritesheets/stupidskelly.png" id="4_wak43"]
 [ext_resource type="Script" uid="uid://c2y8k6kqp8rsg" path="res://Enemies/Scripts/enemyStateMachine.gd" id="5_4cvsp"]
 [ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="5_5j0lj"]
@@ -1269,8 +1270,9 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_201bx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 3
 texture_filter = 1
+material = ExtResource("4_f8nry")
 texture = ExtResource("4_wak43")
 hframes = 3
 vframes = 2
@@ -1308,19 +1310,23 @@ afterIdleState = NodePath("../Walk")
 
 [node name="Walk" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
 script = ExtResource("7_5rmuq")
+walkSpeed = 75.0
 stateAnimationDuration = 0.6
 nextState = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("nextState")]
 script = ExtResource("8_arlmh")
+knockbackSpeed = 400.0
 nextState = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("9_ant6j")
+knockbackSpeed = 400.0
 drops = Array[ExtResource("10_1rh7s")]([SubResource("Resource_3jv6o"), SubResource("Resource_2ydvl")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "attackArea", "nextState")]
 script = ExtResource("16_phrp5")
+chaseSpeed = 75.0
 visionArea = NodePath("../../VisionArea")
 attackArea = NodePath("../../Sprite2D/WeaponSprite2D/AttackHurtBox")
 stateAggroDuration = 5.0

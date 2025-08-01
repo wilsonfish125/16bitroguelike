@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://duqri0wiswap5"]
+
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_aqrhq"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_gkkpd"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="2_mq6pr"]
+
+[sub_resource type="Resource" id="Resource_b35tq"]
+script = ExtResource("1_aqrhq")
+item = ExtResource("2_mq6pr")
+quantity = 5
+metadata/_custom_type_script = "uid://b62mnalgibn5g"
+
+[resource]
+script = ExtResource("2_gkkpd")
+title = "Save the Gnome Mine"
+description = "Gerblins have overrun the Gnome mine! They'll surely have a good reward stashed away somewhere if I help them..."
+steps = Array[String](["Defeat the Gerblin Horde", "Return to the Gnome Miner"])
+rewardXP = 30
+rewardItems = Array[ExtResource("1_aqrhq")]([SubResource("Resource_b35tq")])
+metadata/_custom_type_script = "uid://d0eebcw17f3je"

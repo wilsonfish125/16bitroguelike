@@ -1,6 +1,7 @@
-[gd_scene load_steps=70 format=3 uid="uid://dyoad8y2vcdpa"]
+[gd_scene load_steps=71 format=3 uid="uid://dyoad8y2vcdpa"]
 
 [ext_resource type="Script" uid="uid://64tf12gt24p4" path="res://Player/player.gd" id="1_e4rxs"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="2_3e1ri"]
 [ext_resource type="Texture2D" uid="uid://cl5jaw3aadg7t" path="res://Resources/ShardsArt/spritesheets/stupidplayertest.png" id="2_6rvv5"]
 [ext_resource type="Texture2D" uid="uid://btlnrekwj3wp6" path="res://Resources/Old Tilesets/Old Tilesets/swordsattack.png" id="3_mpl4u"]
 [ext_resource type="Texture2D" uid="uid://2g3vt1u56bv0" path="res://Resources/Michael Games Sprites/player_updates/sprites/Props.png" id="4_kporb"]
@@ -1799,6 +1800,7 @@ shape = SubResource("RectangleShape2D_a4k85")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture_filter = 1
+material = ExtResource("2_3e1ri")
 texture = ExtResource("2_6rvv5")
 hframes = 8
 vframes = 9

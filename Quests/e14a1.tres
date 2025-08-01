@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://ctabi5mj65ibm"]
+
+[ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_cg2wc"]
+[ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_5em65"]
+
+[resource]
+script = ExtResource("2_5em65")
+title = "Slay the Cave Dragon"
+description = "Slay the fabled emerald cave dragon and claim its treasure!"
+steps = Array[String](["Slay the Dragon", "Claim its Reward", "Speak to the Gnome"])
+rewardXP = 30
+rewardItems = Array[ExtResource("1_cg2wc")]([])
+metadata/_custom_type_script = "uid://d0eebcw17f3je"

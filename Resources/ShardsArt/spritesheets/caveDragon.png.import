@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjpel10qysq6x"
-path="res://.godot/imported/dragonSprite.png-d21112102e03952fe8c697277d6828e1.ctex"
+uid="uid://cisdguidgi6qw"
+path="res://.godot/imported/caveDragon.png-7afde71a3580ded35d780a6aa91cfb86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/ShardsArt/spritesheets/dragonSprite.png"
-dest_files=["res://.godot/imported/dragonSprite.png-d21112102e03952fe8c697277d6828e1.ctex"]
+source_file="res://Resources/ShardsArt/spritesheets/caveDragon.png"
+dest_files=["res://.godot/imported/caveDragon.png-7afde71a3580ded35d780a6aa91cfb86.ctex"]
 
 [params]
 
