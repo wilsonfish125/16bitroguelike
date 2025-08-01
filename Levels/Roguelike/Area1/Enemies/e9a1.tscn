@@ -321,4 +321,9 @@ metadata/_custom_type_script = "uid://cdk6dpee5kak6"
 
 [node name="NpcBehaviorWander" parent="NPC3" instance=ExtResource("24_mce4h")]
 
+[node name="LevelTransition2" parent="." instance=ExtResource("3_vcuj3")]
+position = Vector2(541, 149)
+level = "uid://knfoj71gyrhf"
+size = 3
+
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]
