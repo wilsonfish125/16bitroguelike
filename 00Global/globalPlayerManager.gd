@@ -1,7 +1,7 @@
 #great place to handle functionality of player "spawner"
 extends Node
 
-const PLAYER = preload("res://Player/player2.tscn")
+var PLAYER = preload("res://Player/player2.tscn")
 const INVENTORYDATA : InventoryData = preload("res://GUI/Inventory/playerInventory.tres")
 
 signal CameraShook( trauma : float )
@@ -21,11 +21,19 @@ func _ready() -> void:
 	await get_tree().create_timer( 0.2 ).timeout
 	playerSpawned = true #after half a second if we havent had something try to spawn a player we set it to true
 
+func _init() -> void:
+	PLAYER = preload("res://Player/Characters/playerKaito.tscn")
+
 func addPlayerInstance() -> void:
 	player = PLAYER.instantiate() #creates an instance of PLAYER and assigns it to the variable
 	add_child( player ) #gotta add the player somewhere
 	pass
 
+func updatePlayer( PlayerSceneName : String ) -> void:
+	PLAYER = load(PlayerSceneName)
+	unparentPlayer( player )
+	player = null
+	addPlayerInstance()
 
 func setPlayerPosition( _newPosition : Vector2 ) -> void:
 	player.global_position = _newPosition
@@ -79,4 +87,4 @@ func interact() -> void:
 	InteractPressed.emit()
 
 func shakeCamera( trauma : float = 1 ) -> void:
-	CameraShook.emit( clampi( trauma, 0, 3 ) ) 
+	CameraShook.emit( clampi( trauma, 0, 2 ) ) 

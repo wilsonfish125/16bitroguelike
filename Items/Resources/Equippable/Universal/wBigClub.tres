@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://jkyqt7x46dh"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_wv70i"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_jyb58"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_qs04p"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="4_jyb58"]
+
+[sub_resource type="Resource" id="Resource_wv70i"]
+script = ExtResource("2_jyb58")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_jyb58"]
+script = ExtResource("2_jyb58")
+type = 2
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs04p"]
+atlas = ExtResource("4_jyb58")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_qs04p")
+type = 0
+modifiers = Array[ExtResource("2_jyb58")]([SubResource("Resource_wv70i"), SubResource("Resource_jyb58")])
+name = "Battleaxe"
+description = "A long and bulky battleaxe. +1 Atk, +1 Def"
+texture = SubResource("AtlasTexture_qs04p")
+cost = 120
+effects = Array[ExtResource("1_wv70i")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8urf2p53aaef"]
+
+[ext_resource type="Script" uid="uid://cjmmgqer6lx2r" path="res://GUI/Character Select/Scripts/characterSelect.gd" id="1_ieu8o"]
+[ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="2_mk36u"]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_ieu8o")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Kaito"
+
+[node name="Button2" type="Button" parent="Buttons/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Clawsten"
+
+[node name="Button3" type="Button" parent="Buttons/HBoxContainer"]
+layout_mode = 2
+text = "Senara"
+
+[node name="Button4" type="Button" parent="Buttons/HBoxContainer"]
+layout_mode = 2
+text = "Reyna Hawke"
+
+[node name="Button5" type="Button" parent="Buttons/HBoxContainer"]
+layout_mode = 2
+text = "AERIX"
+
+[node name="Button6" type="Button" parent="Buttons/HBoxContainer"]
+layout_mode = 2
+text = "Varin"
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("2_mk36u")]
