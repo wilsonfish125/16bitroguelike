@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba6uw6xsfs2m2"]
+[gd_scene load_steps=9 format=3 uid="uid://ba6uw6xsfs2m2"]
 
 [ext_resource type="Texture2D" uid="uid://smsvvtd4rlak" path="res://GUI/Map/Icons/mapEnemyIcon.png" id="1_kfab8"]
 [ext_resource type="Script" uid="uid://bvixflico62xa" path="res://GUI/Map/Scripts/mapRoom.gd" id="1_ndpj1"]
+[ext_resource type="Material" uid="uid://cy7s1m84r5svi" path="res://Shaders & Materials/outlineShader.tres" id="2_dfnco"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sqsa6"]
 radius = 20.0
@@ -93,6 +94,7 @@ monitorable = false
 script = ExtResource("1_ndpj1")
 
 [node name="Visuals" type="Node2D" parent="."]
+material = ExtResource("2_dfnco")
 
 [node name="Line2D" type="Line2D" parent="Visuals"]
 modulate = Color(1, 1, 1, 0)
@@ -102,6 +104,7 @@ width = 3.0
 default_color = Color(0.438498, 0.438498, 0.438498, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+material = ExtResource("2_dfnco")
 texture = ExtResource("1_kfab8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

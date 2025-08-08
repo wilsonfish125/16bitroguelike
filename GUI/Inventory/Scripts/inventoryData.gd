@@ -38,7 +38,6 @@ func addItem( item : ItemData, count : int = 1 ) -> bool:
 			newSlot.changed.connect( slotChanged )
 			return true
 	
-	print("inventory was full stupido")
 	return false
 
 func connectSlots() -> void:

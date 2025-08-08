@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cold1tkfiqnog"]
+[gd_scene load_steps=27 format=4 uid="uid://cold1tkfiqnog"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_nio3s"]
 [ext_resource type="AudioStream" uid="uid://fadtm63bqnq" path="res://Resources/Music/AMBIENT/FLOW.wav" id="2_j0468"]
@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="21_2bld0"]
 [ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/magicalFlute.tres" id="22_4u5qb"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="23_4u5qb"]
+[ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="24_7ba6b"]
+[ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="25_pojri"]
 
 [sub_resource type="GDScript" id="GDScript_2bld0"]
 script/source = "extends Node
@@ -291,5 +293,10 @@ Complete: false"
 position = Vector2(-167, 142)
 level = "uid://knfoj71gyrhf"
 size = 3
+
+[node name="ItemPickup" parent="." instance=ExtResource("24_7ba6b")]
+position = Vector2(-342, 107)
+itemData = ExtResource("25_pojri")
+itemCount = 99
 
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]

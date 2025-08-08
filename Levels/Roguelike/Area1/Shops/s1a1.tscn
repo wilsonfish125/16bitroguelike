@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bm7aqew14gly3"]
+[gd_scene load_steps=15 format=4 uid="uid://bm7aqew14gly3"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_8ios2"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="1_bi6sm"]
@@ -12,6 +12,8 @@
 [ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="9_7ds4a"]
 [ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="10_cxhcg"]
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="11_4xvuv"]
+[ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="13_vnuut"]
+[ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="14_id2eb"]
 
 [node name="S1a1" type="Node2D"]
 script = ExtResource("1_8ios2")
@@ -52,3 +54,8 @@ position = Vector2(320, -48)
 level = "uid://knfoj71gyrhf"
 size = 1
 side = 1
+
+[node name="ItemPickup" parent="." instance=ExtResource("13_vnuut")]
+position = Vector2(147, -129)
+itemData = ExtResource("14_id2eb")
+itemCount = 300

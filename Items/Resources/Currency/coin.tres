@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=5 format=3 uid="uid://bxru18jmpft46"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_80e27"]
+[ext_resource type="Script" uid="uid://b5oke4uvap4uf" path="res://Items/Scripts/itemData.gd" id="2_tv0jo"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="3_tv0jo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a02v"]
+atlas = ExtResource("3_tv0jo")
+region = Rect2(96, 96, 32, 32)
+
+[resource]
+script = ExtResource("2_tv0jo")
+name = "Coin"
+description = "A shiny golden coin. These can surely be used as currency."
+texture = SubResource("AtlasTexture_2a02v")
+cost = 1
+effects = Array[ExtResource("1_80e27")]([])
+metadata/_custom_type_script = "uid://b5oke4uvap4uf"

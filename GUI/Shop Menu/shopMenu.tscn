@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bs0n3ldjse1h2"]
+[gd_scene load_steps=11 format=3 uid="uid://bs0n3ldjse1h2"]
 
 [ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="1_exhyt"]
 [ext_resource type="Script" uid="uid://b6twjhaw3rpyv" path="res://GUI/Shop Menu/shopMenu.gd" id="1_w5npp"]
 [ext_resource type="PackedScene" uid="uid://c1j7aa0kk5i1a" path="res://GUI/Shop Menu/shopItemButton.tscn" id="2_cu34e"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="2_q8ubo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu34e"]
-atlas = ExtResource("1_exhyt")
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("2_q8ubo")
+region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="Animation" id="Animation_w5npp"]
 length = 0.001
@@ -17,10 +18,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0.001),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1037, 4)]
+"values": [Vector2(488, 18)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -48,7 +49,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(1037, 4), Vector2(1027, 4), Vector2(1044, 4), Vector2(1022, 4), Vector2(1037, 4)]
+"values": [Vector2(487, 4), Vector2(477, 4), Vector2(494, 4), Vector2(472, 4), Vector2(487, 4)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -109,10 +110,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_top = 16.0
-offset_right = -13.0
-offset_bottom = 56.0
+offset_left = -153.0
+offset_top = 4.0
+offset_right = -46.0
+offset_bottom = 44.0
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer"]

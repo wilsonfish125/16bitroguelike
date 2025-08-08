@@ -5,17 +5,21 @@ class_name ItemPickup extends CharacterBody2D
 signal pickedUp
 
 @export var itemData : ItemData : set = _setItemData
+@export var itemCount : int = 1 : set = _setItemCount
 
 @onready var area_2d: Area2D = $Area2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var count_label: Label = %CountLabel
 
 
 func _ready() -> void:
 	_updateTexture()
+	_updateCountLabel()
 	
 	if Engine.is_editor_hint():
 		return #anything below this point only happens when the game is running
+	
 	area_2d.body_entered.connect( _onBodyEntered )
 
 #functions for drop velocity, hence characterbody root node
@@ -31,7 +35,14 @@ func _physics_process(delta: float) -> void:
 func _onBodyEntered( b ) -> void:
 	if b is Player:
 		if itemData:
-			if PlayerManager.INVENTORYDATA.addItem( itemData ):
+			# Check here to see if important items are of a specific type
+			if itemData.name == "Coin":
+				PlayerManager.player.coins += itemCount
+				itemPickedUp()
+			elif itemData.name == "Shard":
+				PlayerManager.shards += itemCount
+				itemPickedUp()
+			elif PlayerManager.INVENTORYDATA.addItem( itemData, itemCount ):
 				itemPickedUp()
 	pass
 
@@ -48,9 +59,18 @@ func itemPickedUp() -> void:
 func _setItemData( value : ItemData ) -> void:
 	itemData = value
 	_updateTexture()
-	pass
 
 func _updateTexture() -> void:
 	if itemData and sprite_2d:
 		sprite_2d.texture = itemData.texture
+
+func _setItemCount( value : int ) -> void:
+	itemCount = value
+	_updateCountLabel()
+
+func _updateCountLabel() -> void:
+	if itemData and count_label:
+		count_label.text = ""
+		if itemCount > 1:
+			count_label.text = str( itemCount )
 	pass

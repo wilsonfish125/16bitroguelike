@@ -15,6 +15,8 @@ var playerSpawned : bool = false
 # Each index for each unique level in ascending
 var levelRequirements = [ 0, 50, 150, 300, 500, 800, 1200 ]
 
+var shards : int = 0 # Roguelike currency, used for metaprogression. Saved over runs
+
 func _ready() -> void:
 	addPlayerInstance()
 	#add a failsafe in case we have levels and we dont add a player spawn point

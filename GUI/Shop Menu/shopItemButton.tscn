@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1j7aa0kk5i1a"]
 
-[ext_resource type="Texture2D" uid="uid://c8ehgf31m8yp1" path="res://Items/Sprites/items.png" id="1_4ix4m"]
 [ext_resource type="Script" uid="uid://cqgc3jaq14apg" path="res://GUI/Shop Menu/shopItemButton.gd" id="1_au51i"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="2_au51i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_au51i"]
-atlas = ExtResource("1_4ix4m")
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("2_au51i")
+region = Rect2(96, 96, 32, 32)
 
 [node name="ShopItemButton" type="Button"]
 custom_minimum_size = Vector2(220, 36)

@@ -15,6 +15,9 @@ signal PreviewStatsChanged( item : ItemData )
 @onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription
 @onready var audio_stream_player: AudioStreamPlayer = $Control/AudioStreamPlayer
 
+@onready var coin_label: Label = %CoinLabel
+@onready var shards_label: Label = %ShardsLabel
+
 
 var isPaused : bool = false
 
@@ -49,6 +52,7 @@ func showPauseMenu() -> void:
 	visible = true
 	isPaused = true
 	tab_container.current_tab = 0 #always sets to inventory upon reopening
+	updateCurrencyLabels( PlayerManager.player.coins, PlayerManager.shards )
 	Shown.emit()
 
 func hidePauseMenu() -> void:
@@ -87,6 +91,10 @@ func focusItemChanged( slot : SlotData ) -> void:
 
 func updateItemDescription( newDescription : String ) -> void:
 	item_description.text = newDescription
+
+func updateCurrencyLabels( coinCount : int, shardCount : int ) -> void:
+	coin_label.text = str(coinCount)
+	shards_label.text = str(shardCount)
 
 func playAudio( audio : AudioStream ) -> void:
 	audio_stream_player.stream = audio

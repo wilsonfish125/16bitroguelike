@@ -12,6 +12,7 @@ var maxHP : int = 6
 
 var level : int = 1
 var xp : int = 0
+var coins : int = 0
 
 var attackStat : int = 1 :
 	set( v ):

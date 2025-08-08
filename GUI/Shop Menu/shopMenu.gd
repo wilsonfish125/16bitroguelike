@@ -8,7 +8,7 @@ const MENUSELECT = preload("res://Resources/Michael Games Sprites/title_screen/m
 const SHOPITEMBUTTON = preload("res://GUI/Shop Menu/shopItemButton.tscn")
 
 # Want this to be a var not a const since it should be a direct reference to the scene
-var currency : ItemData = preload("res://Items/testgem.tres") #  CHANGE IN FUTURE
+var currency : ItemData = preload("res://Items/Resources/Currency/coin.tres") 
 
 signal Shown
 signal Hidden
@@ -68,7 +68,7 @@ func enableMenu( _enabled : bool = true ) -> void:
 	isActive = _enabled
 
 func updateCoins() -> void:
-	coin_label.text = str(getItemCount( currency ))
+	coin_label.text = str(PlayerManager.player.coins)
 
 func getItemCount( item : ItemData ) -> int:
 	return PlayerManager.INVENTORYDATA.getItemHeldCount( item )
@@ -107,14 +107,14 @@ func updateItemDetails( item : ItemData ) -> void:
 
 func purchaseItem( item : ItemData ) -> void:
 	# Either we have enough money and we buy item, or we don't and notify player
-	var canPurchase : bool = getItemCount( currency ) >= item.cost
+	var canPurchase : bool = PlayerManager.player.coins >= item.cost
 	if canPurchase:
 		# Can buy
 		playAudio( PURCHASE )
 		# Add item to inventory and subtract currency
 		var inv : InventoryData = PlayerManager.INVENTORYDATA
 		inv.addItem( item )
-		inv.useItem( currency, item.cost )
+		PlayerManager.player.coins -= item.cost
 		updateCoins()
 		updateItemDetails( item )
 	else:
