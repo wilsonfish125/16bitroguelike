@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="23_ys5lu"]
 
 [node name="E11A1" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_ybin3")
 music = ExtResource("2_ekp4l")
 metadata/_edit_horizontal_guides_ = [-352.0]

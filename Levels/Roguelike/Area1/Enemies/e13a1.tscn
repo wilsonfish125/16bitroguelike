@@ -419,13 +419,13 @@ position = Vector2(-220, 43)
 [node name="EnemyCounter" parent="." instance=ExtResource("20_lynke")]
 
 [node name="Wraith" parent="EnemyCounter" instance=ExtResource("12_glkai")]
-position = Vector2(135, -249)
+position = Vector2(133, -218)
 
 [node name="Wraith2" parent="EnemyCounter" instance=ExtResource("12_glkai")]
 position = Vector2(359, 1)
 
 [node name="Wraith3" parent="EnemyCounter" instance=ExtResource("12_glkai")]
-position = Vector2(167, -164)
+position = Vector2(253, -119)
 
 [node name="MudGolem" parent="EnemyCounter" instance=ExtResource("13_0e2g7")]
 position = Vector2(466, -194)

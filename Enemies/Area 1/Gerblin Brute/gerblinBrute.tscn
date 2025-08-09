@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dwfho8nbvmffj"]
+[gd_scene load_steps=48 format=3 uid="uid://dwfho8nbvmffj"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_qksnx"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_rs1ei"]
@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://blfv6up580jgu" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="11_yutva"]
 [ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="12_r18vt"]
 [ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="13_c287l"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="14_uem74"]
+[ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="15_rs1ei"]
 [ext_resource type="Script" uid="uid://okc8e4dpk12b" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="15_ub1nd"]
 [ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="16_aoise"]
 [ext_resource type="PackedScene" uid="uid://cy8ykq3e30uyd" path="res://Enemies/visionArea.tscn" id="17_pcewh"]
@@ -1167,17 +1167,10 @@ _data = {
 
 [sub_resource type="Resource" id="Resource_3jv6o"]
 script = ExtResource("13_c287l")
-item = ExtResource("14_uem74")
+item = ExtResource("15_rs1ei")
 probability = 100.0
-minAmount = 1
-maxAmount = 1
-
-[sub_resource type="Resource" id="Resource_2ydvl"]
-script = ExtResource("13_c287l")
-item = ExtResource("14_uem74")
-probability = 50.0
-minAmount = 1
-maxAmount = 3
+minAmount = 8
+maxAmount = 10
 
 [sub_resource type="Animation" id="Animation_r5enb"]
 length = 0.001
@@ -1322,7 +1315,7 @@ nextState = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("12_r18vt")
-drops = Array[ExtResource("13_c287l")]([SubResource("Resource_3jv6o"), SubResource("Resource_2ydvl")])
+drops = Array[ExtResource("13_c287l")]([SubResource("Resource_3jv6o")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "attackArea", "nextState")]
 script = ExtResource("15_ub1nd")

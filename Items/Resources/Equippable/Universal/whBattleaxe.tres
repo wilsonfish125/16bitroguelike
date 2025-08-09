@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=8 format=3 uid="uid://bv3qsv0m5fy1t"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_l3me6"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_370o6"]
+[ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_3eeti"]
+[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="4_370o6"]
+
+[sub_resource type="Resource" id="Resource_l3me6"]
+script = ExtResource("2_370o6")
+type = 1
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_370o6"]
+script = ExtResource("2_370o6")
+type = 4
+value = -1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eeti"]
+atlas = ExtResource("4_370o6")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_3eeti")
+attackType = 2
+type = 0
+modifiers = Array[ExtResource("2_370o6")]([SubResource("Resource_l3me6"), SubResource("Resource_370o6")])
+name = "Battleaxe"
+description = "A heavy battleaxe forged from iron."
+texture = SubResource("AtlasTexture_3eeti")
+cost = 250
+effects = Array[ExtResource("1_l3me6")]([])
+metadata/_custom_type_script = "uid://dwrmtudn1g670"

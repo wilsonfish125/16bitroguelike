@@ -1,6 +1,7 @@
 class_name stateAttack extends State
 
 var attacking : bool = false
+var attackType
 
 @export var attackSound : AudioStream
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
@@ -13,7 +14,16 @@ var attacking : bool = false
 
 # What happens when the player enters this state?
 func Enter() -> void:
-	player.updateAnimation("Attack")
+	attackType = PlayerManager.player.attackType
+	
+	match attackType:
+		PlayerManager.player.AttackType.LIGHT:
+			player.updateAnimation("LightAttack")
+		PlayerManager.player.AttackType.MEDIUM:
+			player.updateAnimation("MediumAttack")
+		PlayerManager.player.AttackType.HEAVY:
+			player.updateAnimation("HeavyAttack")
+	
 	#do some spin attack shit with an if statemecnt checking if prev state was  charging
 	
 	if player.cardinalDirection == Vector2.LEFT:

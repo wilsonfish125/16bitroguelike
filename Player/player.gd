@@ -27,6 +27,9 @@ var skillTreePoints : int = 0
 
 var activeBuffs : Array = []
 
+enum AttackType {LIGHT, MEDIUM, HEAVY}
+var attackType : AttackType = AttackType.MEDIUM
+
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
 

@@ -30,6 +30,7 @@ QuestManager="*res://Quests/Scripts/globalQuestManager.gd"
 EffectManager="*res://00Global/globalEffectManager.gd"
 ShopMenu="*res://GUI/Shop Menu/shopMenu.tscn"
 MapManager="*res://00Global/globalMapManager.gd"
+ItemManager="*res://00Global/globalItemManager.gd"
 
 [display]
 

@@ -121,6 +121,8 @@ func equipItem( slot : SlotData ) -> void:
 			equipmentIndex += 0
 		EquippableItemData.Type.WEAPON:
 			equipmentIndex += 1 # 21
+			if item is WeaponItemData:
+				PlayerManager.player.attackType = item.attackType
 		EquippableItemData.Type.AMULET:
 			equipmentIndex += 2 # 22
 		EquippableItemData.Type.RING:

@@ -1,9 +1,23 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=7 format=3 uid="uid://b6d6rc77ngjyi"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=11 format=3 uid="uid://b6d6rc77ngjyi"]
 
 [ext_resource type="Script" uid="uid://cd04ma2qdvn8e" path="res://GUI/Inventory/Scripts/inventoryData.gd" id="1_7vovl"]
 [ext_resource type="Script" uid="uid://cpwl588j6dhdi" path="res://GUI/Inventory/Scripts/slotData.gd" id="2_affun"]
 [ext_resource type="Resource" uid="uid://ce1op7v3mae2v" path="res://Items/Resources/Equippable/aTunic.tres" id="3_5xfym"]
-[ext_resource type="Resource" uid="uid://x707pbdibs4y" path="res://Items/Resources/Equippable/wIronSword.tres" id="4_mh2vj"]
+[ext_resource type="Resource" uid="uid://bv3qsv0m5fy1t" path="res://Items/Resources/Equippable/Universal/whBattleaxe.tres" id="3_yh03f"]
+[ext_resource type="Resource" uid="uid://dwjwdlrkjqxld" path="res://Items/Resources/Equippable/Universal/wmLongsword.tres" id="4_brv64"]
+[ext_resource type="Resource" uid="uid://qwjxmivqdcj1" path="res://Items/Resources/Equippable/Universal/wlDagger.tres" id="4_x1wh3"]
+
+[sub_resource type="Resource" id="Resource_du616"]
+script = ExtResource("2_affun")
+itemData = ExtResource("3_yh03f")
+quantity = 1
+metadata/_custom_type_script = "uid://cpwl588j6dhdi"
+
+[sub_resource type="Resource" id="Resource_eygin"]
+script = ExtResource("2_affun")
+itemData = ExtResource("4_x1wh3")
+quantity = 1
+metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
 [sub_resource type="Resource" id="Resource_psp8k"]
 script = ExtResource("2_affun")
@@ -12,9 +26,9 @@ quantity = 1
 
 [sub_resource type="Resource" id="Resource_javyq"]
 script = ExtResource("2_affun")
-itemData = ExtResource("4_mh2vj")
+itemData = ExtResource("4_brv64")
 quantity = 1
 
 [resource]
 script = ExtResource("1_7vovl")
-slots = Array[ExtResource("2_affun")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_psp8k"), SubResource("Resource_javyq"), null, null])
+slots = Array[ExtResource("2_affun")]([null, SubResource("Resource_du616"), SubResource("Resource_eygin"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_psp8k"), SubResource("Resource_javyq"), null, null])

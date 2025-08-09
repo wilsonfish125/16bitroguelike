@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bfkb6kv87y15t"]
+[gd_scene load_steps=46 format=3 uid="uid://bfkb6kv87y15t"]
 
 [ext_resource type="Script" uid="uid://cjmoo2508dkhq" path="res://Enemies/Scripts/enemy.gd" id="1_6du7l"]
 [ext_resource type="PackedScene" uid="uid://bes8u0hwrpmds" path="res://GeneralNodes/HurtBox/hurtBox.tscn" id="2_rcaje"]
@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://blfv6up580jgu" path="res://Enemies/Scripts/States/enemyStateStun.gd" id="11_od0es"]
 [ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="12_66iob"]
 [ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="13_uy4gx"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="14_s2iiw"]
+[ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="14_pya8n"]
 [ext_resource type="Script" uid="uid://okc8e4dpk12b" path="res://Enemies/Scripts/States/enemyStateChase.gd" id="15_e2bl7"]
 [ext_resource type="Texture2D" uid="uid://bvq6j84if730o" path="res://Enemies/Effects/smokedeath.png" id="16_bt0dq"]
 [ext_resource type="PackedScene" uid="uid://cy8ykq3e30uyd" path="res://Enemies/visionArea.tscn" id="17_3oxm0"]
@@ -922,15 +922,8 @@ _data = {
 
 [sub_resource type="Resource" id="Resource_3jv6o"]
 script = ExtResource("13_uy4gx")
-item = ExtResource("14_s2iiw")
+item = ExtResource("14_pya8n")
 probability = 100.0
-minAmount = 1
-maxAmount = 1
-
-[sub_resource type="Resource" id="Resource_2ydvl"]
-script = ExtResource("13_uy4gx")
-item = ExtResource("14_s2iiw")
-probability = 50.0
 minAmount = 1
 maxAmount = 3
 
@@ -1058,7 +1051,7 @@ nextState = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("12_66iob")
-drops = Array[ExtResource("13_uy4gx")]([SubResource("Resource_3jv6o"), SubResource("Resource_2ydvl")])
+drops = Array[ExtResource("13_uy4gx")]([SubResource("Resource_3jv6o")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("visionArea", "nextState")]
 script = ExtResource("15_e2bl7")

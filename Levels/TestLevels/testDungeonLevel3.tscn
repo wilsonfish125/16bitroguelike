@@ -635,12 +635,12 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 257
 sources/0 = SubResource("TileSetAtlasSource_04ylq")
 
-[sub_resource type="Gradient" id="Gradient_8qlew"]
+[sub_resource type="Gradient" id="Gradient_kt20b"]
 offsets = PackedFloat32Array(0.491525, 0.977401)
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_58ong"]
-gradient = SubResource("Gradient_8qlew")
+gradient = SubResource("Gradient_kt20b")
 width = 48
 height = 24
 fill = 1
@@ -724,12 +724,12 @@ _data = {
 &"up": SubResource("Animation_4drer")
 }
 
-[sub_resource type="Gradient" id="Gradient_68310"]
+[sub_resource type="Gradient" id="Gradient_qkljs"]
 offsets = PackedFloat32Array(0.19774, 0.988701)
 colors = PackedColorArray(0.687294, 0.16161, 0.628603, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nbgw3"]
-gradient = SubResource("Gradient_68310")
+gradient = SubResource("Gradient_qkljs")
 width = 256
 height = 256
 fill = 1
@@ -1311,12 +1311,12 @@ _data = {
 &"default": SubResource("Animation_nk8g4")
 }
 
-[sub_resource type="Gradient" id="Gradient_b6fak"]
+[sub_resource type="Gradient" id="Gradient_nlelv"]
 offsets = PackedFloat32Array(0.429379, 0.661017, 1)
 colors = PackedColorArray(0.62, 0, 0, 0, 0.62, 0, 0, 1, 0.62, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g44ir"]
-gradient = SubResource("Gradient_b6fak")
+gradient = SubResource("Gradient_nlelv")
 width = 32
 height = 32
 fill = 1
