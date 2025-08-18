@@ -1,11 +1,14 @@
 class_name RandomTreasureChest extends TreasureChest
 
-@export var itemPool : Array[EquippableItemData] : set = _setItemPool
+var itemPool : Array[EquippableItemData] = ItemManager.defaultPool
 
 func _ready() -> void:
-	
 	if Engine.is_editor_hint():
 		return #whenever is below will not run in the editor
+	_setItemData(null)
+	super()
+	
 
-func _setItemPool( value : Array[EquippableItemData] ) -> void:
-	itemPool = value
+func _setItemData( value : ItemData ) -> void:
+	itemData = itemPool.pick_random()
+	_updateTexture()
