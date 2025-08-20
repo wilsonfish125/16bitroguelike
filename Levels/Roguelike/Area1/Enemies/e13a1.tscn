@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ix27wi2t70da" path="res://Enemies/Area 1/Mud Golem/mdGolem.tscn" id="13_0e2g7"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="15_xntov"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="16_2jbio"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="17_enfq7"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="17_enfq7"]
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="20_lynke"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="21_nblke"]
 

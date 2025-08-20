@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="9_l2tkj"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="10_do33q"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="11_amhhq"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="12_722wi"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="12_722wi"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="14_722wi"]
 
 [node name="E2A1" type="Node2D"]

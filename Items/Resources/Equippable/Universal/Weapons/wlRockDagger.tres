@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=8 format=3 uid="uid://dp74j68ensiwu"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_6vqt4"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_derfd"]
+[ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_kxi60"]
+[ext_resource type="Texture2D" uid="uid://bd6g1aycagfjj" path="res://Resources/ShardsArt/weapons-export.png" id="4_whlmr"]
+
+[sub_resource type="Resource" id="Resource_4lcnq"]
+script = ExtResource("2_derfd")
+type = 2
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_ur2ts"]
+script = ExtResource("2_derfd")
+type = 3
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1tua"]
+atlas = ExtResource("4_whlmr")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_kxi60")
+attackType = 0
+type = 0
+modifiers = Array[ExtResource("2_derfd")]([SubResource("Resource_4lcnq"), SubResource("Resource_ur2ts")])
+name = "Rock Dagger"
+description = "A sharp and unbreakable rock... perfect for a weapon."
+texture = SubResource("AtlasTexture_i1tua")
+cost = 350
+effects = Array[ExtResource("1_6vqt4")]([])
+metadata/_custom_type_script = "uid://dwrmtudn1g670"

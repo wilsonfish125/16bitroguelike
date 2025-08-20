@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="16_4dc4i"]
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="17_1683c"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="18_y2wsb"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="19_k6d1f"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="19_k6d1f"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="20_wnvmt"]
 [ext_resource type="PackedScene" uid="uid://ba34wes5rbkd" path="res://Levels/levelTransitionInteract.tscn" id="22_davbd"]
 

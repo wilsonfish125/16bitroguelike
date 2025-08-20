@@ -111,15 +111,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75118, 0.394923, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Body"
+text = "Speed"
 
-[node name="LabelBody" type="Label" parent="VBoxContainer/HBoxContainer3"]
+[node name="LabelSpeed" type="Label" parent="VBoxContainer/HBoxContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "1"
 
-[node name="LabelBodyChange" type="Label" parent="VBoxContainer/HBoxContainer3"]
+[node name="LabelSpeedChange" type="Label" parent="VBoxContainer/HBoxContainer3"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

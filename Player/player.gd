@@ -23,6 +23,9 @@ var defenceStat : int = 1
 var defenseBonus : int = 0
 
 var bodyStat : int = 1
+var speedStat : int = 1
+var attackSpeed : float = 1.0
+
 var skillTreePoints : int = 0
 
 var activeBuffs : Array = []
@@ -92,8 +95,6 @@ func setDirection() -> bool:
 
 func updateAnimation( state : String ) -> void:
 	animation.play("player" + state + animationDirection())
-	pass
-
 
 func animationDirection() -> String:
 	if cardinalDirection == Vector2.DOWN:

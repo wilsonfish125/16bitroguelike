@@ -11,6 +11,8 @@ var hoveredItem : InventorySlotUI
 @onready var inventory_slot_amulet: InventorySlotUI = %InventorySlotAmulet
 @onready var inventory_slot_weapon: InventorySlotUI = %InventorySlotWeapon
 @onready var inventory_slot_ring: InventorySlotUI = %InventorySlotRing
+@onready var inventory_slot_boots: InventorySlotUI = %InventorySlotBoots
+@onready var inventory_slot_helmet: InventorySlotUI = %InventorySlotHelmet
 
 func _ready() -> void:
 	PauseMenu.Shown.connect( updateInventory )
@@ -37,10 +39,12 @@ func updateInventory( applyFocus : bool = true ) -> void:
 	
 	# Handles equipment slots
 	var equipmentSlots : Array[ SlotData ] = data.equipmentSlots()
-	inventory_slot_armour.setSlotData( equipmentSlots[ 0 ] )
-	inventory_slot_weapon.setSlotData( equipmentSlots[ 1 ] )
-	inventory_slot_amulet.setSlotData( equipmentSlots[ 2 ] )
-	inventory_slot_ring.setSlotData( equipmentSlots[ 3 ] )
+	inventory_slot_weapon.setSlotData( equipmentSlots[ 0 ] )
+	inventory_slot_helmet.setSlotData( equipmentSlots[ 3 ] )
+	inventory_slot_armour.setSlotData( equipmentSlots[ 1 ] )
+	inventory_slot_boots.setSlotData( equipmentSlots[ 4 ] )
+	inventory_slot_ring.setSlotData( equipmentSlots[ 2 ] )
+	inventory_slot_amulet.setSlotData( equipmentSlots[ 5 ] )
 	
 	if applyFocus:
 		get_child( 0 ).grab_focus()

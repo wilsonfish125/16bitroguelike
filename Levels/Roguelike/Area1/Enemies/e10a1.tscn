@@ -21,7 +21,7 @@
 [ext_resource type="Resource" uid="uid://cbieacin52xo4" path="res://Quests/e10a1.tres" id="19_xfkhw"]
 [ext_resource type="PackedScene" uid="uid://bo4nbi66k1j56" path="res://Quests/Utility Nodes/questActivatedSwitch.tscn" id="20_xfkhw"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="21_2bld0"]
-[ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/magicalFlute.tres" id="22_4u5qb"]
+[ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/zOLD/magicalFlute.tres" id="22_4u5qb"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="23_4u5qb"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="24_7ba6b"]
 [ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="25_pojri"]

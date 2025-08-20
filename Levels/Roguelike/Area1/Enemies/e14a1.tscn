@@ -24,7 +24,7 @@
 [ext_resource type="Script" uid="uid://doesf52yw1ogg" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueChoice.gd" id="19_t2x6m"]
 [ext_resource type="Script" uid="uid://cdk6dpee5kak6" path="res://Props/Interactables/Dialogue Interaction/Scripts/dialogueBranch.gd" id="20_6di5a"]
 [ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="21_tx64q"]
-[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="23_6di5a"]
+[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/zOLD/wKatana.tres" id="23_6di5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_17doo"]
 texture = ExtResource("9_gc2c6")

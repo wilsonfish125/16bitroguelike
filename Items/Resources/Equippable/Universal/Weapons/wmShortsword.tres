@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=8 format=3 uid="uid://bnwibriay6edt"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_a0cvq"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_qllao"]
+[ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_q74q5"]
+[ext_resource type="Texture2D" uid="uid://bd6g1aycagfjj" path="res://Resources/ShardsArt/weapons-export.png" id="4_n8mvk"]
+
+[sub_resource type="Resource" id="Resource_a0cvq"]
+script = ExtResource("2_qllao")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_qllao"]
+script = ExtResource("2_qllao")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqcmm"]
+atlas = ExtResource("4_n8mvk")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("3_q74q5")
+attackType = 1
+type = 0
+modifiers = Array[ExtResource("2_qllao")]([SubResource("Resource_a0cvq"), SubResource("Resource_qllao")])
+name = "Shortsword"
+description = "A quick and sturdy iron shortsword"
+texture = SubResource("AtlasTexture_xqcmm")
+cost = 175
+effects = Array[ExtResource("1_a0cvq")]([])
+metadata/_custom_type_script = "uid://dwrmtudn1g670"

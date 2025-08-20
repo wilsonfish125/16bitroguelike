@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bao3kl6bmfjks"]
 
 [ext_resource type="Script" uid="uid://klduhv1oxpav" path="res://Props/Interactables/Locked Door/lockedDoor.gd" id="1_43rwh"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="2_bchvr"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="2_bchvr"]
 [ext_resource type="PackedScene" uid="uid://2e0h8mj62td1" path="res://GeneralNodes/PersistentDataHandler/persistentDataHandler.tscn" id="2_xgm02"]
 [ext_resource type="AudioStream" uid="uid://vqdsse8frdta" path="res://Resources/Michael Games Sprites/example_music/locked_door.wav" id="3_0vtq1"]
 [ext_resource type="AudioStream" uid="uid://bwm6guilsd83h" path="res://Resources/Michael Games Sprites/example_music/unlock_door.wav" id="4_gr2ce"]

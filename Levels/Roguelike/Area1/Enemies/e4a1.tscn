@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="9_c8w3i"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="9_y5hbg"]
 [ext_resource type="PackedScene" uid="uid://dwfho8nbvmffj" path="res://Enemies/Area 1/Gerblin Brute/gerblinBrute.tscn" id="10_fmawb"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="10_ktyy2"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="10_ktyy2"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="14_fmawb"]
 
 [node name="E4A1" type="Node2D"]

@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="9_m4gr3"]
 [ext_resource type="PackedScene" uid="uid://cnbgp6c760d0r" path="res://Enemies/Area 1/Gerblin/gerblin.tscn" id="10_pg0l6"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="11_037oa"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="12_x8l4d"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="12_x8l4d"]
 [ext_resource type="PackedScene" uid="uid://dwfho8nbvmffj" path="res://Enemies/Area 1/Gerblin Brute/gerblinBrute.tscn" id="13_pg0l6"]
 
 [node name="E8A1" type="Node2D"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_aqrhq"]
 [ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_gkkpd"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="2_mq6pr"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/zOLD/testpotion.tres" id="2_mq6pr"]
 
 [sub_resource type="Resource" id="Resource_b35tq"]
 script = ExtResource("1_aqrhq")

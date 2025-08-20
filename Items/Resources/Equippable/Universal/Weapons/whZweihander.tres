@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=10 format=3 uid="uid://2fixmvf8of8h"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_ncl6r"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_5ig64"]
+[ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_8ncur"]
+[ext_resource type="Texture2D" uid="uid://bd6g1aycagfjj" path="res://Resources/ShardsArt/weapons-export.png" id="4_i0lpn"]
+
+[sub_resource type="Resource" id="Resource_l3me6"]
+script = ExtResource("2_5ig64")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_370o6"]
+script = ExtResource("2_5ig64")
+type = 2
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_0mrxd"]
+script = ExtResource("2_5ig64")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_ncl6r"]
+script = ExtResource("2_5ig64")
+type = 3
+value = -2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eeti"]
+atlas = ExtResource("4_i0lpn")
+region = Rect2(224, 32, 32, 32)
+
+[resource]
+script = ExtResource("3_8ncur")
+attackType = 2
+type = 0
+modifiers = Array[ExtResource("2_5ig64")]([SubResource("Resource_l3me6"), SubResource("Resource_370o6"), SubResource("Resource_0mrxd"), SubResource("Resource_ncl6r")])
+name = "Zweihander"
+description = "Holy shit its from dark soul"
+texture = SubResource("AtlasTexture_3eeti")
+cost = 350
+effects = Array[ExtResource("1_ncl6r")]([])
+metadata/_custom_type_script = "uid://dwrmtudn1g670"

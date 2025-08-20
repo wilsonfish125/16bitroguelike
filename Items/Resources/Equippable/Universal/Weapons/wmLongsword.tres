@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="WeaponItemData" load_steps=7 format=3 uid="uid://dwjwdlrkjqxld"]
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=8 format=3 uid="uid://dwjwdlrkjqxld"]
 
 [ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_awumw"]
 [ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_a2qd3"]
 [ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_xqcmm"]
-[ext_resource type="Texture2D" uid="uid://71vf3swrqxx7" path="res://Resources/ShardsArt/spritesheets/items.png" id="4_a2qd3"]
+[ext_resource type="Texture2D" uid="uid://bd6g1aycagfjj" path="res://Resources/ShardsArt/weapons-export.png" id="4_a2qd3"]
 
 [sub_resource type="Resource" id="Resource_a2qd3"]
 script = ExtResource("2_a2qd3")
@@ -11,15 +11,21 @@ type = 1
 value = 1
 metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
 
+[sub_resource type="Resource" id="Resource_xqcmm"]
+script = ExtResource("2_a2qd3")
+type = 2
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xqcmm"]
 atlas = ExtResource("4_a2qd3")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(96, 32, 32, 32)
 
 [resource]
 script = ExtResource("3_xqcmm")
 attackType = 1
 type = 0
-modifiers = Array[ExtResource("2_a2qd3")]([SubResource("Resource_a2qd3")])
+modifiers = Array[ExtResource("2_a2qd3")]([SubResource("Resource_a2qd3"), SubResource("Resource_xqcmm")])
 name = "Longsword"
 description = "A moderately heavy steel sword"
 texture = SubResource("AtlasTexture_xqcmm")

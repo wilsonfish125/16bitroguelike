@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://cbieacin52xo4"]
 
 [ext_resource type="Script" uid="uid://b62mnalgibn5g" path="res://Quests/Scripts/questRewardItem.gd" id="1_hnx3t"]
-[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="2_jogkw"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/zOLD/testgem.tres" id="2_jogkw"]
 [ext_resource type="Script" uid="uid://d0eebcw17f3je" path="res://Quests/Scripts/questResource.gd" id="2_qxc53"]
 
 [sub_resource type="Resource" id="Resource_im4ak"]

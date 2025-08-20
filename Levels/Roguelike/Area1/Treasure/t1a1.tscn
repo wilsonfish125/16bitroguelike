@@ -8,7 +8,7 @@
 [ext_resource type="TileSet" uid="uid://dyg00xqnlfugg" path="res://Levels/Roguelike/Area1/00Tilesets/treesrocks.tres" id="4_iosfj"]
 [ext_resource type="TileSet" uid="uid://dfc43h06ndal0" path="res://Levels/Roguelike/Area1/00Tilesets/propswalls.tres" id="5_lcvlx"]
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="6_stflw"]
-[ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="7_7gckk"]
+[ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/zOLD/aDarkTunic.tres" id="7_7gckk"]
 
 [node name="T1a1" type="Node2D"]
 script = ExtResource("1_iosfj")

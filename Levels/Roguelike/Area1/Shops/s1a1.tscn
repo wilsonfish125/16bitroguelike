@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cj2fhb0hvaa3a" path="res://Props/Interactables/Shopkeeper/shopkeeper.tscn" id="6_epq5i"]
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="8_j1lof"]
 [ext_resource type="Script" uid="uid://b5oke4uvap4uf" path="res://Items/Scripts/itemData.gd" id="8_xpfyn"]
-[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/Resources/Equippable/wKatana.tres" id="9_7ds4a"]
-[ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/Resources/Equippable/aDarkTunic.tres" id="10_cxhcg"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="11_4xvuv"]
+[ext_resource type="Resource" uid="uid://cfuqx35vvb08d" path="res://Items/zOLD/wKatana.tres" id="9_7ds4a"]
+[ext_resource type="Resource" uid="uid://cyovhkyi6061n" path="res://Items/zOLD/aDarkTunic.tres" id="10_cxhcg"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/zOLD/testpotion.tres" id="11_4xvuv"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="13_vnuut"]
 [ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="14_id2eb"]
 

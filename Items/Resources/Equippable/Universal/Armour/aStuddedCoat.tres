@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://cjvbfm1v7ggj7"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_yfyeh"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_0cci7"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_247rb"]
+[ext_resource type="Texture2D" uid="uid://clixw4ydl55f6" path="res://Resources/ShardsArt/armor-export.png" id="4_fhdod"]
+
+[sub_resource type="Resource" id="Resource_mmcvt"]
+script = ExtResource("2_0cci7")
+type = 2
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_c4xlh"]
+script = ExtResource("2_0cci7")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dftcd"]
+atlas = ExtResource("4_fhdod")
+region = Rect2(36, 36, 36, 36)
+
+[resource]
+script = ExtResource("3_247rb")
+type = 2
+modifiers = Array[ExtResource("2_0cci7")]([SubResource("Resource_mmcvt"), SubResource("Resource_c4xlh")])
+name = "Studded Coat"
+description = "A leather coat studded with iron spikes"
+texture = SubResource("AtlasTexture_dftcd")
+cost = 250
+effects = Array[ExtResource("1_yfyeh")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

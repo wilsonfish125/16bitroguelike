@@ -67,6 +67,7 @@ func checkForLevelAdvance() -> void:
 		player.level += 1
 		player.attackStat += 1
 		player.defenceStat += 1
+		player.speedStat += 1
 		PlayerLevelUp.emit()
 		checkForLevelAdvance()
 

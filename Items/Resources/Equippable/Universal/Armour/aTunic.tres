@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://bo8x1ym011r2c"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_mmcvt"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_c4xlh"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_dftcd"]
+[ext_resource type="Texture2D" uid="uid://clixw4ydl55f6" path="res://Resources/ShardsArt/armor-export.png" id="4_c4xlh"]
+
+[sub_resource type="Resource" id="Resource_mmcvt"]
+script = ExtResource("2_c4xlh")
+type = 3
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_c4xlh"]
+script = ExtResource("2_c4xlh")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dftcd"]
+atlas = ExtResource("4_c4xlh")
+region = Rect2(180, 36, 36, 36)
+
+[resource]
+script = ExtResource("3_dftcd")
+type = 2
+modifiers = Array[ExtResource("2_c4xlh")]([SubResource("Resource_mmcvt"), SubResource("Resource_c4xlh")])
+name = "Tunic"
+description = "A lightweight leather tunic"
+texture = SubResource("AtlasTexture_dftcd")
+cost = 250
+effects = Array[ExtResource("1_mmcvt")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

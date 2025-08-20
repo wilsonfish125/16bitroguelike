@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="WeaponItemData" load_steps=9 format=3 uid="uid://b8n7fh304liaw"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_gkfqp"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_ngced"]
+[ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="3_1l72t"]
+[ext_resource type="Texture2D" uid="uid://bd6g1aycagfjj" path="res://Resources/ShardsArt/weapons-export.png" id="4_ug2mb"]
+
+[sub_resource type="Resource" id="Resource_4lcnq"]
+script = ExtResource("2_ngced")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_ur2ts"]
+script = ExtResource("2_ngced")
+type = 3
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_gkfqp"]
+script = ExtResource("2_ngced")
+type = 2
+value = -1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1tua"]
+atlas = ExtResource("4_ug2mb")
+region = Rect2(32, 192, 32, 32)
+
+[resource]
+script = ExtResource("3_1l72t")
+attackType = 0
+type = 0
+modifiers = Array[ExtResource("2_ngced")]([SubResource("Resource_4lcnq"), SubResource("Resource_ur2ts"), SubResource("Resource_gkfqp")])
+name = "Katar"
+description = "A hand dagger with an H shaped grip "
+texture = SubResource("AtlasTexture_i1tua")
+cost = 250
+effects = Array[ExtResource("1_gkfqp")]([])
+metadata/_custom_type_script = "uid://dwrmtudn1g670"

@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dodishrbxibgn" path="res://Enemies/Slimes/slime.tscn" id="4_ijy1t"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="6_2ag21"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="7_mqnlc"]
-[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="8_uuy0f"]
-[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/testpotion.tres" id="9_c145v"]
-[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="10_mh61v"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/zOLD/testgem.tres" id="8_uuy0f"]
+[ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/zOLD/testpotion.tres" id="9_c145v"]
+[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/zOLD/testrock.tres" id="10_mh61v"]
 [ext_resource type="PackedScene" uid="uid://l42qg1ksr1xj" path="res://Props/Interactables/Treasure Chest/treasureChest.tscn" id="11_7tok5"]
 [ext_resource type="PackedScene" uid="uid://dmlf6isdeerhd" path="res://Enemies/Knight/knight.tscn" id="12_sicrm"]
 

@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dd217q4bsu0gm" path="res://Resources/Michael Games Sprites/wizard_boss/boss_destroy.wav" id="14_wpe76"]
 [ext_resource type="PackedScene" uid="uid://csci2lncscmr6" path="res://Enemies/Hazards/Energy Beam/energyBeam.tscn" id="15_vrnuf"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="16_25jty"]
-[ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/magicalFlute.tres" id="17_0jtbl"]
+[ext_resource type="Resource" uid="uid://dfcvihl3d8vjf" path="res://Items/zOLD/magicalFlute.tres" id="17_0jtbl"]
 [ext_resource type="PackedScene" uid="uid://cwhfnluog5jpp" path="res://Quests/Utility Nodes/questAdvanceTrigger.tscn" id="18_pry8h"]
 [ext_resource type="Resource" uid="uid://xwsltq1wtx2k" path="res://Quests/evilWizardQuest.tres" id="19_fmwgs"]
 

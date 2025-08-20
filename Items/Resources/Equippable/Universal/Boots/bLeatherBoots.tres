@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=7 format=3 uid="uid://jsg7cvwkf31e"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_hjyka"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_3x1fv"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_s6e01"]
+[ext_resource type="Texture2D" uid="uid://clixw4ydl55f6" path="res://Resources/ShardsArt/armor-export.png" id="4_6dsnp"]
+
+[sub_resource type="Resource" id="Resource_pxqs8"]
+script = ExtResource("2_3x1fv")
+type = 3
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwjkg"]
+atlas = ExtResource("4_6dsnp")
+region = Rect2(252, 36, 36, 36)
+
+[resource]
+script = ExtResource("3_s6e01")
+type = 3
+modifiers = Array[ExtResource("2_3x1fv")]([SubResource("Resource_pxqs8")])
+name = "Leather Boots"
+description = "Soft protective leather boots"
+texture = SubResource("AtlasTexture_iwjkg")
+cost = 150
+effects = Array[ExtResource("1_hjyka")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

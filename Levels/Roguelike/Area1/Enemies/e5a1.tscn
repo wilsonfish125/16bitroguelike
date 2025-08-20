@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cnwc42qyewsnm" path="res://00Global/playerSpawn.tscn" id="11_h0gjm"]
 [ext_resource type="PackedScene" uid="uid://ba34wes5rbkd" path="res://Levels/levelTransitionInteract.tscn" id="13_7jtxw"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="14_yygue"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="15_t6s27"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="15_t6s27"]
 
 [node name="E5A1" type="Node2D"]
 script = ExtResource("1_f0q8h")

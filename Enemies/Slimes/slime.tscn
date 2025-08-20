@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://57t3njb1yj57" path="res://GeneralNodes/Hitbox/hitBox.tscn" id="11_5egc4"]
 [ext_resource type="Script" uid="uid://i454nnq8mtn4" path="res://Enemies/Scripts/States/enemyStateDestroy.gd" id="11_cmx4p"]
 [ext_resource type="Script" uid="uid://bknf0oqrqcv8h" path="res://Enemies/Scripts/dropData.gd" id="12_amhx5"]
-[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/testgem.tres" id="13_06wwq"]
-[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/testrock.tres" id="14_ne6p3"]
+[ext_resource type="Resource" uid="uid://vkriwnp4cb0j" path="res://Items/zOLD/testgem.tres" id="13_06wwq"]
+[ext_resource type="Resource" uid="uid://cimb0su5tmfji" path="res://Items/zOLD/testrock.tres" id="14_ne6p3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qq3d8"]
 radius = 20.0

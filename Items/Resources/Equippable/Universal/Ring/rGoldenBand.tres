@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://dm8jul0yrtl4m"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_cffxf"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_d082c"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_06l13"]
+[ext_resource type="Texture2D" uid="uid://4gegiy5hj3r7" path="res://Resources/ShardsArt/The Roguelike 1-15-5 Alpha-export 32.png" id="4_nysbk"]
+
+[sub_resource type="Resource" id="Resource_0kf82"]
+script = ExtResource("2_d082c")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_2ea8y"]
+script = ExtResource("2_d082c")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5uas"]
+atlas = ExtResource("4_nysbk")
+region = Rect2(288, 1184, 32, 32)
+
+[resource]
+script = ExtResource("3_06l13")
+type = 5
+modifiers = Array[ExtResource("2_d082c")]([SubResource("Resource_0kf82"), SubResource("Resource_2ea8y")])
+name = "Golden Band"
+description = "A small golden band, scratched and chipped from combat"
+texture = SubResource("AtlasTexture_n5uas")
+cost = 10
+effects = Array[ExtResource("1_cffxf")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

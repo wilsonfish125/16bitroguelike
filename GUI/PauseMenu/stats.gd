@@ -6,11 +6,11 @@ var inventory : InventoryData
 @onready var labelXP: Label = %LabelXP
 @onready var labelAttack: Label = %LabelAttack
 @onready var labelDefense: Label = %LabelDefense
-@onready var labelBody: Label = %LabelBody
+@onready var labelSpeed: Label = %LabelSpeed
 @onready var labelSkillTreePoints: Label = %LabelSkillTreePoints
 @onready var label_attack_change: Label = %LabelAttackChange
 @onready var label_defense_change: Label = %LabelDefenseChange
-@onready var label_body_change: Label = %LabelBodyChange
+@onready var label_speed_change: Label = %LabelSpeedChange
 
 
 func _ready() -> void:
@@ -31,26 +31,30 @@ func updateStats() -> void:
 	
 	labelAttack.text = str( _p.attackStat + inventory.getAttackBonus() )
 	labelDefense.text = str( _p.defenceStat + inventory.getDefenseBonus() )
-	labelBody.text = str( _p.bodyStat + inventory.getBodyBonus() )
+	labelSpeed.text = str( _p.speedStat + inventory.getSpeedBonus() )
 	labelSkillTreePoints.text = str( _p.skillTreePoints )
 
 func _onPreviewStatsChanged( item : ItemData ) -> void:
 	# Take bonus labels and change them according to item stats/if there is any item at all
 	label_attack_change.text = ""
 	label_defense_change.text = ""
-	label_body_change.text = ""
+	label_speed_change.text = ""
 	
 	if not item is EquippableItemData:
 		return # Regular items stop right here
 	
 	var equipment : EquippableItemData = item # We know it is equippable, cast it as such
+	
 	var attackChange : int = inventory.getAttackBonusDiff( equipment )
 	var defenseChange : int = inventory.getDefenseBonusDiff( equipment )
-	var bodyChange : int = inventory.getBodyBonusDiff( equipment )
+	var speedChange : int = inventory.getSpeedBonusDiff( equipment )
+	
+	print(equipment)
+	print(equipment.modifiers)
 	
 	updageChangeLabel( label_attack_change, attackChange )
 	updageChangeLabel( label_defense_change, defenseChange )
-	updageChangeLabel( label_body_change, bodyChange )
+	updageChangeLabel( label_speed_change, speedChange )
 
 func updageChangeLabel( label : Label, value : int ) -> void:
 	# Update and Modulate label depending on if stat is below or above zero

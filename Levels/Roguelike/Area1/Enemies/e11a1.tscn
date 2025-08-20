@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://btvrnmxnn3big" path="res://GeneralNodes/Enemy Counter/enemyCounter.tscn" id="8_cstuv"]
 [ext_resource type="PackedScene" uid="uid://bfkb6kv87y15t" path="res://Enemies/Area 1/Spider/spider.tscn" id="9_ta8oq"]
 [ext_resource type="PackedScene" uid="uid://cnbgp6c760d0r" path="res://Enemies/Area 1/Gerblin/gerblin.tscn" id="9_tonag"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="12_ta8oq"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="12_ta8oq"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="14_871ck"]
 [ext_resource type="PackedScene" uid="uid://d3gvg88jr4rf4" path="res://Props/Interactables/Random Treasure Chest/randomTreasureChest.tscn" id="16_ogmvi"]
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="21_mfsw1"]

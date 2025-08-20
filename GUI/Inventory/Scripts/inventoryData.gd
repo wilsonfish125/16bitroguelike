@@ -4,7 +4,7 @@ class_name InventoryData extends Resource
 signal EquipmentChanged
 
 @export var slots : Array[ SlotData ]
-var equipmentSlotCount : int = 4
+var equipmentSlotCount : int = 6
 
 #ready for resources
 func _init() -> void:
@@ -114,19 +114,24 @@ func equipItem( slot : SlotData ) -> void:
 	
 	var item : EquippableItemData = slot.itemData
 	var slotIndex : int = slots.find( slot ) # Returns index of the parameter in the array
-	var equipmentIndex : int = slots.size() - equipmentSlotCount # 20 (21) by default for Armour
+	var equipmentIndex : int = slots.size() - equipmentSlotCount # 20 (21) by default for Weapon
 	
-	match item.type: # Weapon, Armour, Amulet, Ring
-		EquippableItemData.Type.ARMOUR:
-			equipmentIndex += 0
+	match item.type: # Weapon, Helmet, Armour, Amulet, Ring
 		EquippableItemData.Type.WEAPON:
-			equipmentIndex += 1 # 21
+			equipmentIndex += 0 # 7
 			if item is WeaponItemData:
 				PlayerManager.player.attackType = item.attackType
-		EquippableItemData.Type.AMULET:
-			equipmentIndex += 2 # 22
+		EquippableItemData.Type.ARMOUR:
+			equipmentIndex += 1 # 8
 		EquippableItemData.Type.RING:
-			equipmentIndex += 3 # 23
+			equipmentIndex += 2 # 9
+		EquippableItemData.Type.HELMET:
+			equipmentIndex += 3 # 10
+		EquippableItemData.Type.BOOTS:
+			equipmentIndex += 4 # 11
+		EquippableItemData.Type.AMULET:
+			equipmentIndex += 5 # 12
+	
 	
 	var unequippedSlot : SlotData = slots[ equipmentIndex ]
 	
@@ -157,12 +162,12 @@ func getDefenseBonusDiff( item : EquippableItemData ) -> int:
 	var after : int = getEquipmentBonus( EquippableItemModifier.Type.DEFENSE, item )
 	return after - before
 
-func getBodyBonus() -> int:
-	return getEquipmentBonus( EquippableItemModifier.Type.BODY )
+func getSpeedBonus() -> int:
+	return getEquipmentBonus( EquippableItemModifier.Type.SPEED )
 
-func getBodyBonusDiff( item : EquippableItemData ) -> int:
-	var before : int = getBodyBonus()
-	var after : int = getEquipmentBonus( EquippableItemModifier.Type.BODY, item )
+func getSpeedBonusDiff( item : EquippableItemData ) -> int:
+	var before : int = getSpeedBonus()
+	var after : int = getEquipmentBonus( EquippableItemModifier.Type.SPEED, item )
 	return after - before
 
 # Can detect any type of bonus

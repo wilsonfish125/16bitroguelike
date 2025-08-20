@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqgltvrxvf1d" path="res://GeneralNodes/Item Dropper/itemDropper.tscn" id="10_1yuse"]
 [ext_resource type="PackedScene" uid="uid://bao3kl6bmfjks" path="res://Props/Interactables/Locked Door/lockedDoor.tscn" id="10_p55jx"]
 [ext_resource type="PackedScene" uid="uid://dbt0k1j0ifw35" path="res://Enemies/Ghost/ghost.tscn" id="11_saxli"]
-[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/smallDungeonKey.tres" id="11_thwco"]
+[ext_resource type="Resource" uid="uid://rusg8i52j4qk" path="res://Items/zOLD/smallDungeonKey.tres" id="11_thwco"]
 
 [node name="E3A1" type="Node2D"]
 script = ExtResource("1_4ue1r")
