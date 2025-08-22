@@ -13,6 +13,9 @@ var defaultPool : Array[EquippableItemData] = [
 	preload("res://Items/Resources/Equippable/Universal/Armour/aSoldiersBreastplate.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Armour/aTunic.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Armour/aStuddedCoat.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Ring/rSilverSnakeRing.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Ring/rNacreSignetRing.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Ring/rGarnetRing.tres")
 ]
 
 var forestPool : Array[EquippableItemData] = []

@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=53 format=3 uid="uid://b6d6rc77ngjyi"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=51 format=3 uid="uid://b6d6rc77ngjyi"]
 
 [ext_resource type="Script" uid="uid://cd04ma2qdvn8e" path="res://GUI/Inventory/Scripts/inventoryData.gd" id="1_7vovl"]
 [ext_resource type="Script" uid="uid://cpwl588j6dhdi" path="res://GUI/Inventory/Scripts/slotData.gd" id="2_affun"]
 [ext_resource type="Resource" uid="uid://cjvbfm1v7ggj7" path="res://Items/Resources/Equippable/Universal/Armour/aStuddedCoat.tres" id="3_ycw3r"]
-[ext_resource type="Resource" uid="uid://dm8jul0yrtl4m" path="res://Items/Resources/Equippable/Universal/Ring/rGoldenBand.tres" id="5_hps8i"]
+[ext_resource type="Resource" uid="uid://ccblpcfr0mjoy" path="res://Items/Resources/Equippable/Universal/Ring/rSilverSnakeRing.tres" id="5_28xhj"]
 [ext_resource type="Resource" uid="uid://2fixmvf8of8h" path="res://Items/Resources/Equippable/Universal/Weapons/whZweihander.tres" id="6_28xhj"]
 [ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="6_eygin"]
 [ext_resource type="Resource" uid="uid://jsg7cvwkf31e" path="res://Items/Resources/Equippable/Universal/Boots/bLeatherBoots.tres" id="7_1d3cu"]
 [ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="7_kd37i"]
+[ext_resource type="Resource" uid="uid://b8n7fh304liaw" path="res://Items/Resources/Equippable/Universal/Weapons/wlKatar.tres" id="8_28xhj"]
 [ext_resource type="Script" uid="uid://dwrmtudn1g670" path="res://Items/Scripts/weaponItemData.gd" id="8_hps8i"]
 [ext_resource type="Resource" uid="uid://cwuy4xumgbgfu" path="res://Items/Resources/Equippable/Universal/Helmet/hLeatherHood.tres" id="8_kd37i"]
 [ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="9_28xhj"]
+[ext_resource type="Resource" uid="uid://dwqnufulh25wk" path="res://Items/Resources/Equippable/Universal/Talisman-Amulet/tChronosStone.tres" id="13_1d3cu"]
 
 [sub_resource type="Resource" id="Resource_pt36d"]
 script = ExtResource("2_affun")
@@ -26,7 +28,7 @@ metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
 [sub_resource type="Resource" id="Resource_yh03f"]
 script = ExtResource("2_affun")
-itemData = ExtResource("5_hps8i")
+itemData = ExtResource("5_28xhj")
 quantity = 1
 metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
@@ -39,6 +41,12 @@ metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 [sub_resource type="Resource" id="Resource_hxkux"]
 script = ExtResource("2_affun")
 itemData = ExtResource("7_1d3cu")
+quantity = 1
+metadata/_custom_type_script = "uid://cpwl588j6dhdi"
+
+[sub_resource type="Resource" id="Resource_dewwv"]
+script = ExtResource("2_affun")
+itemData = ExtResource("8_28xhj")
 quantity = 1
 metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
@@ -228,43 +236,12 @@ itemData = SubResource("Resource_firuy")
 quantity = 1
 metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
-[sub_resource type="Resource" id="Resource_e0uk2"]
-script = ExtResource("7_kd37i")
-type = 1
-value = 0
-metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
-
-[sub_resource type="Resource" id="Resource_xtsf3"]
-script = ExtResource("7_kd37i")
-type = 2
-value = 0
-metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
-
-[sub_resource type="Resource" id="Resource_gxng8"]
-script = ExtResource("7_kd37i")
-type = 3
-value = 0
-metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o8rxp"]
-
-[sub_resource type="Resource" id="Resource_2t1r5"]
-script = ExtResource("9_28xhj")
-type = 4
-modifiers = Array[ExtResource("7_kd37i")]([SubResource("Resource_e0uk2"), SubResource("Resource_xtsf3"), SubResource("Resource_gxng8")])
-name = ""
-description = ""
-texture = SubResource("PlaceholderTexture2D_o8rxp")
-cost = 10
-effects = Array[ExtResource("6_eygin")]([])
-metadata/_custom_type_script = "uid://c1ystmp7ywce2"
-
 [sub_resource type="Resource" id="Resource_bffct"]
 script = ExtResource("2_affun")
-itemData = SubResource("Resource_2t1r5")
+itemData = ExtResource("13_1d3cu")
 quantity = 1
 metadata/_custom_type_script = "uid://cpwl588j6dhdi"
 
 [resource]
 script = ExtResource("1_7vovl")
-slots = Array[ExtResource("2_affun")]([SubResource("Resource_pt36d"), SubResource("Resource_kd37i"), SubResource("Resource_yh03f"), SubResource("Resource_radn4"), SubResource("Resource_hxkux"), null, SubResource("Resource_lw3lm"), SubResource("Resource_o8rxp"), SubResource("Resource_v0ruj"), SubResource("Resource_gbqdp"), SubResource("Resource_gdh2b"), SubResource("Resource_bffct")])
+slots = Array[ExtResource("2_affun")]([SubResource("Resource_pt36d"), SubResource("Resource_kd37i"), SubResource("Resource_yh03f"), SubResource("Resource_radn4"), SubResource("Resource_hxkux"), SubResource("Resource_dewwv"), SubResource("Resource_lw3lm"), SubResource("Resource_o8rxp"), SubResource("Resource_v0ruj"), SubResource("Resource_gbqdp"), SubResource("Resource_gdh2b"), SubResource("Resource_bffct")])

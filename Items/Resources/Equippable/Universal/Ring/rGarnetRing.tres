@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=7 format=3 uid="uid://dygkwfm43s0y5"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_jprbt"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_nlt8p"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_hk1yp"]
+[ext_resource type="Texture2D" uid="uid://c4bfhagiys8pn" path="res://Resources/ShardsArt/iconset_16x16_00_basic-export.png" id="4_jprbt"]
+
+[sub_resource type="Resource" id="Resource_cshxo"]
+script = ExtResource("2_nlt8p")
+type = 1
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlt8p"]
+atlas = ExtResource("4_jprbt")
+region = Rect2(32, 64, 32, 32)
+
+[resource]
+script = ExtResource("3_hk1yp")
+type = 5
+modifiers = Array[ExtResource("2_nlt8p")]([SubResource("Resource_cshxo")])
+name = "Garnet Ring"
+description = "A warm Garnet Ring forged from steel"
+texture = SubResource("AtlasTexture_nlt8p")
+cost = 200
+effects = Array[ExtResource("1_jprbt")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

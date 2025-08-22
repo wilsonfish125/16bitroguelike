@@ -79,6 +79,24 @@ func itemPressed() -> void:
 				return
 			label.text = str( slotData.quantity )
 
+func dropItemPressed() -> void:
+	if slotData and outsideDragThreshold() == false:
+		if slotData.itemData:
+			# Valid Item
+			var item = slotData.itemData
+			
+			#check for input here
+			
+			#var wasDropped = item.drop()
+			#if wasDropped == false:
+			#	return
+			#slotData.quantity -= 1
+			#if slotData == null:
+			#	return
+			#label.text = ""
+			
+
+
 func onButtonDown() -> void:
 	# Set values of our dragging variables, get a COPY of the texture to follow mouse
 	clickPos = get_global_mouse_position()

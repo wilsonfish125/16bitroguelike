@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=7 format=3 uid="uid://ccblpcfr0mjoy"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_tok81"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_np73b"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_kf5kr"]
+[ext_resource type="Texture2D" uid="uid://c4bfhagiys8pn" path="res://Resources/ShardsArt/iconset_16x16_00_basic-export.png" id="4_qyg6h"]
+
+[sub_resource type="Resource" id="Resource_cshxo"]
+script = ExtResource("2_np73b")
+type = 3
+value = 3
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlt8p"]
+atlas = ExtResource("4_qyg6h")
+region = Rect2(192, 32, 32, 32)
+
+[resource]
+script = ExtResource("3_kf5kr")
+type = 5
+modifiers = Array[ExtResource("2_np73b")]([SubResource("Resource_cshxo")])
+name = "Silver Snake Ring"
+description = "A ring in the shape of a silver snake, biting its own tail."
+texture = SubResource("AtlasTexture_nlt8p")
+cost = 300
+effects = Array[ExtResource("1_tok81")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

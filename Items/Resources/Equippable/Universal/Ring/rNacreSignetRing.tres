@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://dsx2x8ldnyboy"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_04f7c"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_qlbeo"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_uuo0p"]
+[ext_resource type="Texture2D" uid="uid://c4bfhagiys8pn" path="res://Resources/ShardsArt/iconset_16x16_00_basic-export.png" id="4_er5ds"]
+
+[sub_resource type="Resource" id="Resource_cshxo"]
+script = ExtResource("2_qlbeo")
+type = 1
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_04f7c"]
+script = ExtResource("2_qlbeo")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlt8p"]
+atlas = ExtResource("4_er5ds")
+region = Rect2(96, 32, 32, 32)
+
+[resource]
+script = ExtResource("3_uuo0p")
+type = 5
+modifiers = Array[ExtResource("2_qlbeo")]([SubResource("Resource_cshxo"), SubResource("Resource_04f7c")])
+name = "Nacre Signet Ring"
+description = "A signet ring made from copper and nacre, signs have been engraved into it."
+texture = SubResource("AtlasTexture_nlt8p")
+cost = 200
+effects = Array[ExtResource("1_04f7c")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=7 format=3 uid="uid://dwqnufulh25wk"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_r1nep"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_mdia7"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_7tsh0"]
+[ext_resource type="Texture2D" uid="uid://c4bfhagiys8pn" path="res://Resources/ShardsArt/iconset_16x16_00_basic-export.png" id="4_mdia7"]
+
+[sub_resource type="Resource" id="Resource_7tsh0"]
+script = ExtResource("2_mdia7")
+type = 2
+value = 3
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aave0"]
+atlas = ExtResource("4_mdia7")
+region = Rect2(288, 160, 32, 32)
+
+[resource]
+script = ExtResource("3_7tsh0")
+type = 0
+modifiers = Array[ExtResource("2_mdia7")]([SubResource("Resource_7tsh0")])
+name = "Chronos Stone"
+description = "If you look into the huge purple crystal you'll see galaxies and stars."
+texture = SubResource("AtlasTexture_aave0")
+cost = 500
+effects = Array[ExtResource("1_r1nep")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"
