@@ -20,6 +20,7 @@ signal PreviewStatsChanged( item : ItemData )
 
 
 var isPaused : bool = false
+var dropToggle : bool = false
 
 func _ready() -> void:
 	hidePauseMenu()
@@ -45,12 +46,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			changeTab( 1 )
 		elif event.is_action_pressed("left_bumper"):
 			changeTab( -1 )
-	
+		elif event.is_action_pressed("drop_toggle"):
+			dropToggle =! dropToggle
 
 func showPauseMenu() -> void:
 	get_tree().paused = true #gets the root of the whole game and pauses it
 	visible = true
 	isPaused = true
+	dropToggle = false
 	tab_container.current_tab = 0 #always sets to inventory upon reopening
 	updateCurrencyLabels( PlayerManager.player.coins, PlayerManager.shards )
 	Shown.emit()

@@ -65,6 +65,15 @@ func itemPressed() -> void:
 			# Item is valid, get a reference to it
 			var item = slotData.itemData
 			
+			# Before we do anything with the item, we want to check if drop manager is on and if so
+			# drop the item
+			
+			print(PauseMenu.dropToggle)
+			if PauseMenu.dropToggle == true:
+				# We drop the item, for now count - 1
+				slotData.quantity -= 1
+				return
+			
 			# Equippable Items
 			if item is EquippableItemData:
 				PlayerManager.INVENTORYDATA.equipItem( slotData )
@@ -77,7 +86,7 @@ func itemPressed() -> void:
 			slotData.quantity -= 1
 			if slotData == null:
 				return
-			label.text = str( slotData.quantity )
+			label.text = str( slotData.quantity ) 
 
 func dropItemPressed() -> void:
 	if slotData and outsideDragThreshold() == false:
