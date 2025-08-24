@@ -12,6 +12,7 @@ var dragThreshold : float = 16 * 3 # Change when scaling is fixed
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var label: Label = $Label
 
+const PICKUP = preload("res://Items/ItemPickup/itemPickup.tscn")
 
 func _ready() -> void:
 	texture_rect.texture = null
@@ -69,9 +70,14 @@ func itemPressed() -> void:
 			# drop the item
 			
 			print(PauseMenu.dropToggle)
+			
 			if PauseMenu.dropToggle == true:
 				# We drop the item, for now count - 1
+				dropItem(item)
 				slotData.quantity -= 1
+				if slotData == null:
+					return
+				label.text = str( slotData.quantity )
 				return
 			
 			# Equippable Items
@@ -88,23 +94,12 @@ func itemPressed() -> void:
 				return
 			label.text = str( slotData.quantity ) 
 
-func dropItemPressed() -> void:
-	if slotData and outsideDragThreshold() == false:
-		if slotData.itemData:
-			# Valid Item
-			var item = slotData.itemData
-			
-			#check for input here
-			
-			#var wasDropped = item.drop()
-			#if wasDropped == false:
-			#	return
-			#slotData.quantity -= 1
-			#if slotData == null:
-			#	return
-			#label.text = ""
-			
-
+func dropItem( item : ItemData ) -> void:
+	var drop : ItemPickup = PICKUP.instantiate() as ItemPickup
+	drop.itemData = item
+	drop.global_position = PlayerManager.player.global_position + Vector2(32, 32)
+	PlayerManager.player.get_parent().call_deferred( "add_child", drop)
+	print("Dropped")
 
 func onButtonDown() -> void:
 	# Set values of our dragging variables, get a COPY of the texture to follow mouse
