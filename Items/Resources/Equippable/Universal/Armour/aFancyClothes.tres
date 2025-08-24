@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=9 format=3 uid="uid://1ssxk2ags7wi"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_dh24l"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_30ndh"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_2w4d6"]
+[ext_resource type="Texture2D" uid="uid://clixw4ydl55f6" path="res://Resources/ShardsArt/armor-export.png" id="4_t6q6k"]
+
+[sub_resource type="Resource" id="Resource_mmcvt"]
+script = ExtResource("2_30ndh")
+type = 3
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_c4xlh"]
+script = ExtResource("2_30ndh")
+type = 0
+value = 1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_dh24l"]
+script = ExtResource("2_30ndh")
+type = 2
+value = -1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dftcd"]
+atlas = ExtResource("4_t6q6k")
+region = Rect2(180, 72, 36, 36)
+
+[resource]
+script = ExtResource("3_2w4d6")
+type = 2
+modifiers = Array[ExtResource("2_30ndh")]([SubResource("Resource_mmcvt"), SubResource("Resource_c4xlh"), SubResource("Resource_dh24l")])
+name = "Fancy Shirt"
+description = "A fancy shirt made of fine silk and silver lining"
+texture = SubResource("AtlasTexture_dftcd")
+cost = 300
+effects = Array[ExtResource("1_dh24l")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

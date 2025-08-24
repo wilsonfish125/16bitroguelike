@@ -22,6 +22,6 @@ modifiers = Array[ExtResource("2_np73b")]([SubResource("Resource_cshxo")])
 name = "Silver Snake Ring"
 description = "A ring in the shape of a silver snake, biting its own tail."
 texture = SubResource("AtlasTexture_nlt8p")
-cost = 300
+cost = 500
 effects = Array[ExtResource("1_tok81")]([])
 metadata/_custom_type_script = "uid://c1ystmp7ywce2"

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="EquippableItemData" load_steps=8 format=3 uid="uid://bmx6f2p5pto34"]
+
+[ext_resource type="Script" uid="uid://dm1gqg000atcw" path="res://Items/ItemEffects/itemEffect.gd" id="1_6bhgw"]
+[ext_resource type="Script" uid="uid://brsyjjvdu1f8f" path="res://Items/Scripts/equippableItemModifier.gd" id="2_my6hp"]
+[ext_resource type="Script" uid="uid://c1ystmp7ywce2" path="res://Items/Scripts/equippableItemData.gd" id="3_atkwq"]
+[ext_resource type="Texture2D" uid="uid://clixw4ydl55f6" path="res://Resources/ShardsArt/armor-export.png" id="4_06fvk"]
+
+[sub_resource type="Resource" id="Resource_jhi2d"]
+script = ExtResource("2_my6hp")
+type = 0
+value = 2
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="Resource" id="Resource_6bhgw"]
+script = ExtResource("2_my6hp")
+type = 2
+value = -1
+metadata/_custom_type_script = "uid://brsyjjvdu1f8f"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwjkg"]
+atlas = ExtResource("4_06fvk")
+region = Rect2(144, 72, 36, 36)
+
+[resource]
+script = ExtResource("3_atkwq")
+type = 1
+modifiers = Array[ExtResource("2_my6hp")]([SubResource("Resource_jhi2d"), SubResource("Resource_6bhgw")])
+name = "Fancy Hat"
+description = "A fine and expensive hat"
+texture = SubResource("AtlasTexture_iwjkg")
+cost = 250
+effects = Array[ExtResource("1_6bhgw")]([])
+metadata/_custom_type_script = "uid://c1ystmp7ywce2"

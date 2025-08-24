@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bm7aqew14gly3"]
+[gd_scene load_steps=16 format=4 uid="uid://bm7aqew14gly3"]
 
 [ext_resource type="Script" uid="uid://cvmncj41ky7yr" path="res://Levels/Scripts/level.gd" id="1_8ios2"]
 [ext_resource type="PackedScene" uid="uid://rfvdt8tuy3gh" path="res://Levels/levelTransition.tscn" id="1_bi6sm"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" uid="uid://fcjsdsx3xljl" path="res://Items/zOLD/testpotion.tres" id="11_4xvuv"]
 [ext_resource type="PackedScene" uid="uid://7s4pfdyxw865" path="res://Items/ItemPickup/itemPickup.tscn" id="13_vnuut"]
 [ext_resource type="Resource" uid="uid://bxru18jmpft46" path="res://Items/Resources/Currency/coin.tres" id="14_id2eb"]
+[ext_resource type="PackedScene" uid="uid://d3gvg88jr4rf4" path="res://Props/Interactables/Random Treasure Chest/randomTreasureChest.tscn" id="15_id2eb"]
 
 [node name="S1a1" type="Node2D"]
 script = ExtResource("1_8ios2")
@@ -56,6 +57,36 @@ size = 1
 side = 1
 
 [node name="ItemPickup" parent="." instance=ExtResource("13_vnuut")]
-position = Vector2(147, -129)
+position = Vector2(147.961, -94.7001)
 itemData = ExtResource("14_id2eb")
 itemCount = 300
+
+[node name="RandomTreasureChest" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(-67, -152)
+
+[node name="RandomTreasureChest2" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(-19, -152)
+
+[node name="RandomTreasureChest3" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(27, -152)
+
+[node name="RandomTreasureChest4" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(71, -150)
+
+[node name="RandomTreasureChest5" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(113, -152)
+
+[node name="RandomTreasureChest6" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(161, -150)
+
+[node name="RandomTreasureChest7" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(203, -150)
+
+[node name="RandomTreasureChest8" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(248, -151)
+
+[node name="RandomTreasureChest9" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(291, -149)
+
+[node name="RandomTreasureChest10" parent="." instance=ExtResource("15_id2eb")]
+position = Vector2(332, -149)

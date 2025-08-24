@@ -85,4 +85,10 @@ position = Vector2(367, 176)
 [node name="RandomTreasureChest" parent="." instance=ExtResource("16_ogmvi")]
 position = Vector2(-368, -104)
 
+[node name="RandomTreasureChest2" parent="." instance=ExtResource("16_ogmvi")]
+position = Vector2(-466, -125)
+
+[node name="RandomTreasureChest3" parent="." instance=ExtResource("16_ogmvi")]
+position = Vector2(-336, -104)
+
 [connection signal="EnemiesDefeated" from="EnemyCounter" to="ItemDropper" method="dropItem"]

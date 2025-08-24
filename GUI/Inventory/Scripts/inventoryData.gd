@@ -14,6 +14,13 @@ func inventorySlots() -> Array[ SlotData ]:
 	# We only want to return the inventory slots that are not equipped items
 	return slots.slice( 0, -equipmentSlotCount )
 
+func checkEmptySlot() -> bool:
+	# We want to return yes if there is an empty slot in the inventory, otherwise false
+	for i in inventorySlots():
+		if i == null:
+			return true
+	return false
+
 func equipmentSlots() -> Array[ SlotData ]:
 	# We only want to return the equippable slots
 	return slots.slice( -equipmentSlotCount, slots.size() )

@@ -321,7 +321,15 @@ metadata/_custom_type_script = "uid://cdk6dpee5kak6"
 
 [node name="NpcBehaviorWander" parent="NPC3" instance=ExtResource("24_mce4h")]
 
-[node name="LevelTransition2" parent="." instance=ExtResource("3_vcuj3")]
+[node name="QuestActivatedSwitch" parent="." instance=ExtResource("10_flv1n")]
+checkType = 3
+reactToGlobalSignal = true
+linkedQuest = ExtResource("11_ls6ml")
+settingsSummary = "UPDATE QUEST:
+Quest: Help the Gnomes
+Checking if quest is complete"
+
+[node name="LevelTransition2" parent="QuestActivatedSwitch" instance=ExtResource("3_vcuj3")]
 position = Vector2(541, 149)
 level = "uid://knfoj71gyrhf"
 size = 3

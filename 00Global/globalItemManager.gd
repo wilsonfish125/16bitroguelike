@@ -12,10 +12,13 @@ var defaultPool : Array[EquippableItemData] = [
 	preload("res://Items/Resources/Equippable/Universal/Weapons/wlRockDagger.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Armour/aSoldiersBreastplate.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Armour/aTunic.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Armour/aFancyClothes.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Armour/aStuddedCoat.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Ring/rSilverSnakeRing.tres"),
 	preload("res://Items/Resources/Equippable/Universal/Ring/rNacreSignetRing.tres"),
-	preload("res://Items/Resources/Equippable/Universal/Ring/rGarnetRing.tres")
+	preload("res://Items/Resources/Equippable/Universal/Ring/rGarnetRing.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Boots/bFancyBoots.tres"),
+	preload("res://Items/Resources/Equippable/Universal/Helmet/hFancyHat.tres")
 ]
 
 var forestPool : Array[EquippableItemData] = []
