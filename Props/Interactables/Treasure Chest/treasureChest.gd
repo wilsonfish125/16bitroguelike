@@ -36,7 +36,7 @@ func playerInteract() -> void:
 	if itemData and quantity > 0:
 		PlayerManager.INVENTORYDATA.addItem( itemData, quantity ) #works with existing inv scripts
 	else:
-		printerr("u fucked up in chest.tscn")
+		return
 	pass
 
 

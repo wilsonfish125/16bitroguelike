@@ -108,7 +108,7 @@ func updateItemDetails( item : ItemData ) -> void:
 func purchaseItem( item : ItemData ) -> void:
 	# Either we have enough money and we buy item, or we don't and notify player
 	var canPurchase : bool = PlayerManager.player.coins >= item.cost
-	var freeSlot : bool = PlayerManager.INVENTORYDATA.checkEmptySlot()
+	var freeSlot : bool = PlayerManager.INVENTORYDATA.checkEmptySlot(item) 
 	print(freeSlot)
 	if canPurchase && freeSlot:
 		# Can buy
